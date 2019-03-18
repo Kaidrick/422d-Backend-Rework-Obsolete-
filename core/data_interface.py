@@ -12,3 +12,4 @@ active_players_by_name = {}  # indexed by player name
 playable_unit_info_by_name = {}  # indexed by unit name
 playable_unit_info_by_group_id = {}  # indexed by group id
 playable_unit_info_by_group_name = {}  # indexed by group name
+

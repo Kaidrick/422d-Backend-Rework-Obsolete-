@@ -1,0 +1,1 @@
+{"ATIS": 123000000, "ATIS_group": "ATIS GROOM LAKE AFB", "ATIS_pos": {"x": -287800, "z": -88356, "y": 1361}, "runways": {"32R": {"pos": {"x": -290226, "z": -86163, "y": 1370}, "hdg": 336, "ils": true}, "14L": {"pos": {"x": -287012, "z": -87565, "y": 1359}, "hdg": 156, "ils": false}}}

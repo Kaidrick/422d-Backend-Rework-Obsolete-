@@ -45,7 +45,7 @@ def process_api_pulls():
         return
 
     for api_pull in api_pulls:
-        print("debug_info", "api_pulls", api_pulls)
+        # print("debug_info", "api_pulls", api_pulls)
         if api_pull['type'] == PullType.SLOT_CHANGE:
             on_pull_slot_changes(api_pull)
 

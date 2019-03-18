@@ -1,0 +1,4 @@
+import plugins.declare_plugins
+from plugins.airport_static_player_units.static_player_units import plugin_name, include_static_player_units
+
+plugins.declare_plugins.plugin_mains[plugin_name] = include_static_player_units
