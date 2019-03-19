@@ -1,0 +1,214 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2018-12-29 13:07+0800\n"
+"PO-Revision-Date: 2019-01-09 09:56+0800\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+"X-Generator: Poedit 2.2\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: ja_JP\n"
+
+#: chat_cmd_processor.py:35
+msgid "Syntax Error: "
+msgstr "シンタックスエラー："
+
+#: chat_cmd_processor.py:36
+msgid "Unit Conversion Error: "
+msgstr "単位変換エラー："
+
+#: chat_cmd_processor.py:37
+msgid "Database Search Error: "
+msgstr "データベース検索エラー："
+
+#: chat_cmd_processor.py:43
+msgid "info <search_item> <specific_data> <other_args>"
+msgstr "info <検索項目> <特定のデータ> <その他の引数>"
+
+#: chat_cmd_processor.py:45
+msgid "This function searches 422d Database for the given argument name"
+msgstr ""
+
+#: chat_cmd_processor.py:51
+msgid "roll <range>"
+msgstr "roll <範囲>"
+
+#: chat_cmd_processor.py:53
+msgid ""
+"Roll a dice to see in you are lucky! This function rolls a n-face dice and "
+"show the number in chat window. The result is a integer number from 1 to "
+"n. \n"
+"Default roll range is from 1 to 100. n can not be less than 2 and n must be "
+"an integer."
+msgstr ""
+
+#: chat_cmd_processor.py:63
+msgid "help, help <syntax>"
+msgstr ""
+
+#: chat_cmd_processor.py:65
+msgid ""
+"\n"
+"All available chat commands are as follows: "
+msgstr ""
+
+#: chat_cmd_processor.py:66
+msgid ""
+"\n"
+"Use \"help <syntax>\" command to display help info for this specific syntax "
+"usage."
+msgstr ""
+
+#: chat_cmd_processor.py:73
+msgid "meter <number in feet>, meter [list of numbers in feet]"
+msgstr ""
+
+#: chat_cmd_processor.py:75
+msgid ""
+"Convert a number (or a series of number) from imperial feet to metric "
+"meters.\n"
+"If the list of number has more than 5 numbers to be converted, you must be "
+"in a unit to receive the response message by trigger text due to message "
+"length."
+msgstr ""
+
+#: chat_cmd_processor.py:79 chat_cmd_processor.py:93
+msgid "ft"
+msgstr ""
+
+#: chat_cmd_processor.py:80 chat_cmd_processor.py:92
+msgid "m"
+msgstr "メートル"
+
+#: chat_cmd_processor.py:86
+msgid "feet <number in meters>, feet [list of numbers in feet]"
+msgstr ""
+
+#: chat_cmd_processor.py:88
+msgid ""
+"Convert a number (or a series of number) from metric meters to imperial "
+"feet.\n"
+"If the list of number has more than 5 numbers to be converted, you must be "
+"in a unit to receive the response message by trigger text due to message "
+"length."
+msgstr ""
+
+#: chat_cmd_processor.py:99
+msgid "nm <number in kilometers>, nm [list of numbers in kilometers]"
+msgstr ""
+
+#: chat_cmd_processor.py:101
+msgid ""
+"Convert a number (or a series of number) from metric kilometers to nautical "
+"miles.\n"
+"If the list of number has more than 5 numbers to be converted, you must be "
+"in a unit to receive the response message by trigger text due to message "
+"length."
+msgstr ""
+
+#: chat_cmd_processor.py:105 chat_cmd_processor.py:119
+msgid "km"
+msgstr "キロメートル"
+
+#: chat_cmd_processor.py:106 chat_cmd_processor.py:118
+msgid "nm"
+msgstr "海里"
+
+#: chat_cmd_processor.py:112
+msgid "km <number in nautical miles>, km [list of numbers in nautical miles]"
+msgstr ""
+
+#: chat_cmd_processor.py:114
+msgid ""
+"Convert a number (or a series of number) from nautical miles to metric "
+"kilometers.\n"
+"If the list of number has more than 5 numbers to be converted, you must be "
+"in a unit to receive the response message by trigger text due to message "
+"length."
+msgstr ""
+
+#: chat_cmd_processor.py:125
+msgid ""
+"kts <number in kilometers per hour>, kts [list of numbers in kilometers per "
+"hour]"
+msgstr ""
+
+#: chat_cmd_processor.py:127
+msgid ""
+"Convert a number (or a series of number) in kilmeters per hour to knots.\n"
+"If the list of number has more than 5 numbers to be converted, you must be "
+"in a unit to receive the response message by trigger text due to message "
+"length."
+msgstr ""
+
+#: chat_cmd_processor.py:131 chat_cmd_processor.py:145
+msgid "km/h"
+msgstr ""
+
+#: chat_cmd_processor.py:132 chat_cmd_processor.py:144
+msgid "kts"
+msgstr "ノット"
+
+#: chat_cmd_processor.py:138
+msgid "kmh <number in knots>, kmh [list of numbers in knots]"
+msgstr ""
+
+#: chat_cmd_processor.py:140
+msgid ""
+"Convert a number (or a series of number) in kilometers per hour to knots.\n"
+"If the list of number has more than 5 numbers to be converted, you must be "
+"in a unit to receive the response message by trigger text due to message "
+"length."
+msgstr ""
+
+#: chat_cmd_processor.py:151
+msgid "kg <number in pounds>, kg [list of numbers in pounds]"
+msgstr ""
+
+#: chat_cmd_processor.py:153
+msgid ""
+"Convert a number (or a series of numbers) in pounds to metric kilograms.\n"
+"If the list of number has more than 5 numbers to be converted, you must be "
+"in a unit to receive the response message by trigger text due to message "
+"length."
+msgstr ""
+
+#: chat_cmd_processor.py:157 chat_cmd_processor.py:171
+msgid "lbs"
+msgstr ""
+
+#: chat_cmd_processor.py:158 chat_cmd_processor.py:170
+msgid "kg"
+msgstr "キログラム"
+
+#: chat_cmd_processor.py:164
+msgid "lbs <number in kilograms>, lbs [list of numbers in kilograms]"
+msgstr ""
+
+#: chat_cmd_processor.py:166
+msgid ""
+"Convert a number (or a series of numbers) in kilograms to pounds.\n"
+"If the list of number has more than 5 numbers to be converted, you must be "
+"in a unit to receive the response message by trigger text due to message "
+"length."
+msgstr ""
+
+#: chat_cmd_processor.py:237
+msgid " equals to "
+msgstr ""
+
+#: chat_cmd_processor.py:346 chat_cmd_processor.py:349
+msgid " rolls "
+msgstr ""
+
+#: chat_cmd_processor.py:390
+msgid "Syntax - "
+msgstr ""

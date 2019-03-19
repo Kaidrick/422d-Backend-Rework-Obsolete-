@@ -1,8 +1,9 @@
 from core.request.miz.dcs_action import DcsAction, ActionType
-from core.request.miz.dcs_env import airbase_dict, env_player_dict, set_msg_locale, search_localized_string, dcs_message_format as mf
+from core.request.miz.dcs_env import airbase_dict, env_player_dict, set_msg_locale, \
+    search_localized_string, dcs_message_format as mf
 from core.request.miz import dcs_env as db
 from administrative import MOTD, RULES, FAQ
-from core.utility import utils as util
+
 from core.request.miz.dcs_weather import RequestDcsWeather, parse_wx
 from core.request.miz.dcs_message import RequestDcsMessageForGroup
 from core.request.miz.dcs_navigation import find_nearest_airbase, get_2d_xy_dist, get_dir_vector, vec2hdg, generate_ll_deg_min, \
@@ -15,7 +16,7 @@ import gettext
 import core.data_interface as cdi
 import core.request.miz.dcs_event
 import time
-import core.signal as sig
+import core.spark as spark
 from core.request.miz.dcs_event import EventHandler
 from core.request.miz.dcs_debug import RequestDcsDebugCommand
 
@@ -523,71 +524,18 @@ def response_to_radio_item_pull(pull):  # TODO: add system of measurement prefer
         RequestDcsMessageForGroup(group_id, message).send()
 
 
-def radio_menu_on_event_birth(event_data):  # check if player control?
-    print(event_data)
-    # FIXME: in some occasion, group id does not match the runtime id
-    # maybe it's better to use runtime_id to query in game group id?
-    # make group object
-    print("wait five")
-    time.sleep(5)
+def init_radio_menu_on_birth_spark(spark_dt):
+    print(spark_dt)
+    player_group_id = spark_dt['data']['group_id']
+    player_name = spark_dt['data']['name']
+    player_runtime_id = spark_dt['data']['runtime_id']
+    print(player_group_id, player_name, player_runtime_id)
 
-    if event_data['player_control'] is True:  # player controlled unit
-        player_name = event_data['player_name']
-        unit_name = event_data['unit_name']
-        for group_name, group_info in cdi.player_group_id_by_name_dict.items():
-            # for each data, check if there is a unit name match?
-            if group_info['unit_name'] == unit_name:
-                # match
-                event_initiator_group_id = group_info['group_id']
-                print("Matching GroupID: " + str(group_info['group_id']))
-
-                # go and add radio menu
-                SanitizeRadioItem(event_initiator_group_id).send()
-                init_radio_menu_for_group(event_initiator_group_id, player_name)
-
-                return
-
-        # after loop
-
-    # if 'player_name' in signal_data.keys():
-    #     print("Signal Event Triggered: EVENT_BIRTH")
-    #
-    #     # group_id = event_data['owner_group_id']
-    #     initiator_runtime_id = signal_data['initiator']
-    #     # q_str = f"id_{initiator_runtime_id}"
-    #     # find group id?
-    #
-    #     print("dcs_radio_menu.py --> new BIRTH event: " + initiator_runtime_id)
-    #     # time.sleep(1)  # built-in delay before accessing the group
-    #     # print(cdi.active_players_by_group_id)
-    #     # wait until it find the group?
-    #     error_retry_count = 0
-    #     while True and error_retry_count < 10:
-    #         try:
-    #             # print(cdi.active_players_by_unit_runtime_id[q_str])
-    #             # group_id = cdi.active_players_by_unit_runtime_id[initiator_runtime_id].group_id
-    #             group_id = signal_data['player_group_id']
-    #             # group_name = cdi.active_players_by_unit_runtime_id[q_str]['GroupName']
-    #             # group_id = int(RequestAPINetDostring(f"return Group.getByName('{group_name}'):getID()", echo_result=True).send())
-    #             # print(group_id)
-    #             break
-    #         except KeyError:  # not exist yet, but add a retry time otherwise the whole thread stops
-    #             print(f"radio menu init - wait for group spawn" + str(signal_data))
-    #             print(cdi.active_players_by_unit_runtime_id)
-    #             # print(cdi.active_players_by_unit_runtime_id)
-    #             error_retry_count += 1
-    #             time.sleep(1)
-    #
-    #     # print(f"before check {group_id}")
-    #     try:
-    #         if db.valid_group_id(group_id):
-    #             SanitizeRadioItem(group_id).send()
-    #             init_radio_menu_for_group(group_id)
-    #     except Exception as e:
-    #         print(f"Exception: {e}. Fail to add radio menu to {q_str}, runtime id not found.")
+    SanitizeRadioItem(player_group_id).send()  # remove all existing radio items from this group
+    # init_radio_menu_for_group(player_group_id)
+    RequestDcsMessageForGroup(player_group_id, "Welcome! We are doing some major overhaul! Lots of functions"
+                                               " are currently missing from the server. Use this mission "
+                                               "as a free fly practice.").send()
 
 
-# core.request.miz.dcs_event.EventHandler.BIRTH["core_dcs_radio_menu"] = radio_menu_on_event_birth
-# sig.SignalHandler.PLAYER_SPAWN["core_dcs_radio_menu"] = radio_menu_on_event_birth
-
-EventHandler.BIRTH["core_dcs_radio_menu_on_birth"] = radio_menu_on_event_birth
+spark.SparkHandler.PLAYER_SPAWN["dcs_radio_init_on_birth"] = init_radio_menu_on_birth_spark

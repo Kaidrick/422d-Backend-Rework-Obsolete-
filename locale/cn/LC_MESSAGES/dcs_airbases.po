@@ -1,0 +1,278 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2018-12-17 20:14+0800\n"
+"PO-Revision-Date: 2018-12-29 10:57+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+"X-Generator: Poedit 2.2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: dcs_airbases.py:8
+msgid "Creech AFB"
+msgstr "克里奇空军基地"
+
+#: dcs_airbases.py:9
+msgid "Groom Lake AFB"
+msgstr "马夫湖空军基地"
+
+#: dcs_airbases.py:10
+msgid "McCarran International Airport"
+msgstr "麦卡伦国际机场"
+
+#: dcs_airbases.py:11
+msgid "Nellis AFB"
+msgstr "内利斯空军基地"
+
+#: dcs_airbases.py:12
+msgid "Beatty Airport"
+msgstr "贝蒂机场"
+
+#: dcs_airbases.py:13
+msgid "Boulder City Airport"
+msgstr "博尔德市机场"
+
+#: dcs_airbases.py:14
+msgid "Echo Bay"
+msgstr "回音湾"
+
+#: dcs_airbases.py:15
+msgid "Henderson Executive Airport"
+msgstr "亨德森行政机场"
+
+#: dcs_airbases.py:16
+msgid "Jean Airport"
+msgstr "吉恩机场"
+
+#: dcs_airbases.py:17
+msgid "Laughlin Airport"
+msgstr "拉夫林机场"
+
+#: dcs_airbases.py:18
+msgid "Lincoln County"
+msgstr "林肯县"
+
+#: dcs_airbases.py:19
+msgid "Mesquite"
+msgstr "梅斯基特"
+
+#: dcs_airbases.py:20
+msgid "Mina Airport 3Q0"
+msgstr "米娜机场"
+
+#: dcs_airbases.py:21
+msgid "North Las Vegas"
+msgstr "北拉斯维加斯"
+
+#: dcs_airbases.py:22
+msgid "Pahute Mesa Airstrip"
+msgstr "帕胡德梅萨跑道"
+
+#: dcs_airbases.py:23
+msgid "Tonopah Airport"
+msgstr "托诺帕机场"
+
+#: dcs_airbases.py:24
+msgid "Tonopah Test Range Airfield"
+msgstr "托诺帕试验和训练靶场机场"
+
+#: dcs_airbases.py:28
+msgid "Anapa"
+msgstr "阿纳帕"
+
+#: dcs_airbases.py:29
+msgid "Batumi"
+msgstr "巴统"
+
+#: dcs_airbases.py:30
+msgid "Beslan"
+msgstr "别斯兰"
+
+#: dcs_airbases.py:31
+msgid "Gelendzhik"
+msgstr "格连吉克"
+
+#: dcs_airbases.py:32
+msgid "Gudauta"
+msgstr "古达乌塔"
+
+#: dcs_airbases.py:33
+msgid "Khanskaya"
+msgstr "汉斯卡亚"
+
+#: dcs_airbases.py:34
+msgid "Kobuleti"
+msgstr "科布列季"
+
+#: dcs_airbases.py:35
+msgid "Kolkhi"
+msgstr "科尔奇"
+
+#: dcs_airbases.py:36
+msgid "Krasnodar"
+msgstr "克拉斯诺达尔"
+
+#: dcs_airbases.py:37
+msgid "Krymsk"
+msgstr "克雷姆斯克"
+
+#: dcs_airbases.py:38
+msgid "Kutaisi"
+msgstr "库塔伊西"
+
+#: dcs_airbases.py:39
+msgid "Lochini"
+msgstr "洛奇尼"
+
+#: dcs_airbases.py:40
+msgid "MinVody"
+msgstr "矿水城"
+
+#: dcs_airbases.py:41
+msgid "Mozdok"
+msgstr "莫兹多克"
+
+#: dcs_airbases.py:42
+msgid "Nalchik"
+msgstr "纳尔奇克"
+
+#: dcs_airbases.py:43
+msgid "Novorossiysk"
+msgstr "新罗西斯克"
+
+#: dcs_airbases.py:44
+msgid "Pashkovsky"
+msgstr "帕什科夫斯基"
+
+#: dcs_airbases.py:45
+msgid "Sochi"
+msgstr "索契"
+
+#: dcs_airbases.py:46
+msgid "Soganlug"
+msgstr "索干卢"
+
+#: dcs_airbases.py:47
+msgid "Sukhumi"
+msgstr "苏呼米"
+
+#: dcs_airbases.py:48
+msgid "Vaziani"
+msgstr "瓦茨亚尼"
+
+#: dcs_airbases.py:52
+msgid "Abu Musa Island Airport"
+msgstr "阿布穆萨岛机场"
+
+#: dcs_airbases.py:53
+msgid "Bandar Abbas Intl"
+msgstr "阿巴斯港国际机场"
+
+#: dcs_airbases.py:54
+msgid "Bandar Lengeh"
+msgstr "伦格港"
+
+#: dcs_airbases.py:55
+msgid "Al Dhafra AB"
+msgstr "迪哈夫拉空军基地"
+
+#: dcs_airbases.py:56
+msgid "Dubai Intl"
+msgstr "迪拜国际机场"
+
+#: dcs_airbases.py:57
+msgid "Al Maktoum Intl"
+msgstr "阿勒马克图姆国际机场"
+
+#: dcs_airbases.py:58
+msgid "Fujairah Intl"
+msgstr "富查伊拉国际机场"
+
+#: dcs_airbases.py:59
+msgid "Tunb Island AFB"
+msgstr "通布岛空军基地"
+
+#: dcs_airbases.py:60
+msgid "Havadarya"
+msgstr "哈瓦那"
+
+#: dcs_airbases.py:61
+msgid "Khasab"
+msgstr "海塞卜"
+
+#: dcs_airbases.py:62
+msgid "Lar Airbase"
+msgstr "拉尔空军基地"
+
+#: dcs_airbases.py:63
+msgid "Al Minhad AB"
+msgstr "艾尔明翰空军基地"
+
+#: dcs_airbases.py:64
+msgid "Qeshm Island"
+msgstr "格什姆岛"
+
+#: dcs_airbases.py:65
+msgid "Sharjah Intl"
+msgstr "沙迦国际机场"
+
+#: dcs_airbases.py:66
+msgid "Sirri Island"
+msgstr "锡里岛"
+
+#: dcs_airbases.py:67
+msgid "Tunb Kochak"
+msgstr "小通布岛"
+
+#: dcs_airbases.py:68
+msgid "Sir Abu Nuayr"
+msgstr "锡尔阿布努艾尔"
+
+#: dcs_airbases.py:69
+msgid "Kerman Airport"
+msgstr "克尔曼国际机场"
+
+#: dcs_airbases.py:70
+msgid "Shiraz International Airport"
+msgstr "设拉子国际机场"
+
+#: dcs_airbases.py:71
+msgid "Sas Al Nakheel Airport"
+msgstr "阿纳奇机场"
+
+#: dcs_airbases.py:72
+msgid "Bandar-e-Jask airfield"
+msgstr "贾斯克港机场"
+
+#: dcs_airbases.py:73
+msgid "Abu Dhabi International Airport"
+msgstr "阿布扎比国际机场"
+
+#: dcs_airbases.py:74
+msgid "Al-Bateen Airport"
+msgstr "阿尔拜汀机场"
+
+#: dcs_airbases.py:75
+msgid "Kish International Airport"
+msgstr ""
+
+#: dcs_airbases.py:76
+msgid "Al Ain International Airport"
+msgstr "艾因国际机场"
+
+#: dcs_airbases.py:77
+msgid "Lavan Island Airport"
+msgstr "拉万岛机场"
+
+#: dcs_airbases.py:78
+msgid "Jiroft Airport"
+msgstr ""

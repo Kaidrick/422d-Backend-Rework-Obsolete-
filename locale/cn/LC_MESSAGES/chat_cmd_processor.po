@@ -1,0 +1,246 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2018-12-29 13:07+0800\n"
+"PO-Revision-Date: 2019-01-08 12:43+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+"X-Generator: Poedit 2.2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: chat_cmd_processor.py:35
+msgid "Syntax Error: "
+msgstr "语法错误："
+
+#: chat_cmd_processor.py:36
+msgid "Unit Conversion Error: "
+msgstr "单位转换错误："
+
+#: chat_cmd_processor.py:37
+msgid "Database Search Error: "
+msgstr "数据搜索错误："
+
+#: chat_cmd_processor.py:43
+msgid "info <search_item> <specific_data> <other_args>"
+msgstr "info <查询项> <特定数据> <其他参数>"
+
+#: chat_cmd_processor.py:45
+msgid "This function searches 422d Database for the given argument name"
+msgstr "这个功能会在422d数据库中搜索相关的条目名称。"
+
+#: chat_cmd_processor.py:51
+msgid "roll <range>"
+msgstr "roll <范围>"
+
+#: chat_cmd_processor.py:53
+msgid ""
+"Roll a dice to see in you are lucky! This function rolls a n-face dice and "
+"show the number in chat window. The result is a integer number from 1 to "
+"n. \n"
+"Default roll range is from 1 to 100. n can not be less than 2 and n must be "
+"an integer."
+msgstr ""
+"投出一个骰子，看看你的幸运数字是多少！这个功能会骰出一个N面的骰子并将结果的"
+"点数显示在聊天栏中。结果的点数是一个从1到n（范围）的整数。\n"
+"默认的骰子面数是100（结果是1-100间的一个整数）。参数n（范围）不能小于2，且n"
+"必须是一个整数。"
+
+#: chat_cmd_processor.py:63
+msgid "help, help <syntax>"
+msgstr "help或help <子项目>"
+
+#: chat_cmd_processor.py:65
+msgid ""
+"\n"
+"All available chat commands are as follows: "
+msgstr ""
+"\n"
+"所有可用的聊天栏命令如下："
+
+#: chat_cmd_processor.py:66
+msgid ""
+"\n"
+"Use \"help <syntax>\" command to display help info for this specific syntax "
+"usage."
+msgstr ""
+"\n"
+"使用“help <子项目>”命令来显示对应子项目的帮助信息。"
+
+#: chat_cmd_processor.py:73
+msgid "meter <number in feet>, meter [list of numbers in feet]"
+msgstr "meter <以英尺为单位的数值>，meter [以英尺为单位的数值列表]"
+
+#: chat_cmd_processor.py:75
+msgid ""
+"Convert a number (or a series of number) from imperial feet to metric "
+"meters.\n"
+"If the list of number has more than 5 numbers to be converted, you must be "
+"in a unit to receive the response message by trigger text due to message "
+"length."
+msgstr ""
+"将一个（或一串）以英制英尺为单位的数值转换为米制。\n"
+"如果这个列表中含有超过5个的数字，由于信息长度的缘故，你必须选择并进入一架飞"
+"机中，通过游戏触发消息来接受这条处理消息。"
+
+#: chat_cmd_processor.py:79 chat_cmd_processor.py:93
+msgid "ft"
+msgstr "英尺"
+
+#: chat_cmd_processor.py:80 chat_cmd_processor.py:92
+msgid "m"
+msgstr "米"
+
+#: chat_cmd_processor.py:86
+msgid "feet <number in meters>, feet [list of numbers in feet]"
+msgstr "feet <以米制米为单位的数值>，feet [以米制米为单位的数值列表]"
+
+#: chat_cmd_processor.py:88
+msgid ""
+"Convert a number (or a series of number) from metric meters to imperial "
+"feet.\n"
+"If the list of number has more than 5 numbers to be converted, you must be "
+"in a unit to receive the response message by trigger text due to message "
+"length."
+msgstr ""
+"将一个（或一串）以米制米为单位的数值转换为英制英尺。\n"
+"如果这个列表中含有超过5个的数字，由于信息长度的缘故，你必须选择并进入一架飞"
+"机中，通过游戏触发消息来接受这条处理消息。"
+
+#: chat_cmd_processor.py:99
+msgid "nm <number in kilometers>, nm [list of numbers in kilometers]"
+msgstr "nm <以千米为单位的数值>，nm [以千米为单位的数值列表]"
+
+#: chat_cmd_processor.py:101
+msgid ""
+"Convert a number (or a series of number) from metric kilometers to nautical "
+"miles.\n"
+"If the list of number has more than 5 numbers to be converted, you must be "
+"in a unit to receive the response message by trigger text due to message "
+"length."
+msgstr ""
+"将一个（或一串）以米制千米为单位的数值转换为海里。\n"
+"如果这个列表中含有超过5个的数字，由于信息长度的缘故，你必须选择并进入一架飞"
+"机中，通过游戏触发消息来接受这条处理消息。"
+
+#: chat_cmd_processor.py:105 chat_cmd_processor.py:119
+msgid "km"
+msgstr "千米"
+
+#: chat_cmd_processor.py:106 chat_cmd_processor.py:118
+msgid "nm"
+msgstr "海里"
+
+#: chat_cmd_processor.py:112
+msgid "km <number in nautical miles>, km [list of numbers in nautical miles]"
+msgstr "km <以海里为单位的数值>，km [以海里为单位的数值列表]"
+
+#: chat_cmd_processor.py:114
+msgid ""
+"Convert a number (or a series of number) from nautical miles to metric "
+"kilometers.\n"
+"If the list of number has more than 5 numbers to be converted, you must be "
+"in a unit to receive the response message by trigger text due to message "
+"length."
+msgstr ""
+"将一个（或一串）以海里为单位的数值转换为米制千米。\n"
+"如果这个列表中含有超过5个的数字，由于信息长度的缘故，你必须选择并进入一架飞"
+"机中，通过游戏触发消息来接受这条处理消息。"
+
+#: chat_cmd_processor.py:125
+msgid ""
+"kts <number in kilometers per hour>, kts [list of numbers in kilometers per "
+"hour]"
+msgstr "km <以千米每小时为单位的数值>，km [以千米每小时为单位的数值列表]"
+
+#: chat_cmd_processor.py:127
+msgid ""
+"Convert a number (or a series of number) in kilmeters per hour to knots.\n"
+"If the list of number has more than 5 numbers to be converted, you must be "
+"in a unit to receive the response message by trigger text due to message "
+"length."
+msgstr ""
+"将一个（或一串）以米制千米每小时为单位的数值转换为节。\n"
+"如果这个列表中含有超过5个的数字，由于信息长度的缘故，你必须选择并进入一架飞"
+"机中，通过游戏触发消息来接受这条处理消息。"
+
+#: chat_cmd_processor.py:131 chat_cmd_processor.py:145
+msgid "km/h"
+msgstr "千米/时"
+
+#: chat_cmd_processor.py:132 chat_cmd_processor.py:144
+msgid "kts"
+msgstr "节"
+
+#: chat_cmd_processor.py:138
+msgid "kmh <number in knots>, kmh [list of numbers in knots]"
+msgstr "kmh <以节为单位的数值>，kmh [以节为单位的数值列表]"
+
+#: chat_cmd_processor.py:140
+msgid ""
+"Convert a number (or a series of number) in kilometers per hour to knots.\n"
+"If the list of number has more than 5 numbers to be converted, you must be "
+"in a unit to receive the response message by trigger text due to message "
+"length."
+msgstr ""
+"将一个（或一串）以千米每小时为单位的数值转换为节。\n"
+"如果这个列表中含有超过5个的数字，由于信息长度的缘故，你必须选择并进入一架飞"
+"机中，通过游戏触发消息来接受这条处理消息。"
+
+#: chat_cmd_processor.py:151
+msgid "kg <number in pounds>, kg [list of numbers in pounds]"
+msgstr "kg <以英制磅为单位的数值>，kg [以英制磅为单位的数值列表]"
+
+#: chat_cmd_processor.py:153
+msgid ""
+"Convert a number (or a series of numbers) in pounds to metric kilograms.\n"
+"If the list of number has more than 5 numbers to be converted, you must be "
+"in a unit to receive the response message by trigger text due to message "
+"length."
+msgstr ""
+"将一个（或一串）以英制磅为单位的数值转换为米制千克。\n"
+"如果这个列表中含有超过5个的数字，由于信息长度的缘故，你必须选择并进入一架飞"
+"机中，通过游戏触发消息来接受这条处理消息。"
+
+#: chat_cmd_processor.py:157 chat_cmd_processor.py:171
+msgid "lbs"
+msgstr "磅"
+
+#: chat_cmd_processor.py:158 chat_cmd_processor.py:170
+msgid "kg"
+msgstr "千克"
+
+#: chat_cmd_processor.py:164
+msgid "lbs <number in kilograms>, lbs [list of numbers in kilograms]"
+msgstr "lbs <以千克为单位的数值>，lbs [以千克为单位的数值列表]"
+
+#: chat_cmd_processor.py:166
+msgid ""
+"Convert a number (or a series of numbers) in kilograms to pounds.\n"
+"If the list of number has more than 5 numbers to be converted, you must be "
+"in a unit to receive the response message by trigger text due to message "
+"length."
+msgstr ""
+"将一个（或一串）以米制千克为单位的数值转换为英制磅。\n"
+"如果这个列表中含有超过5个的数字，由于信息长度的缘故，你必须选择并进入一架飞"
+"机中，通过游戏触发消息来接受这条处理消息。"
+
+#: chat_cmd_processor.py:237
+msgid " equals to "
+msgstr "约等于"
+
+#: chat_cmd_processor.py:346 chat_cmd_processor.py:349
+msgid " rolls "
+msgstr "掷出"
+
+#: chat_cmd_processor.py:390
+msgid "Syntax - "
+msgstr "命令 - "

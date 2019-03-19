@@ -1,0 +1,165 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2019-01-08 09:43+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+"X-Generator: Poedit 2.2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "Sedan Crater"
+msgstr "萨当弹坑"
+
+msgid ""
+"Sedan Crater is the result of the Sedan nuclear test and is located within "
+"the Nevada Test Site. The 1,280 by 320 ft (390 by 100 m) crater was created "
+"on July 6, 1962 by a 104-kiloton-of-TNT (440 TJ) thermonuclear explosion. \n"
+"Because the craters at the Nevada Test Site (NTS) have features similar to "
+"the topography of Moon craters, 11 of the 12 American astronauts who walked "
+"on the moon trained in Nevada before their missions."
+msgstr ""
+"萨当弹坑是一场在美国内华达试验场的核子试爆所造成的弹坑，地点位于内华达州51区"
+"的东南方约12英里（19千米）处。超过12,000,000短吨（11,000,000公吨）的泥土因强"
+"力的核爆位移而产生了萨当弹坑。\n"
+"由于内华达测试场（NTS）中的各式各样的弹坑与月球表面的陨石坑有着相似的特征，参"
+"与“阿波罗”计划登上月球的12名美国宇航员中，有11位都在内华达沙漠接受过训练。"
+
+msgid "Alamo"
+msgstr "阿拉摩"
+
+msgid "from/to Sally Corridor or other ranges if scheduled"
+msgstr "从萨利走廊进出，或根据安排从其他区域进出"
+
+msgid ""
+"Alamo lies within the Desert National Wildlife Range. This area provides a "
+"buffer zone between 62A, 62B and Sally Corridor. Remain above 2,000ft AGL "
+"unless lower altitude is required for tactical training. Avoid animal "
+"concentrations and watering holes."
+msgstr ""
+"阿拉摩位于沙漠国家野生动物保护区内。阿拉摩为靶场62A、62B和萨利走廊之间提供了"
+"一个缓冲区域。在区域内应保持至少2000英尺AGL，除非战术训练需要进行低空飞行。规"
+"避动物群落和水源。"
+
+msgid "Elgin"
+msgstr "埃尔金"
+
+msgid "normally from the Sally Corridor or Caliente"
+msgstr "通常经由萨利走廊或卡连特进出"
+
+msgid ""
+"Elgin is located east of the Sally Corridor and is the primary air-to-air "
+"training area."
+msgstr "埃尔金位于萨利走廊的东面，它是内华达测试和训练场主要的空对空训练区域。"
+
+msgid "Range 62"
+msgstr "靶场62"
+
+msgid "Alamo B/C or as directed"
+msgstr "阿拉摩B/C（Alamo Bravo/Charlie）或根据管制"
+
+msgid ""
+"Located on the east side of R-4806. The majority of the targets are located "
+"in and around Dogbone Lake. The targets include nuclear bomb circles and "
+"tactical targets consisting of an airfield, supply area, anti-aircraft "
+"artillery, convoys, and a surface-to-air missile site."
+msgstr ""
+"坐落在R-4806的东部。大部分训练目标都位于Dogbone Lake（狗骨湖）周围。这些目标"
+"包括核弹目标圈和由机场、补给区域、防空炮、车队和面对空导弹组成的战术目标。"
+
+msgid "Small Town Square With Airport Mock-up"
+msgstr "带有机场的城镇中心模拟"
+
+msgid "West (Alamo Charlie), keep above 8000 feet MSL in transition."
+msgstr "西面（阿拉摩C），进场离场过程中应保持至少8000英尺的高度。"
+
+msgid "Only inert or training ordinance is allowed in this area."
+msgstr "区域内只允许使用惰性弹药和训练弹。"
+
+msgid "Convoy Targets"
+msgstr "车队目标"
+
+msgid "All Direction"
+msgstr "任意方向"
+
+msgid ""
+"Targets consist of light armored ground units. Only inert or training "
+"ordinance is allowed in this area."
+msgstr "目标由地面轻型装甲单位组成。区域内只允许使用惰性弹药和训练弹。"
+
+msgid "Military Compound Targets"
+msgstr "军事设施目标"
+
+msgid ""
+"Targets consist of armored ground units and buildings. Only inert or "
+"training ordinance is allowed in this area."
+msgstr "目标包括地面装甲目标和建筑。区域内只允许使用惰性弹药和训练弹。"
+
+msgid "63B Bomb Circle"
+msgstr "63B投弹圈"
+
+msgid "Target circle can be used for precision ammunition."
+msgstr "投弹圈可以用于测试弹药精度。"
+
+msgid "Range 66"
+msgstr "靶场66"
+
+msgid "Range entry and departure is conducted from adjacent range airspace."
+msgstr "由附近的空域进出。"
+
+msgid ""
+"Range 66 (Leach Lake Air Gunnery Range) is located in R-2502N. It includes "
+"several tactical targets such as armored convoys, airfields, artillery and "
+"insurgent village mock-up."
+msgstr ""
+"靶场66（利奇湖射击场）坐落于R-2502N内。它包括了诸如装甲车队、机场、火炮和叛军"
+"村庄等战术目标模拟。"
+
+msgid "Range 75"
+msgstr "靶场75"
+
+msgid ""
+"Unmanned range consisting of missile sites and a convoy located in the "
+"central portion of R-4807. Training and inert ordnance and live ordnance "
+"(except for CBU munitions) are authorized."
+msgstr "坐落于R-4807的无人值守靶场，目标由R-4807中部的导弹阵地和车队组成。"
+
+msgid "Sally Corridor"
+msgstr "萨利走廊"
+
+msgid "Directly from/to Nellis AFB"
+msgstr "直接进出内利斯空军基地"
+
+msgid ""
+"The Sally corridor is part of the Desert MOA and is located between Elgin "
+"and Alamo training areas. Sally is the main transition route/corridor to the "
+"northern training areas."
+msgstr ""
+"萨利走廊是内华达沙漠MOA的一部分，它坐落于埃尔金（Elgin）和阿拉摩（Alamo）训练"
+"区域中间。萨利走廊是走往北部训练场的主要路线/通道。"
+
+msgid "X-Ray"
+msgstr "“X-Ray”"
+
+msgid "from/to Nellis AFB or Sally Corridor"
+msgstr "从内利斯空军基地或萨利走廊进出"
+
+msgid ""
+"X-Ray is control by Nellis Control and is an extension of Nellis AFB "
+"airspace. Aircraft from Nellis en route to the North Range are usually sent "
+"to this area first before being given the permission to enter NTTR."
+msgstr ""
+"“X-Ray”由内利斯空管控制，属于内利斯空军基地空域的延申。飞机经由内利斯飞往北部"
+"训练场时，在获得进入NTTR的许可前，通常会被引导至这个区域。"
+
+#~ msgid "Sally Corridor or other ranges if scheduled"
+#~ msgstr "从萨利走廊进出，或根据训练规划从其他靶场进出"

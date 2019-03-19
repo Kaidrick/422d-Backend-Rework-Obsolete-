@@ -1,0 +1,119 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2019-01-14 15:18+0800\n"
+"PO-Revision-Date: 2019-01-14 15:21+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+"X-Generator: Poedit 2.2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: missile_training_announcer.py:61
+msgid "Status"
+msgstr "状态"
+
+#: missile_training_announcer.py:62
+msgid "Bearing"
+msgstr "方位"
+
+#: missile_training_announcer.py:63
+msgid "Range"
+msgstr "距离"
+
+#: missile_training_announcer.py:64
+msgid "Missile ID"
+msgstr "识别号"
+
+#: missile_training_announcer.py:65
+msgid "Note"
+msgstr "信息"
+
+#: missile_training_announcer.py:74
+msgid "Launch"
+msgstr "发射"
+
+#: missile_training_announcer.py:77
+msgid "Tracking"
+msgstr "跟踪"
+
+#: missile_training_announcer.py:86
+msgid " m"
+msgstr "米"
+
+#: missile_training_announcer.py:104
+msgid "Hit"
+msgstr "命中"
+
+#: missile_training_announcer.py:105
+msgid "Splash Target"
+msgstr "击毁目标"
+
+#: missile_training_announcer.py:107
+msgid "Defeated"
+msgstr "被规避"
+
+#: missile_training_announcer.py:109
+msgid "Guidance Failed"
+msgstr "导航失效"
+
+#: missile_training_announcer.py:111
+msgid "Energy Depleted"
+msgstr "能量耗尽"
+
+#: missile_training_announcer.py:113
+msgid "Other Reasons"
+msgstr "其他原因"
+
+#: missile_training_announcer.py:150 missile_training_announcer.py:154
+#: missile_training_announcer.py:158
+msgid " for "
+msgstr "距离"
+
+#: missile_training_announcer.py:150 missile_training_announcer.py:154
+#: missile_training_announcer.py:158
+msgid "HDG "
+msgstr "方位"
+
+#: missile_training_announcer.py:151 missile_training_announcer.py:159
+msgid " nm"
+msgstr "海里"
+
+#: missile_training_announcer.py:153 missile_training_announcer.py:157
+msgid "Missile Launch: "
+msgstr "导弹发射："
+
+#: missile_training_announcer.py:155 missile_training_announcer.py:160
+msgid " km"
+msgstr "千米"
+
+#: missile_training_announcer.py:159
+msgid " or "
+msgstr "或"
+
+#: missile_training_announcer.py:169
+msgid "Missile energy depleted!"
+msgstr "导弹能量耗尽！"
+
+#: missile_training_announcer.py:171
+msgid "Missile decoyed!"
+msgstr "导弹被干扰！"
+
+#: missile_training_announcer.py:173
+msgid "Missile Lock Failed!"
+msgstr "导弹追踪雷达脱锁！"
+
+#: missile_training_announcer.py:175
+msgid "Missile Hit!"
+msgstr "导弹命中目标！"
+
+#~ msgid "Electronic Combat Simulation"
+#~ msgstr "电子战模拟"

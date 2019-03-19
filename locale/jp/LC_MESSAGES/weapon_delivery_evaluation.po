@@ -1,0 +1,110 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2019-01-08 16:59+0800\n"
+"PO-Revision-Date: 2019-01-09 11:03+0800\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+"X-Generator: Poedit 2.2\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: ja_JP\n"
+
+#: weapon_delivery_evaluation.py:73
+msgid "Evaluation of Weapon Delivery Effectiveness"
+msgstr ""
+
+#: weapon_delivery_evaluation.py:147 weapon_delivery_evaluation.py:248
+#: weapon_delivery_evaluation.py:338
+msgid "Dir: "
+msgstr ""
+
+#: weapon_delivery_evaluation.py:148 weapon_delivery_evaluation.py:152
+#: weapon_delivery_evaluation.py:249 weapon_delivery_evaluation.py:253
+#: weapon_delivery_evaluation.py:339 weapon_delivery_evaluation.py:343
+msgid "m"
+msgstr ""
+
+#: weapon_delivery_evaluation.py:148 weapon_delivery_evaluation.py:249
+#: weapon_delivery_evaluation.py:339
+msgid "Alt: "
+msgstr ""
+
+#: weapon_delivery_evaluation.py:149 weapon_delivery_evaluation.py:250
+#: weapon_delivery_evaluation.py:340
+msgid "Flt Time: "
+msgstr ""
+
+#: weapon_delivery_evaluation.py:149 weapon_delivery_evaluation.py:250
+#: weapon_delivery_evaluation.py:340
+msgid "s"
+msgstr ""
+
+#: weapon_delivery_evaluation.py:150 weapon_delivery_evaluation.py:151
+#: weapon_delivery_evaluation.py:251 weapon_delivery_evaluation.py:252
+#: weapon_delivery_evaluation.py:341 weapon_delivery_evaluation.py:342
+msgid "m/s"
+msgstr ""
+
+#: weapon_delivery_evaluation.py:152 weapon_delivery_evaluation.py:253
+#: weapon_delivery_evaluation.py:343
+msgid " at "
+msgstr ""
+
+#: weapon_delivery_evaluation.py:152 weapon_delivery_evaluation.py:253
+#: weapon_delivery_evaluation.py:343
+msgid "Impact: "
+msgstr ""
+
+#: weapon_delivery_evaluation.py:192 weapon_delivery_evaluation.py:293
+#: weapon_delivery_evaluation.py:375
+msgid "Average Impact Point: "
+msgstr ""
+
+#: weapon_delivery_evaluation.py:382
+msgid "Delivery Batch"
+msgstr ""
+
+#: weapon_delivery_evaluation.py:383
+msgid "Qty: "
+msgstr ""
+
+#: weapon_delivery_evaluation.py:383
+msgid "Type: "
+msgstr ""
+
+#: weapon_delivery_evaluation.py:532
+msgid "Effectiveness: "
+msgstr ""
+
+#: weapon_delivery_evaluation.py:600
+msgid "Direct Hit on Target"
+msgstr ""
+
+#: weapon_delivery_evaluation.py:600 weapon_delivery_evaluation.py:605
+msgid "H.E. Pwr: "
+msgstr ""
+
+#: weapon_delivery_evaluation.py:601 weapon_delivery_evaluation.py:606
+msgid "R_shockwave: "
+msgstr ""
+
+#: weapon_delivery_evaluation.py:602 weapon_delivery_evaluation.py:603
+#: weapon_delivery_evaluation.py:607 weapon_delivery_evaluation.py:608
+msgid " hit(s)"
+msgstr ""
+
+#: weapon_delivery_evaluation.py:602 weapon_delivery_evaluation.py:607
+msgid "Effective Hit(s): "
+msgstr ""
+
+#: weapon_delivery_evaluation.py:603 weapon_delivery_evaluation.py:608
+msgid "Shockwave: "
+msgstr ""

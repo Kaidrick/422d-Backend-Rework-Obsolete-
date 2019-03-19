@@ -1,0 +1,119 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2019-01-14 15:18+0800\n"
+"PO-Revision-Date: 2019-01-14 15:22+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ja_JP\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+"X-Generator: Poedit 2.2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: missile_training_announcer.py:61
+msgid "Status"
+msgstr ""
+
+#: missile_training_announcer.py:62
+msgid "Bearing"
+msgstr ""
+
+#: missile_training_announcer.py:63
+msgid "Range"
+msgstr ""
+
+#: missile_training_announcer.py:64
+msgid "Missile ID"
+msgstr "ミサイルID："
+
+#: missile_training_announcer.py:65
+msgid "Note"
+msgstr ""
+
+#: missile_training_announcer.py:74
+msgid "Launch"
+msgstr ""
+
+#: missile_training_announcer.py:77
+msgid "Tracking"
+msgstr ""
+
+#: missile_training_announcer.py:86
+msgid " m"
+msgstr ""
+
+#: missile_training_announcer.py:104
+msgid "Hit"
+msgstr ""
+
+#: missile_training_announcer.py:105
+msgid "Splash Target"
+msgstr ""
+
+#: missile_training_announcer.py:107
+msgid "Defeated"
+msgstr ""
+
+#: missile_training_announcer.py:109
+msgid "Guidance Failed"
+msgstr ""
+
+#: missile_training_announcer.py:111
+msgid "Energy Depleted"
+msgstr ""
+
+#: missile_training_announcer.py:113
+msgid "Other Reasons"
+msgstr ""
+
+#: missile_training_announcer.py:150 missile_training_announcer.py:154
+#: missile_training_announcer.py:158
+msgid " for "
+msgstr ""
+
+#: missile_training_announcer.py:150 missile_training_announcer.py:154
+#: missile_training_announcer.py:158
+msgid "HDG "
+msgstr ""
+
+#: missile_training_announcer.py:151 missile_training_announcer.py:159
+msgid " nm"
+msgstr "海里"
+
+#: missile_training_announcer.py:153 missile_training_announcer.py:157
+msgid "Missile Launch: "
+msgstr "ミサイル発射："
+
+#: missile_training_announcer.py:155 missile_training_announcer.py:160
+msgid " km"
+msgstr "キロメートル"
+
+#: missile_training_announcer.py:159
+msgid " or "
+msgstr ""
+
+#: missile_training_announcer.py:169
+msgid "Missile energy depleted!"
+msgstr ""
+
+#: missile_training_announcer.py:171
+msgid "Missile decoyed!"
+msgstr ""
+
+#: missile_training_announcer.py:173
+msgid "Missile Lock Failed!"
+msgstr ""
+
+#: missile_training_announcer.py:175
+msgid "Missile Hit!"
+msgstr ""
+
+#~ msgid "Electronic Combat Simulation"
+#~ msgstr "電子戦シミュレーション"

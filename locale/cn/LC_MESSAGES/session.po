@@ -1,0 +1,58 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2019-01-08 12:39+0800\n"
+"PO-Revision-Date: 2019-01-08 12:41+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+"X-Generator: Poedit 2.2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: session.py:607
+msgid "[WIP]Flight Session Registered - "
+msgstr "[WIP]飞行记录注册 - "
+
+#: session.py:607 session.py:675
+msgid "Take-Off Time "
+msgstr "起飞时间"
+
+#: session.py:661 session.py:666
+msgid " kilometers"
+msgstr "千米"
+
+#: session.py:663 session.py:665
+msgid " nautical miles"
+msgstr "海里"
+
+#: session.py:666
+msgid " or "
+msgstr "或"
+
+#: session.py:674
+msgid "[WIP]Flight Session Report"
+msgstr "[WIP]飞行记录报告"
+
+#: session.py:676
+msgid "Land Time "
+msgstr "着陆时间"
+
+#: session.py:677
+msgid " minutes"
+msgstr "分钟"
+
+#: session.py:677
+msgid "Flight Duration: "
+msgstr "飞行时长："
+
+#: session.py:678
+msgid "You have travelled "
+msgstr "你飞行了"

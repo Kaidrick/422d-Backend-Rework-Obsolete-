@@ -1,0 +1,62 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2019-01-07 21:35+0800\n"
+"PO-Revision-Date: 2019-01-08 12:42+0800\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+"X-Generator: Poedit 2.2\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: zh_CN\n"
+
+#: missile.py:145 missile.py:165 missile.py:182 missile.py:342
+msgid "Electronic Combat Simulation"
+msgstr "电子战模拟"
+
+#: missile.py:147 missile.py:167 missile.py:184
+msgid "Missile Type: "
+msgstr "导弹型号："
+
+#: missile.py:149
+msgid "(by Out Maneuvering Missile)"
+msgstr "（导弹能量耗尽）"
+
+#: missile.py:149 missile.py:169 missile.py:186
+msgid "Simulation Result: "
+msgstr "模拟结果："
+
+#: missile.py:149 missile.py:186
+msgid "Missile Defeated "
+msgstr "规避成功"
+
+#: missile.py:169
+msgid "Missile Hit"
+msgstr "命中"
+
+#: missile.py:186
+msgid "(by Breaking Radar Lock)"
+msgstr "（跟踪雷达脱锁）"
+
+#: missile.py:344
+msgid "Missile Launch: "
+msgstr "导弹发射："
+
+#: missile.py:345
+msgid " for "
+msgstr "距离"
+
+#: missile.py:345
+msgid "HDG "
+msgstr "航向"
+
+#: missile.py:346
+msgid " nm"
+msgstr "海里"

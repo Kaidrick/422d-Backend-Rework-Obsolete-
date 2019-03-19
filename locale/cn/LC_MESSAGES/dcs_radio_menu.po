@@ -1,0 +1,432 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2018-12-16 17:02+0800\n"
+"PO-Revision-Date: 2018-12-29 10:57+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+"X-Generator: Poedit 2.2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: dcs_radio_menu.py:23
+msgid "Persian Gulf Proving Ground hosted by 422d TES."
+msgstr "由422d TES主办的波斯湾技术检验和考核地图。"
+
+#: dcs_radio_menu.py:24
+msgid "Nevada Test and Training Range hosted by 422d TES."
+msgstr "由422d TES主办的内华达测试和训练场地图。"
+
+#: dcs_radio_menu.py:25
+msgid "Black Sea Free Roaming Map hosted by 422d TEST."
+msgstr "由422d TES主办的黑海公众活动中心地图。"
+
+#: dcs_radio_menu.py:31
+msgid "My Position"
+msgstr "本机位置坐标"
+
+#: dcs_radio_menu.py:31 dcs_radio_menu.py:32 dcs_radio_menu.py:190
+msgid "Nav Link"
+msgstr "导航链"
+
+#: dcs_radio_menu.py:32 dcs_radio_menu.py:191
+msgid "Nearest Airport"
+msgstr "距离本机最近的机场"
+
+#: dcs_radio_menu.py:34 dcs_radio_menu.py:35 dcs_radio_menu.py:185
+msgid "Wx Link"
+msgstr "气象链"
+
+#: dcs_radio_menu.py:34 dcs_radio_menu.py:186
+msgid "Atmosphere Data At My Position"
+msgstr "本机位置大气信息"
+
+#: dcs_radio_menu.py:35 dcs_radio_menu.py:187
+msgid "D-ATIS From the Nearest Airport"
+msgstr "获取最近机场D-ATIS信息"
+
+#: dcs_radio_menu.py:37 dcs_radio_menu.py:194
+msgid "Utils Link"
+msgstr "后勤链"
+
+#: dcs_radio_menu.py:37 dcs_radio_menu.py:195
+msgid "Tankers on Station"
+msgstr "在航加油机列表"
+
+#: dcs_radio_menu.py:39 dcs_radio_menu.py:40 dcs_radio_menu.py:42
+#: dcs_radio_menu.py:43 dcs_radio_menu.py:44 dcs_radio_menu.py:45
+#: dcs_radio_menu.py:198
+msgid "Preferences"
+msgstr "偏好设置"
+
+#: dcs_radio_menu.py:39 dcs_radio_menu.py:40 dcs_radio_menu.py:204
+msgid "Language Settings"
+msgstr "语言设置"
+
+#: dcs_radio_menu.py:39 dcs_radio_menu.py:205
+msgid "Set English as default language"
+msgstr "英语，作为显示语言"
+
+#: dcs_radio_menu.py:40 dcs_radio_menu.py:206
+msgid "Set Chinese as default language"
+msgstr "简体中文，作为显示语言"
+
+#: dcs_radio_menu.py:42 dcs_radio_menu.py:43 dcs_radio_menu.py:44
+#: dcs_radio_menu.py:45 dcs_radio_menu.py:208
+msgid "System of Measurement"
+msgstr "计量单位"
+
+#: dcs_radio_menu.py:42 dcs_radio_menu.py:210
+msgid "Metric, always use"
+msgstr "公制，总是使用"
+
+#: dcs_radio_menu.py:43 dcs_radio_menu.py:209
+msgid "Imperial, always use"
+msgstr "英制，总是使用"
+
+#: dcs_radio_menu.py:44 dcs_radio_menu.py:211
+msgid "Either, usage depends on aircraft type"
+msgstr "度量单位适配飞机型号"
+
+#: dcs_radio_menu.py:45 dcs_radio_menu.py:212
+msgid "Metric Plus Imperial, always show me data in both"
+msgstr "公制和英制，总是同时显示"
+
+#: dcs_radio_menu.py:47 dcs_radio_menu.py:48 dcs_radio_menu.py:49
+#: dcs_radio_menu.py:172
+msgid "Server Information"
+msgstr "服务器信息"
+
+#: dcs_radio_menu.py:47 dcs_radio_menu.py:48 dcs_radio_menu.py:49
+#: dcs_radio_menu.py:174
+msgid "Administrative"
+msgstr "规则和须知"
+
+#: dcs_radio_menu.py:47 dcs_radio_menu.py:176
+msgid "View Message Of The Day"
+msgstr "查看服务器每日信息"
+
+#: dcs_radio_menu.py:48 dcs_radio_menu.py:178
+msgid "Rules"
+msgstr "服务器规则"
+
+#: dcs_radio_menu.py:49 dcs_radio_menu.py:180
+msgid "FAQ"
+msgstr "问答"
+
+#: dcs_radio_menu.py:153
+msgid ""
+"Based on your DCS World client language setting, 422d TES server has "
+"automatically set English as your default display language.\n"
+"You can always set your preference via in-game radio menu option <F.10 Other>"
+msgstr ""
+"根据您的DCS World客户端语言，422d TES服务器已经自动将简体中文设置为信息显示语"
+"言。\n"
+"您可以通过游戏中的无线电菜单<F.10 其他>中的偏好设置选项来改变信息显示语言。"
+
+#: dcs_radio_menu.py:161
+msgid ", welcome to "
+msgstr "，欢迎来到"
+
+#: dcs_radio_menu.py:162
+msgid "Here is your connection info:"
+msgstr "以下是你的连接信息："
+
+#: dcs_radio_menu.py:163
+msgid "IP Address: "
+msgstr "IP地址："
+
+#: dcs_radio_menu.py:164
+msgid "UCID: "
+msgstr "UCID："
+
+#: dcs_radio_menu.py:166
+msgid "Check Radio Menu <F.10 Other> for more information and options."
+msgstr "通过游戏中的无线电菜单<F.10 其他>来获取更多服务器和任务的相关信息。"
+
+#: dcs_radio_menu.py:183
+msgid "Battle Link"
+msgstr "战斗链"
+
+#: dcs_radio_menu.py:199
+msgid "Translation Settings"
+msgstr "本地化设置"
+
+#: dcs_radio_menu.py:200
+msgid "Translate Unit of Measurement"
+msgstr "翻译计量单位"
+
+#: dcs_radio_menu.py:201
+msgid "Enable"
+msgstr "启用"
+
+#: dcs_radio_menu.py:202
+msgid "Disable"
+msgstr "禁用"
+
+#: dcs_radio_menu.py:293
+msgid "Calm"
+msgstr "无风"
+
+#: dcs_radio_menu.py:293 dcs_radio_menu.py:296 dcs_radio_menu.py:299
+#: dcs_radio_menu.py:302
+msgid "Wind: "
+msgstr "风速："
+
+#: dcs_radio_menu.py:296 dcs_radio_menu.py:302
+msgid "kts"
+msgstr "节"
+
+#: dcs_radio_menu.py:297 dcs_radio_menu.py:300 dcs_radio_menu.py:303
+msgid "Wind Direction: "
+msgstr "风向："
+
+#: dcs_radio_menu.py:299 dcs_radio_menu.py:302
+msgid "m/s"
+msgstr "米每秒"
+
+#: dcs_radio_menu.py:302 dcs_radio_menu.py:321 dcs_radio_menu.py:324
+#: dcs_radio_menu.py:325 dcs_radio_menu.py:364
+msgid "or"
+msgstr "或"
+
+#: dcs_radio_menu.py:307 dcs_radio_menu.py:314 dcs_radio_menu.py:321
+msgid "Weather at your Location: "
+msgstr "本机位置天气信息："
+
+#: dcs_radio_menu.py:307 dcs_radio_menu.py:314 dcs_radio_menu.py:321
+msgid "at"
+msgstr "海拔"
+
+#: dcs_radio_menu.py:307 dcs_radio_menu.py:321
+msgid "ft"
+msgstr "英尺"
+
+#: dcs_radio_menu.py:310 dcs_radio_menu.py:317 dcs_radio_menu.py:324
+msgid "OAT: "
+msgstr "外部气温："
+
+#: dcs_radio_menu.py:310 dcs_radio_menu.py:324
+#, fuzzy
+#| msgid "F"
+msgid "F"
+msgstr "华氏度"
+
+#: dcs_radio_menu.py:311 dcs_radio_menu.py:318
+msgid "QNH: "
+msgstr "修正海压："
+
+#: dcs_radio_menu.py:311 dcs_radio_menu.py:325
+msgid "inHg"
+msgstr "英寸汞柱"
+
+#: dcs_radio_menu.py:314 dcs_radio_menu.py:321
+msgid "m"
+msgstr "米"
+
+#: dcs_radio_menu.py:317 dcs_radio_menu.py:324
+#, fuzzy
+#| msgid "C"
+msgid "C"
+msgstr "摄氏度"
+
+#: dcs_radio_menu.py:318 dcs_radio_menu.py:325
+msgid "hP"
+msgstr "百帕"
+
+#: dcs_radio_menu.py:325
+msgid "Pressure: "
+msgstr "压强："
+
+#: dcs_radio_menu.py:352 dcs_radio_menu.py:357 dcs_radio_menu.py:363
+msgid ". Fly heading "
+msgstr "。航向"
+
+#: dcs_radio_menu.py:352 dcs_radio_menu.py:357 dcs_radio_menu.py:363
+msgid "Nearest airport is "
+msgstr "距离你最近的机场是"
+
+#: dcs_radio_menu.py:353 dcs_radio_menu.py:358 dcs_radio_menu.py:364
+msgid " for "
+msgstr "，距离"
+
+#: dcs_radio_menu.py:353 dcs_radio_menu.py:364
+msgid "nm"
+msgstr "海里"
+
+#: dcs_radio_menu.py:358 dcs_radio_menu.py:364
+msgid "km"
+msgstr "千米"
+
+#: dcs_radio_menu.py:385
+msgid "D-ATIS Uplink from "
+msgstr "数据链ATIS，来源："
+
+#: dcs_radio_menu.py:386
+msgid "Info "
+msgstr "气象信息"
+
+#: dcs_radio_menu.py:387
+msgid " at "
+msgstr " 风速"
+
+#: dcs_radio_menu.py:387
+msgid " kts"
+msgstr "节"
+
+#: dcs_radio_menu.py:387
+msgid "Wind "
+msgstr "地面风"
+
+#: dcs_radio_menu.py:387 dcs_radio_menu.py:389
+msgid " or "
+msgstr "或"
+
+#: dcs_radio_menu.py:388
+msgid " mps"
+msgstr "米每秒"
+
+#: dcs_radio_menu.py:388
+msgid "Temperature "
+msgstr "气温"
+
+#: dcs_radio_menu.py:389
+msgid "Altimeter "
+msgstr "修正海压"
+
+#: dcs_radio_menu.py:390
+msgid " End"
+msgstr "结束"
+
+#: dcs_radio_menu.py:390
+msgid " in use"
+msgstr "跑道起降"
+
+#: dcs_radio_menu.py:390
+msgid "Information "
+msgstr "信息"
+
+#: dcs_radio_menu.py:390
+msgid "Runway "
+msgstr "使用"
+
+#: dcs_radio_menu.py:393
+msgid "D-ATIS download failed. No available D-ATIS from nearest station."
+msgstr "D-ATIS获取失败。附近台站没有可用的D-ATIS信息。"
+
+#: dcs_radio_menu.py:398
+msgid "Tanker Unit(s) on Station: "
+msgstr "所有在航加油机："
+
+#: dcs_radio_menu.py:411
+msgid " at Angel "
+msgstr "飞行高度"
+
+#: dcs_radio_menu.py:411
+msgid "Track "
+msgstr "盘旋路径"
+
+#: dcs_radio_menu.py:420
+msgid "No tanker on station at the moment."
+msgstr "没有在航的加油机。"
+
+#: dcs_radio_menu.py:456
+msgid "You have set Imperial Units as your preferred system of measurement."
+msgstr "已将英制系统设置为偏好的计量系统。"
+
+#: dcs_radio_menu.py:463
+msgid "You have set Metric System as your preferred system of measurement."
+msgstr "已将米制系统设置为偏好的计量系统。"
+
+#: dcs_radio_menu.py:470
+msgid "You have set Mixed Units as your preferred system of measurement."
+msgstr "已将混合单位系统设置为偏好的计量系统。"
+
+#: dcs_radio_menu.py:477
+msgid ""
+"You have set to display data in both Imperial and Metric System of "
+"measurement."
+msgstr "已将计量系统偏好设置为同时显示英制和米制单位。"
+
+#~ msgid "Weather"
+#~ msgstr "天气信息"
+
+#~ msgid "Anapa"
+#~ msgstr "阿纳帕"
+
+#~ msgid "Batumi"
+#~ msgstr "巴统"
+
+#~ msgid "Beslan"
+#~ msgstr "别斯兰"
+
+#~ msgid "Gelendzhik"
+#~ msgstr "格连吉克"
+
+#~ msgid "Gudauta"
+#~ msgstr "古达乌塔"
+
+#~ msgid "Khanskaya"
+#~ msgstr "汉斯卡亚"
+
+#~ msgid "Kobuleti"
+#~ msgstr "科布列季"
+
+#~ msgid "Kolkhi"
+#~ msgstr "科尔奇"
+
+#~ msgid "Krasnodar"
+#~ msgstr "克拉斯诺达尔"
+
+#~ msgid "Krymsk"
+#~ msgstr "克雷姆斯克"
+
+#~ msgid "Kutaisi"
+#~ msgstr "库塔伊西"
+
+#~ msgid "Lochini"
+#~ msgstr "洛奇尼"
+
+#~ msgid "MinVody"
+#~ msgstr "矿水城"
+
+#~ msgid "Mozdok"
+#~ msgstr "莫兹多克"
+
+#~ msgid "Nalchik"
+#~ msgstr "纳尔奇克"
+
+#~ msgid "Novorossiysk"
+#~ msgstr "新罗西斯克"
+
+#~ msgid "Pashkovsky"
+#~ msgstr "帕什科夫斯基"
+
+#~ msgid "Sochi"
+#~ msgstr "索契"
+
+#~ msgid "Soganlug"
+#~ msgstr "索干卢"
+
+#~ msgid "Sukhumi"
+#~ msgstr "苏呼米"
+
+#~ msgid "Vaziani"
+#~ msgstr "瓦茨亚尼"
+
+#~ msgid "km/h"
+#~ msgstr "千米时"
+
+#~ msgid "Always use Metric"
+#~ msgstr "总是使用公制"
+
+#~ msgid "Always use Imperial"
+#~ msgstr "总是使用英制"
