@@ -24,7 +24,8 @@ for coa_name, coa_data in pairs(env.mission.coalition) do  -- parse coalition ta
                     local groupName = env.getValueDictByKey(group_data.name)  -- -> group_name
                     for unit_num, unit_data in pairs(group_data.units) do
                       if unit_data.skill == 'Client' then  -- is a playable unit, add to res_paste
-                        res_paste[groupName] = {
+                        local unit_name_idx = env.getValueDictByKey(unit_data.name)
+                        res_paste[unit_name_idx] = {
                         ['unit_name'] = env.getValueDictByKey(unit_data.name),  -- -> unit_name
                         ['group_name'] = groupName,
                         ['group_id'] = group_data.groupId

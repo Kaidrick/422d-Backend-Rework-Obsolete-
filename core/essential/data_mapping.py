@@ -31,7 +31,7 @@ def map_playable_group_info():
         cmd = f.read()  # read whole lua script
 
     res = RequestAPINetDostring(cmd, echo_result=True).send()  # do script
-    cdi.playable_unit_info_by_name = res  # container dictionary, indexed by unit name
+    cdi.playable_unit_info_by_unit_name = res  # container dictionary, indexed by unit name
     for unit_name, unit_info in res.items():
         cdi.playable_unit_info_by_group_id[unit_info['group_id']] = unit_info
         cdi.playable_unit_info_by_group_name[unit_info['group_name']] = unit_info
@@ -81,12 +81,12 @@ def get_all_players_data():
                 # trigger spawn signal here?
                 try:
                     player_unit_name = res[name]['unit_name'].rstrip(' ')
-                    player_group_id = cdi.playable_unit_info_by_name[player_unit_name]['group_id']
+                    player_group_id = cdi.playable_unit_info_by_unit_name[player_unit_name]['group_id']
                     player_runtime_id_name = res[name]['unit_runtime_id_name'].rstrip(' ')
                     # player_runtime_id is a string start with id_, not a number
                 except KeyError:
                     print(res)
-                    print(cdi.playable_unit_info_by_name)
+                    print(cdi.playable_unit_info_by_unit_name)
                     print(cdi.playable_unit_info_by_group_id)
                     print(cdi.playable_unit_info_by_group_name)
                 else:
