@@ -121,7 +121,8 @@ def get_all_players_data():
 
         obs_names = _active_players_name_set.difference(_check_players_name_set)
         for name in obs_names:
-            print(f"Player >>>{name}<<< has left the mission.")
+            if name != '':
+                print(f"Player >>>{name}<<< has left the mission.")
 
         _active_players_name_set = _check_players_name_set
 

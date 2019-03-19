@@ -50,8 +50,8 @@ def prec_step():
 
                 lop = cdi.playable_unit_info_by_group_name[group_name]
                 p_group_id = lop['group_id']
-                RequestDcsDebugCommand(f"trigger.action.outTextForGroup({p_group_id}, "
-                                       f"'track: {time.time()}', 1, true)").send()
+                RequestDcsDebugCommand(f"trigger.action.outText({p_group_id}, "
+                                       f"'group: {p_group_id}, track: {time.time()}', 1, true)").send()
                 # print(object_runtime_id_name, unit_type, player_name, group_name)
                 # id_16938241
                 # res_test = {
