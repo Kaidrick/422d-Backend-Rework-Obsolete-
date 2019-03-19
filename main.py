@@ -59,7 +59,8 @@ def prec_step():
                     print("maybe need to wait for unit update?")
                     print(player_name)
                     print(cdi.group_id_alloc_by_player_name)
-                    print(cdi.group_id_alloc_by_runtime_id[object_runtime_id_name])
+                    print(cdi.group_id_alloc_by_runtime_id)
+                    print(object_runtime_id_name)
 
                 else:
                     print(f"sending to {p_group_id} {object_runtime_id_name}")
