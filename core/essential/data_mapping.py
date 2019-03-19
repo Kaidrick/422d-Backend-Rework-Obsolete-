@@ -87,9 +87,9 @@ def get_all_players_data():
                     # player_runtime_id is a string start with id_, not a number
                 except KeyError:
                     print(res)
-                    print(cdi.playable_unit_info_by_unit_name)
-                    print(cdi.playable_unit_info_by_group_id)
-                    print(cdi.playable_unit_info_by_group_name)
+                    # print(cdi.playable_unit_info_by_unit_name)
+                    # print(cdi.playable_unit_info_by_group_id)
+                    # print(cdi.playable_unit_info_by_group_name)
                 else:
                     # trigger signal here
                     # RequestDcsDebugCommand(f"trigger.action.outTextForGroup({player_group_id}, 'Welcome!', 10)").send()

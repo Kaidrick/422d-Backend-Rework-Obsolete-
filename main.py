@@ -61,9 +61,9 @@ def prec_step():
                     print(object_runtime_id_name)
 
                 else:
-                    print(f"sending to {p_group_id} {object_runtime_id_name}")
+                    # print(f"sending to {p_group_id} {object_runtime_id_name}")
                     RequestDcsDebugCommand(f"trigger.action.outTextForGroup({p_group_id}, "
-                                           f"'track: {time.time()}', 1, true)").send()
+                                           f"'ctime: {time.time()}', 1, true)").send()
                 # print(object_runtime_id_name, unit_type, player_name, group_name)
                 # id_16938241
                 # res_test = {
