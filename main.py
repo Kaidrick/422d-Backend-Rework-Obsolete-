@@ -40,6 +40,8 @@ def prec_step():
     :return:
     """
     while True:
+        get_all_players_data()
+
         res = RequestExportUnitsData().send()
 
         for object_runtime_id_name, object_data in res.items():
@@ -90,7 +92,7 @@ def prec_step():
                 #     'UnitName': 'Kaidrick'
                 # }
 
-        time.sleep(1)
+        time.sleep(0.01)
 
 
 def pull_loop():
@@ -110,7 +112,7 @@ def pull_loop():
 if __name__ == '__main__':
     map_playable_group_info()
 
-    threading.Thread(target=step).start()
+    # threading.Thread(target=step).start()
     threading.Thread(target=pull_loop).start()
     threading.Thread(target=prec_step).start()
 
