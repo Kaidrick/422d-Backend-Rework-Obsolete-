@@ -1,0 +1,10 @@
+[
+  {
+    "name": "63B Bomb Circle",
+    "pos": {"x": -358622, "z": -61612, "y": 0},
+    "type": "dpi",
+    "entry": "All Direction",
+    "pack": "South Ranges - 63B",
+    "desc": "Target circle can be used for precision ammunition."
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Range 75",
+    "pos": {"x": -255673, "z": -166886, "y": 0},
+    "type": "info",
+    "entry": "Range entry and departure is conducted from adjacent range airspace.",
+    "pack": "North Ranges - 75",
+    "desc": "Unmanned range consisting of missile sites and a convoy located in the central portion of R-4807. Training and inert ordnance and live ordnance (except for CBU munitions) are authorized."
+  }
+]

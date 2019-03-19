@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Range 62",
+    "pos": {"x": -315547, "z": -63606, "y": 0},
+    "type": "info",
+    "entry": "Alamo B/C or as directed",
+    "pack": "South Ranges - Range 62",
+    "desc": "Located on the east side of R-4806. The majority of the targets are located in and around Dogbone Lake. The targets include nuclear bomb circles and tactical targets consisting of an airfield, supply area, anti-aircraft artillery, convoys, and a surface-to-air missile site."
+  },
+
+  {
+    "name": "Small Town Square With Airport Mock-up",
+    "pos": {"x": -337951, "z": -55505, "y": 0},
+    "type": "area",
+    "entry": "West (Alamo Charlie), keep above 8000 feet MSL in transition.",
+    "pack": "South Ranges - Range 62",
+    "desc": "Only inert or training ordinance is allowed in this area."
+  },
+
+  {
+    "name": "Convoy Targets",
+    "pos": {"x": -334347, "z": -55370, "y": 0},
+    "type": "area",
+    "entry": "All Direction",
+    "pack": "South Ranges - Range 62",
+    "desc": "Targets consist of light armored ground units. Only inert or training ordinance is allowed in this area."
+  },
+
+  {
+    "name": "Military Compound Targets",
+    "pos": {"x": -334096, "z": -56620, "y": 0},
+    "type": "area",
+    "entry": "All Direction",
+    "pack": "South Ranges - Range 62",
+    "desc": "Targets consist of armored ground units and buildings. Only inert or training ordinance is allowed in this area."
+  }
+]

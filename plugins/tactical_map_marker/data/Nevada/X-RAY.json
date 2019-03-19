@@ -1,0 +1,10 @@
+[
+  {
+    "name": "X-Ray",
+    "pos": {"x": -346658, "z": -18851, "y": 0},
+    "type": "info",
+    "entry": "from/to Nellis AFB or Sally Corridor",
+    "pack": "South Ranges - X-Ray",
+    "desc": "X-Ray is control by Nellis Control and is an extension of Nellis AFB airspace. Aircraft from Nellis en route to the North Range are usually sent to this area first before being given the permission to enter NTTR."
+  }
+]
