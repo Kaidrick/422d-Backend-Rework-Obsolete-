@@ -47,9 +47,9 @@ def prec_step():
             if object_data['Flags']['Human'] is True:
                 unit_type = object_data['Name']
                 player_name = object_data['UnitName']
-                group_name = object_data['GroupName'].lstrip(' ').rstrip(' ')  # supposedly wrong for some reason..
+                # group_name = object_data['GroupName'].lstrip(' ').rstrip(' ')  # supposedly wrong for some reason..
 
-                lop = cdi.playable_unit_info_by_group_name[group_name]  # FIXME: either group name or group id is WRONG
+                # lop = cdi.playable_unit_info_by_group_name[group_name]  # FIXME: either group name or group id is WRONG
                 try:
                     p_group_id = cdi.group_id_alloc_by_player_name[player_name]
                 except KeyError:

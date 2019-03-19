@@ -211,12 +211,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="49" column="115" selection-start-line="49" selection-start-column="115" selection-end-line="49" selection-end-column="115" />
+            <state relative-caret-position="398">
+              <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
               <folding>
                 <element signature="e#12#23#0" expanded="true" />
-                <marker date="1552981279370" expanded="true" signature="810:3626" ph="..." />
-                <marker date="1552981279370" expanded="true" signature="900:3339" ph="..." />
+                <marker date="1552981321601" expanded="true" signature="810:3630" ph="..." />
+                <marker date="1552981321601" expanded="true" signature="900:3343" ph="..." />
               </folding>
             </state>
           </provider>
@@ -792,12 +792,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="49" column="115" selection-start-line="49" selection-start-column="115" selection-end-line="49" selection-end-column="115" />
+        <state relative-caret-position="398">
+          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
           <folding>
             <element signature="e#12#23#0" expanded="true" />
-            <marker date="1552981279370" expanded="true" signature="810:3626" ph="..." />
-            <marker date="1552981279370" expanded="true" signature="900:3339" ph="..." />
+            <marker date="1552981321601" expanded="true" signature="810:3630" ph="..." />
+            <marker date="1552981321601" expanded="true" signature="900:3343" ph="..." />
           </folding>
         </state>
       </provider>
