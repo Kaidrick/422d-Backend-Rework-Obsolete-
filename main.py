@@ -51,9 +51,14 @@ def prec_step():
 
                 # lop = cdi.playable_unit_info_by_group_name[group_name]  # FIXME: either group name or group id is WRONG
                 try:
-                    p_group_id = cdi.group_id_alloc_by_player_name[player_name]
+                    # p_group_id = cdi.group_id_alloc_by_player_name[player_name]
+                    p_group_id = cdi.group_id_alloc_by_runtime_id[object_runtime_id_name]
                 except KeyError:
                     print("maybe need to wait for unit update?")
+                    print(player_name)
+                    print(cdi.group_id_alloc_by_player_name)
+                    print(cdi.group_id_alloc_by_runtime_id[object_runtime_id_name])
+
                 else:
                     print(f"sending to {p_group_id} {object_runtime_id_name}")
                     RequestDcsDebugCommand(f"trigger.action.outTextForGroup({p_group_id}, "

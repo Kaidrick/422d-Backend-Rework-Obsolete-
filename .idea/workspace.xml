@@ -4,7 +4,7 @@
     <list default="true" id="600c2c46-9673-4fc9-98d6-73a0b6339ae7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/core/data_interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/data_interface.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/essential/data_mapping.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/essential/data_mapping.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/essential/scripts/map_playable.lua" beforeDir="false" afterPath="$PROJECT_DIR$/core/essential/scripts/map_playable.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,8 +49,8 @@
             <file pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/core/data_interface.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="417">
-                    <caret line="32" column="58" lean-forward="true" selection-start-line="32" selection-start-column="58" selection-end-line="32" selection-end-column="58" />
+                  <state relative-caret-position="440">
+                    <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
                     <folding>
                       <element signature="e#106#167#0" expanded="true" />
                     </folding>
@@ -126,27 +126,27 @@
         <counts>
           <entry key="dummy" value="4" />
           <entry key="lua" value="570" />
-          <entry key="py" value="7383" />
+          <entry key="py" value="7618" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="574" />
-          <entry key="Python" value="7383" />
+          <entry key="Python" value="7618" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/essential/data_mapping.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="75" column="22" lean-forward="true" selection-start-line="75" selection-start-column="22" selection-end-line="75" selection-end-column="22" />
+            <state relative-caret-position="460">
+              <caret line="119" column="59" lean-forward="true" selection-start-line="119" selection-start-column="59" selection-end-line="119" selection-end-column="59" />
               <folding>
                 <element signature="e#147#156#0" expanded="true" />
-                <marker date="1552982408481" expanded="true" signature="2706:5965" ph="..." />
+                <marker date="1552984472158" expanded="true" signature="2706:6289" ph="..." />
               </folding>
             </state>
           </provider>
@@ -186,15 +186,15 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+            <state relative-caret-position="437">
+              <caret line="58" column="60" lean-forward="true" selection-start-line="58" selection-start-column="60" selection-end-line="58" selection-end-column="60" />
               <folding>
                 <element signature="e#12#23#0" expanded="true" />
-                <marker date="1552981321601" expanded="true" signature="810:3630" ph="..." />
-                <marker date="1552981321601" expanded="true" signature="900:3343" ph="..." />
+                <marker date="1552984558896" expanded="true" signature="810:3907" ph="..." />
+                <marker date="1552984558896" expanded="true" signature="900:3620" ph="..." />
               </folding>
             </state>
           </provider>
@@ -242,10 +242,10 @@
         <option value="$PROJECT_DIR$/plugins/declare_plugins.py" />
         <option value="$PROJECT_DIR$/core/request/api/player_preference.py" />
         <option value="$PROJECT_DIR$/core/essential/player.py" />
-        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/core/essential/scripts/map_playable.lua" />
         <option value="$PROJECT_DIR$/core/data_interface.py" />
         <option value="$PROJECT_DIR$/core/essential/data_mapping.py" />
-        <option value="$PROJECT_DIR$/core/essential/scripts/map_playable.lua" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
@@ -750,15 +750,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/core/essential/scripts/map_playable.lua">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
-          <folding>
-            <element signature="e#12#23#0" expanded="true" />
-            <marker date="1552981321601" expanded="true" signature="810:3630" ph="..." />
-            <marker date="1552981321601" expanded="true" signature="900:3343" ph="..." />
-          </folding>
+        <state relative-caret-position="541">
+          <caret line="30" column="57" lean-forward="true" selection-start-line="30" selection-start-column="57" selection-end-line="30" selection-end-column="57" />
         </state>
       </provider>
     </entry>
@@ -774,28 +769,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core/data_interface.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="32" column="58" lean-forward="true" selection-start-line="32" selection-start-column="58" selection-end-line="32" selection-end-column="58" />
+        <state relative-caret-position="440">
+          <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
           <folding>
             <element signature="e#106#167#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/essential/scripts/map_playable.lua">
+    <entry file="file://$PROJECT_DIR$/core/essential/data_mapping.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="30" column="57" lean-forward="true" selection-start-line="30" selection-start-column="57" selection-end-line="30" selection-end-column="57" />
+        <state relative-caret-position="460">
+          <caret line="119" column="59" lean-forward="true" selection-start-line="119" selection-start-column="59" selection-end-line="119" selection-end-column="59" />
+          <folding>
+            <element signature="e#147#156#0" expanded="true" />
+            <marker date="1552984472158" expanded="true" signature="2706:6289" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/essential/data_mapping.py">
+    <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="75" column="22" lean-forward="true" selection-start-line="75" selection-start-column="22" selection-end-line="75" selection-end-column="22" />
+        <state relative-caret-position="437">
+          <caret line="58" column="60" lean-forward="true" selection-start-line="58" selection-start-column="60" selection-end-line="58" selection-end-column="60" />
           <folding>
-            <element signature="e#147#156#0" expanded="true" />
-            <marker date="1552982408481" expanded="true" signature="2706:5965" ph="..." />
+            <element signature="e#12#23#0" expanded="true" />
+            <marker date="1552984558896" expanded="true" signature="810:3907" ph="..." />
+            <marker date="1552984558896" expanded="true" signature="900:3620" ph="..." />
           </folding>
         </state>
       </provider>

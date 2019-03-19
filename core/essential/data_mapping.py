@@ -103,6 +103,8 @@ def get_all_players_data():
                     }
 
                     cdi.group_id_alloc_by_player_name[name] = player_group_id
+                    cdi.group_id_alloc_by_runtime_id[player_runtime_id_name] = player_group_id
+                    cdi.player_runtime_id_alloc_by_name[name] = player_runtime_id_name
 
                     spark.player_spawn(spk_dt)
                     print(f"Player >>>{spk_dt['data']['name']}<<< has spawned. "
@@ -116,6 +118,8 @@ def get_all_players_data():
             if name != '':
                 print(f"Player >>>{name}<<< has left the mission.")
                 del cdi.group_id_alloc_by_player_name[name]
+                kn_runtime_id = cdi.player_runtime_id_alloc_by_name[name]
+                del cdi.group_id_alloc_by_runtime_id[kn_runtime_id]
 
         # pass current name set to active set
         _active_players_name_set = _check_players_name_set
