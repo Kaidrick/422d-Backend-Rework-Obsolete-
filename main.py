@@ -43,13 +43,15 @@ def prec_step():
         res = RequestExportUnitsData().send()
 
         for object_runtime_id_name, object_data in res.items():
+
             if object_data['Flags']['Human'] is True:
                 unit_type = object_data['Name']
                 player_name = object_data['UnitName']
-                group_name = object_data['GroupName']
+                group_name = object_data['GroupName'].lstrip(' ').rstrip(' ')
 
                 lop = cdi.playable_unit_info_by_group_name[group_name]
                 p_group_id = lop['group_id']
+                print(f"sending to {p_group_id} {object_runtime_id_name}")
                 RequestDcsDebugCommand(f"trigger.action.outTextForGroup({p_group_id}, "
                                        f"'track: {time.time()}', 1, true)").send()
                 # print(object_runtime_id_name, unit_type, player_name, group_name)
@@ -79,7 +81,7 @@ def prec_step():
                 #     'UnitName': 'Kaidrick'
                 # }
 
-        time.sleep(0.1)
+        time.sleep(1)
 
 
 def pull_loop():
