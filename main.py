@@ -47,13 +47,17 @@ def prec_step():
             if object_data['Flags']['Human'] is True:
                 unit_type = object_data['Name']
                 player_name = object_data['UnitName']
-                group_name = object_data['GroupName'].lstrip(' ').rstrip(' ')
+                group_name = object_data['GroupName'].lstrip(' ').rstrip(' ')  # supposedly wrong for some reason..
 
                 lop = cdi.playable_unit_info_by_group_name[group_name]  # FIXME: either group name or group id is WRONG
-                p_group_id = cdi.group_id_alloc_by_player_name[player_name]
-                print(f"sending to {p_group_id} {object_runtime_id_name}")
-                RequestDcsDebugCommand(f"trigger.action.outTextForGroup({p_group_id}, "
-                                       f"'track: {time.time()}', 1, true)").send()
+                try:
+                    p_group_id = cdi.group_id_alloc_by_player_name[player_name]
+                except KeyError:
+                    print("maybe need to wait for unit update?")
+                else:
+                    print(f"sending to {p_group_id} {object_runtime_id_name}")
+                    RequestDcsDebugCommand(f"trigger.action.outTextForGroup({p_group_id}, "
+                                           f"'track: {time.time()}', 1, true)").send()
                 # print(object_runtime_id_name, unit_type, player_name, group_name)
                 # id_16938241
                 # res_test = {
