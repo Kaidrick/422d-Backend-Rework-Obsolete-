@@ -49,8 +49,8 @@ def prec_step():
                 player_name = object_data['UnitName']
                 group_name = object_data['GroupName'].lstrip(' ').rstrip(' ')
 
-                lop = cdi.playable_unit_info_by_group_name[group_name]
-                p_group_id = lop['group_id']
+                lop = cdi.playable_unit_info_by_group_name[group_name]  # FIXME: either group name or group id is WRONG
+                p_group_id = cdi.group_id_alloc_by_player_name[player_name]
                 print(f"sending to {p_group_id} {object_runtime_id_name}")
                 RequestDcsDebugCommand(f"trigger.action.outTextForGroup({p_group_id}, "
                                        f"'track: {time.time()}', 1, true)").send()

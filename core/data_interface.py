@@ -26,6 +26,8 @@ active_players = {}  # indexed by player UCID
 active_players_by_group_id = {}  # indexed by player group id
 active_players_by_name = {}  # indexed by player name
 
+group_id_alloc_by_player_name = {}
+
 # all playable units indexed by group id, group name and unit_name
 playable_unit_info_by_name = {}  # indexed by unit name
 playable_unit_info_by_group_id = {}  # indexed by group id
