@@ -7,6 +7,7 @@ import core.data_interface as cdi
 import core.spark as spark
 from core.request.miz.dcs_debug import RequestDcsDebugCommand
 from core.request.api.api_debug import RequestAPINetDostring
+from core.essential.other_unit import OtherUnits
 
 
 f_map_playable_group_info = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'scripts', 'map_playable.lua')
@@ -134,6 +135,48 @@ def get_all_players_data():
                 del cdi.group_id_alloc_by_player_name[name]
 
         _active_players_name_set = _check_players_name_set
+
+
+def other_data_process(res_units):
+
+    active_other_units = cdi.other_units_by_runtime_id.copy()
+
+    check_other_units = {}
+
+    for object_id_name, object_data in res_units.items():
+        if object_data['Flags']['Human'] is False:  # is an AI unit
+            kn_other_unit = OtherUnits(object_id_name, object_data)
+            check_other_units[object_id_name] = kn_other_unit
+
+
+    # after comparing, pass to container
+    cdi.other_units_by_runtime_id = check_other_units
+
+    # id_16938241
+    # res_test = {
+    #     'Heading': 5.412256360054,
+    #     'Bank': -0.00099762040190399,
+    #     'Pitch': 0.091638997197151,
+    #     'Position': {'x': -399128.69931336, 'y': 563.55842578656, 'z': -18581.799532482},
+    #     'LatLongAlt': {
+    #         'Alt': 563.55842578656, 'Lat': 36.227060267933, 'Long': -115.048208364
+    #     },
+    #     'Coalition': 'Enemies',
+    #     'CoalitionID': 2,
+    #     'Country': 2,
+    #
+    #     'Flags': {
+    #         'AI_ON': True, 'Born': True, 'Human': True, 'IRJamming': False, 'Invisible': False,
+    #         'Jamming': False, 'RadarActive': False, 'Static': False
+    #     },
+    #
+    #     'GroupName': 'AV-8B N/A (401) Sn: N/A',
+    #     'Name': 'AV8BNA',
+    #     'Type': {
+    #          'level1': 1, 'level2': 1, 'level3': 1, 'level4': 260
+    #     },
+    #     'UnitName': 'Kaidrick'
+    # }
 
 
 if __name__ == '__main__':

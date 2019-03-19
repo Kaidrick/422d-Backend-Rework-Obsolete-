@@ -1,7 +1,7 @@
 from core.request.miz.dcs_object import Task, Point
-from game_object_control.dcs_set_task import DcsSetTask
+from core.game_object_control.dcs_set_task import DcsSetTask
 from core.request.miz.dcs_env import filter_none_value
-import game_object_control.AI as AI
+import core.game_object_control.AI as AI
 
 
 class TaskType:

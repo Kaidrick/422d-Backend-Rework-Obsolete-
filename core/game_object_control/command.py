@@ -1,4 +1,4 @@
-from game_object_control.dcs_set_command import DcsSetCommand, CommandType
+from core.game_object_control.dcs_set_command import DcsSetCommand, CommandType
 
 
 class SetFrequency(DcsSetCommand):
@@ -65,7 +65,7 @@ class SetImmortal(DcsSetCommand):
 
 
 if __name__ == '__main__':
-    from game_object_control import AI
+    from core.game_object_control import AI
 
     kmd = """local sid = Unit.getByName('新飞机群组'):getID()
             trigger.action.outText(sid, 10)

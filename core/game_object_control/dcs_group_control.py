@@ -1,6 +1,6 @@
 from core.request.miz.dcs_object import Group, Unit, Point
-import game_object_control.AI as AI
-from game_object_control.task import Mission
+import core.game_object_control.AI as AI
+from core.game_object_control.task import Mission
 
 
 # TODO: generate airport information for nav use

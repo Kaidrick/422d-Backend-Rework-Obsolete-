@@ -1,4 +1,4 @@
-from game_object_control.dcs_set_task import DcsSetTask
+from core.game_object_control.dcs_set_task import DcsSetTask
 
 
 class EnRouteTaskType:

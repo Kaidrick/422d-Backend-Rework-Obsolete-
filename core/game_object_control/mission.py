@@ -1,7 +1,7 @@
 # always use mission to issue task
 # always use command to execute command
 # always use option to set option
-from game_object_control.dcs_set_task import DcsSetTask
+from core.game_object_control.dcs_set_task import DcsSetTask
 
 
 def filter_none_value(kn_dict):

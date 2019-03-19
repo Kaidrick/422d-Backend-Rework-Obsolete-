@@ -3,7 +3,7 @@ import time
 import threading
 
 # -- basic data mapping function
-from core.essential.data_mapping import get_all_players_data, map_playable_group_info
+from core.essential.data_mapping import get_all_players_data, map_playable_group_info, other_data_process
 
 # -- player preferences
 from core.request.api.player_preference import get_player_preference_settings
@@ -49,9 +49,7 @@ def prec_step():
             if object_data['Flags']['Human'] is True:
                 unit_type = object_data['Name']
                 player_name = object_data['UnitName']
-                # group_name = object_data['GroupName'].lstrip(' ').rstrip(' ')  # supposedly wrong for some reason..
 
-                # lop = cdi.playable_unit_info_by_group_name[group_name]  # FIXME: either group name or group id is WRONG
                 try:
                     # p_group_id = cdi.group_id_alloc_by_player_name[player_name]
                     p_group_id = cdi.group_id_alloc_by_runtime_id[object_runtime_id_name]
@@ -93,6 +91,7 @@ def prec_step():
                 #     'UnitName': 'Kaidrick'
                 # }
 
+        other_data_process(res)
         time.sleep(0.01)
 
 

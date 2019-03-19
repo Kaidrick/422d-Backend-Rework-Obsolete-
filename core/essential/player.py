@@ -21,7 +21,7 @@ class Player:
     """
     Player model
     """
-    def __init__(self, player_name, group_id, unit_name, runtime_id):
+    def __init__(self, player_name, group_id, unit_name, runtime_id, unit_data):
         self.runtime_id_name = runtime_id
         self.runtime_id = int(runtime_id[3:])
 
