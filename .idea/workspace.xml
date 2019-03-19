@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="600c2c46-9673-4fc9-98d6-73a0b6339ae7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/core/spark.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/data_interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/data_interface.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/essential/data_mapping.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/essential/data_mapping.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/essential/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/essential/player.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/request/api/player_preference.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/request/api/player_preference.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/request/miz/dcs_pull.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/request/miz/dcs_pull.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/request/miz/dcs_radio_menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/request/miz/dcs_radio_menu.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/__init__.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -134,27 +124,27 @@
         <counts>
           <entry key="dummy" value="4" />
           <entry key="lua" value="542" />
-          <entry key="py" value="6911" />
+          <entry key="py" value="6955" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="546" />
-          <entry key="Python" value="6911" />
+          <entry key="Python" value="6955" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core/essential/data_mapping.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="86" column="26" lean-forward="true" selection-start-line="86" selection-start-column="26" selection-end-line="86" selection-end-column="26" />
+            <state relative-caret-position="569">
+              <caret line="123" column="56" lean-forward="true" selection-start-line="123" selection-start-column="56" selection-end-line="123" selection-end-column="56" />
               <folding>
                 <element signature="e#147#156#0" expanded="true" />
-                <marker date="1552974049729" expanded="true" signature="2701:5549" ph="..." />
+                <marker date="1552976044343" expanded="true" signature="2701:5719" ph="..." />
               </folding>
             </state>
           </provider>
@@ -206,10 +196,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
+            <state relative-caret-position="345">
               <caret line="45" column="53" lean-forward="true" selection-start-line="45" selection-start-column="53" selection-end-line="45" selection-end-column="53" />
               <folding>
                 <element signature="e#12#23#0" expanded="true" />
@@ -264,8 +254,8 @@
         <option value="$PROJECT_DIR$/core/request/api/player_preference.py" />
         <option value="$PROJECT_DIR$/core/data_interface.py" />
         <option value="$PROJECT_DIR$/core/essential/player.py" />
-        <option value="$PROJECT_DIR$/core/essential/data_mapping.py" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/core/essential/data_mapping.py" />
       </list>
     </option>
   </component>
@@ -743,16 +733,6 @@
     <entry file="file://$PROJECT_DIR$/core/request/exp/export_debug.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/data_interface.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="29" column="55" lean-forward="true" selection-start-line="29" selection-start-column="55" selection-end-line="29" selection-end-column="55" />
-          <folding>
-            <element signature="e#106#167#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/request/api/player_preference.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="582">
@@ -774,25 +754,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/essential/data_mapping.py">
+    <entry file="file://$PROJECT_DIR$/core/data_interface.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="86" column="26" lean-forward="true" selection-start-line="86" selection-start-column="26" selection-end-line="86" selection-end-column="26" />
+        <state relative-caret-position="667">
+          <caret line="29" column="55" lean-forward="true" selection-start-line="29" selection-start-column="55" selection-end-line="29" selection-end-column="55" />
           <folding>
-            <element signature="e#147#156#0" expanded="true" />
-            <marker date="1552974049729" expanded="true" signature="2701:5549" ph="..." />
+            <element signature="e#106#167#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
+        <state relative-caret-position="345">
           <caret line="45" column="53" lean-forward="true" selection-start-line="45" selection-start-column="53" selection-end-line="45" selection-end-column="53" />
           <folding>
             <element signature="e#12#23#0" expanded="true" />
             <marker date="1552974999452" expanded="true" signature="810:3253" ph="..." />
             <marker date="1552974999452" expanded="true" signature="900:2966" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/essential/data_mapping.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="569">
+          <caret line="123" column="56" lean-forward="true" selection-start-line="123" selection-start-column="56" selection-end-line="123" selection-end-column="56" />
+          <folding>
+            <element signature="e#147#156#0" expanded="true" />
+            <marker date="1552976044343" expanded="true" signature="2701:5719" ph="..." />
           </folding>
         </state>
       </provider>

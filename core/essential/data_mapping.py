@@ -76,40 +76,42 @@ def get_all_players_data():
         # player spawn
         new_names = _check_players_name_set.difference(_active_players_name_set)  # name in check, but no in active
         for name in new_names:
-            print(f"Player >>>{name}<<< has entered mission.")
-            # trigger spawn signal here?
-            try:
-                player_unit_name = res[name]['unit_name'].rstrip(' ')
-                player_group_id = cdi.playable_unit_info_by_name[player_unit_name]['group_id']
-                player_runtime_id_name = res[name]['unit_runtime_id_name'].rstrip(' ')
-                # player_runtime_id is a string start with id_, not a number
-            except KeyError:
-                print(res)
-                print(cdi.playable_unit_info_by_name)
-                print(cdi.playable_unit_info_by_group_id)
-                print(cdi.playable_unit_info_by_group_name)
-            else:
-                # trigger signal here
-                # RequestDcsDebugCommand(f"trigger.action.outTextForGroup({player_group_id}, 'Welcome!', 10)").send()
-                spk_dt = {
-                    'type': 'player_spawn',
-                    'data': {
-                        'name': name,
-                        'group_id': player_group_id,
-                        'unit_name': player_unit_name,
-                        'runtime_id': player_runtime_id_name
+            if name != '':
+                print(f"Player >>>{name}<<< has entered mission.")
+                # trigger spawn signal here?
+                try:
+                    player_unit_name = res[name]['unit_name'].rstrip(' ')
+                    player_group_id = cdi.playable_unit_info_by_name[player_unit_name]['group_id']
+                    player_runtime_id_name = res[name]['unit_runtime_id_name'].rstrip(' ')
+                    # player_runtime_id is a string start with id_, not a number
+                except KeyError:
+                    print(res)
+                    print(cdi.playable_unit_info_by_name)
+                    print(cdi.playable_unit_info_by_group_id)
+                    print(cdi.playable_unit_info_by_group_name)
+                else:
+                    # trigger signal here
+                    # RequestDcsDebugCommand(f"trigger.action.outTextForGroup({player_group_id}, 'Welcome!', 10)").send()
+                    spk_dt = {
+                        'type': 'player_spawn',
+                        'data': {
+                            'name': name,
+                            'group_id': player_group_id,
+                            'unit_name': player_unit_name,
+                            'runtime_id': player_runtime_id_name
+                        }
                     }
-                }
-                spark.player_spawn(spk_dt)
-                print(f"Player >>>{spk_dt['data']['name']}<<< has spawned. "
-                      f"GroupID: {spk_dt['data']['group_id']}, "
-                      f"RuntimeID: {spk_dt['data']['runtime_id']}. ")
+                    spark.player_spawn(spk_dt)
+                    print(f"Player >>>{spk_dt['data']['name']}<<< has spawned. "
+                          f"GroupID: {spk_dt['data']['group_id']}, "
+                          f"RuntimeID: {spk_dt['data']['runtime_id']}. ")
 
         # player de-spawn
         # print("before save:" + str(_active_players_name_set))
         obs_names = _active_players_name_set.difference(_check_players_name_set)
         for name in obs_names:
-            print(f"Player >>>{name}<<< has left the mission.")
+            if name != '':
+                print(f"Player >>>{name}<<< has left the mission.")
 
         # pass current name set to active set
         _active_players_name_set = _check_players_name_set
