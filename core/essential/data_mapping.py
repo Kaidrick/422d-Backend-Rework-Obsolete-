@@ -6,6 +6,7 @@ import os
 import core.data_interface as cdi
 import core.spark as spark
 from core.request.miz.dcs_debug import RequestDcsDebugCommand
+from core.request.miz.dcs_query import RequestDcsAllGroups, RequestDcsAllStaticObjects
 from core.request.api.api_debug import RequestAPINetDostring
 from core.essential.other_unit import OtherUnits
 
@@ -36,6 +37,14 @@ def map_playable_group_info():
     for unit_name, unit_info in res.items():
         cdi.playable_unit_info_by_group_id[unit_info['group_id']] = unit_info
         cdi.playable_unit_info_by_group_name[unit_info['group_name']] = unit_info
+
+
+def get_all_groups_data():
+    RequestDcsAllGroups().send()
+
+
+def get_all_statics_data():
+    RequestDcsAllStaticObjects().send()
 
 
 # get all players data from mission env

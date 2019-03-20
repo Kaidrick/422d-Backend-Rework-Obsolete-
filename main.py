@@ -3,13 +3,14 @@ import time
 import threading
 
 # -- basic data mapping function
-from core.essential.data_mapping import get_all_players_data, map_playable_group_info, other_data_process
+from core.essential.data_mapping import get_all_players_data, map_playable_group_info, \
+    get_all_groups_data, get_all_statics_data
 
 # -- player preferences
 from core.request.api.player_preference import get_player_preference_settings
 
 # -- from Export.lua
-from core.request.exp.export_data import RequestExportUnitsData
+# FIXME: deemed not reliable. Avoid at all cost.
 
 # -- process api pulls and miz pull
 from core.request.api.api_pull import process_api_pulls
@@ -41,57 +42,15 @@ def prec_step():
     """
     while True:
         get_all_players_data()
+        res_group = get_all_groups_data()
+        res_static = get_all_statics_data()
 
-        res = RequestExportUnitsData().send()
+        # res = RequestExportUnitsData().send()
+        # FIXME: object runtime id from Export.lua is not reliable. Avoid using Export.lua at all
 
-        for object_runtime_id_name, object_data in res.items():
 
-            if object_data['Flags']['Human'] is True:
-                unit_type = object_data['Name']
-                player_name = object_data['UnitName']
 
-                try:
-                    # p_group_id = cdi.group_id_alloc_by_player_name[player_name]
-                    p_group_id = cdi.group_id_alloc_by_runtime_id[object_runtime_id_name]
-                except KeyError:
-                    print("maybe need to wait for unit update?")
-                    print(player_name)
-                    print(cdi.group_id_alloc_by_player_name)
-                    print(cdi.group_id_alloc_by_runtime_id)
-                    print(object_runtime_id_name)
-
-                else:
-                    # print(f"sending to {p_group_id} {object_runtime_id_name}")
-                    RequestDcsDebugCommand(f"trigger.action.outTextForGroup({p_group_id}, "
-                                           f"'ctime: {time.time()}', 1, true)").send()
-                # print(object_runtime_id_name, unit_type, player_name, group_name)
-                # id_16938241
-                # res_test = {
-                #     'Heading': 5.412256360054,
-                #     'Bank': -0.00099762040190399,
-                #     'Pitch': 0.091638997197151,
-                #     'Position': {'x': -399128.69931336, 'y': 563.55842578656, 'z': -18581.799532482},
-                #     'LatLongAlt': {
-                #         'Alt': 563.55842578656, 'Lat': 36.227060267933, 'Long': -115.048208364
-                #     },
-                #     'Coalition': 'Enemies',
-                #     'CoalitionID': 2,
-                #     'Country': 2,
-                #
-                #     'Flags': {
-                #         'AI_ON': True, 'Born': True, 'Human': True, 'IRJamming': False, 'Invisible': False,
-                #         'Jamming': False, 'RadarActive': False, 'Static': False
-                #     },
-                #
-                #     'GroupName': 'AV-8B N/A (401) Sn: N/A',
-                #     'Name': 'AV8BNA',
-                #     'Type': {
-                #          'level1': 1, 'level2': 1, 'level3': 1, 'level4': 260
-                #     },
-                #     'UnitName': 'Kaidrick'
-                # }
-
-        other_data_process(res)
+        # other_data_process(res)
         time.sleep(0.01)
 
 
