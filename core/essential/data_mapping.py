@@ -146,46 +146,21 @@ def get_all_players_data():
         _active_players_name_set = _check_players_name_set
 
 
-def other_data_process(res_units):
+def group_data_process(res_group):
+    """
+    This method process all group data in the mission environment
+    :param res_group:
+    :return:
+    """
 
-    active_other_units = cdi.other_units_by_runtime_id.copy()
+    # if this group is a player group, then call parse_player
 
-    check_other_units = {}
+    # if this group is a AI group, then call parse_other
 
-    for object_id_name, object_data in res_units.items():
-        if object_data['Flags']['Human'] is False:  # is an AI unit
-            kn_other_unit = OtherUnits(object_id_name, object_data)
-            check_other_units[object_id_name] = kn_other_unit
-
-
-    # after comparing, pass to container
-    cdi.other_units_by_runtime_id = check_other_units
-
-    # id_16938241
-    # res_test = {
-    #     'Heading': 5.412256360054,
-    #     'Bank': -0.00099762040190399,
-    #     'Pitch': 0.091638997197151,
-    #     'Position': {'x': -399128.69931336, 'y': 563.55842578656, 'z': -18581.799532482},
-    #     'LatLongAlt': {
-    #         'Alt': 563.55842578656, 'Lat': 36.227060267933, 'Long': -115.048208364
-    #     },
-    #     'Coalition': 'Enemies',
-    #     'CoalitionID': 2,
-    #     'Country': 2,
-    #
-    #     'Flags': {
-    #         'AI_ON': True, 'Born': True, 'Human': True, 'IRJamming': False, 'Invisible': False,
-    #         'Jamming': False, 'RadarActive': False, 'Static': False
-    #     },
-    #
-    #     'GroupName': 'AV-8B N/A (401) Sn: N/A',
-    #     'Name': 'AV8BNA',
-    #     'Type': {
-    #          'level1': 1, 'level2': 1, 'level3': 1, 'level4': 260
-    #     },
-    #     'UnitName': 'Kaidrick'
-    # }
+    for group_data in res_group:  # check each group
+        for unit in group_data['units']:  # check units in each group
+            if unit['player_control']:  # if player control flag is True
+                print(unit)
 
 
 if __name__ == '__main__':

@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="600c2c46-9673-4fc9-98d6-73a0b6339ae7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/essential/data_mapping.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/essential/data_mapping.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/__init__.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,8 +25,8 @@
             <file pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/main.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="368">
-                    <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+                  <state relative-caret-position="644">
+                    <caret line="61" column="15" lean-forward="true" selection-start-line="61" selection-start-column="15" selection-end-line="61" selection-end-column="15" />
                     <folding>
                       <element signature="e#12#23#0" expanded="true" />
                     </folding>
@@ -108,29 +105,29 @@
         <counts>
           <entry key="dummy" value="4" />
           <entry key="lua" value="570" />
-          <entry key="py" value="8895" />
+          <entry key="py" value="9426" />
           <entry key="txt" value="113" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="687" />
-          <entry key="Python" value="8895" />
+          <entry key="Python" value="9426" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core/essential/data_mapping.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="67">
-              <caret line="79" column="20" lean-forward="true" selection-start-line="79" selection-start-column="20" selection-end-line="79" selection-end-column="20" />
+            <state relative-caret-position="826">
+              <caret line="162" column="27" lean-forward="true" selection-start-line="162" selection-start-column="27" selection-end-line="162" selection-end-column="27" />
               <folding>
                 <element signature="e#147#156#0" expanded="true" />
-                <marker date="1553059424816" expanded="true" signature="1643:1777" ph="..." />
-                <marker date="1553059424816" expanded="true" signature="1734:1777" ph="..." />
+                <marker date="1553060575430" expanded="true" signature="1643:1777" ph="..." />
+                <marker date="1553060575430" expanded="true" signature="1734:1777" ph="..." />
               </folding>
             </state>
           </provider>
@@ -139,41 +136,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plugins/dispatch_tankers/tanker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-642">
+            <state relative-caret-position="-1746">
               <caret line="279" column="33" lean-forward="true" selection-start-line="279" selection-start-column="33" selection-end-line="279" selection-end-column="33" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plugins/dispatch_tankers/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-              <folding>
-                <element signature="e#0#30#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/plugins/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="56" selection-start-column="56" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/request/miz/dcs_query.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
             </state>
           </provider>
         </entry>
@@ -230,9 +197,9 @@
         <option value="$PROJECT_DIR$/core/game_object_control/mission.py" />
         <option value="$PROJECT_DIR$/core/game_object_control/task.py" />
         <option value="$PROJECT_DIR$/plugins/dispatch_tankers/tanker.py" />
-        <option value="$PROJECT_DIR$/core/essential/data_mapping.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/plugins/__init__.py" />
+        <option value="$PROJECT_DIR$/core/essential/data_mapping.py" />
       </list>
     </option>
   </component>
@@ -858,42 +825,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/request/miz/dcs_query.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+        <state relative-caret-position="644">
+          <caret line="61" column="15" lean-forward="true" selection-start-line="61" selection-start-column="15" selection-end-line="61" selection-end-column="15" />
           <folding>
             <element signature="e#12#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/essential/data_mapping.py">
+    <entry file="file://$PROJECT_DIR$/plugins/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="79" column="20" lean-forward="true" selection-start-line="79" selection-start-column="20" selection-end-line="79" selection-end-column="20" />
-          <folding>
-            <element signature="e#147#156#0" expanded="true" />
-            <marker date="1553059424816" expanded="true" signature="1643:1777" ph="..." />
-            <marker date="1553059424816" expanded="true" signature="1734:1777" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/dispatch_tankers/tanker.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-642">
-          <caret line="279" column="33" lean-forward="true" selection-start-line="279" selection-start-column="33" selection-end-line="279" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="23">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
@@ -907,10 +852,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/__init__.py">
+    <entry file="file://$PROJECT_DIR$/core/request/miz/dcs_query.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="56" selection-start-column="56" selection-end-column="56" />
+        <state relative-caret-position="412">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/dispatch_tankers/tanker.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1746">
+          <caret line="279" column="33" lean-forward="true" selection-start-line="279" selection-start-column="33" selection-end-line="279" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/essential/data_mapping.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="826">
+          <caret line="162" column="27" lean-forward="true" selection-start-line="162" selection-start-column="27" selection-end-line="162" selection-end-column="27" />
+          <folding>
+            <element signature="e#147#156#0" expanded="true" />
+            <marker date="1553060575430" expanded="true" signature="1643:1777" ph="..." />
+            <marker date="1553060575430" expanded="true" signature="1734:1777" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
