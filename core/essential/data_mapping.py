@@ -202,6 +202,13 @@ def group_data_process(res_group):
             trigger_spark_player_despawn(check_name, p_omni)
 
     # -- Other spark detection
+    for check_name in check_other_names:
+        if check_name not in active_other_names:  # new player spawn
+            print(check_name + " has spawned")
+
+    for check_name in active_other_names:
+        if check_name not in check_other_names:  # player de-spawn
+            print(check_name + " has de-spawned")
 
 
 def trigger_spark_player_despawn(check_name, p_omni):

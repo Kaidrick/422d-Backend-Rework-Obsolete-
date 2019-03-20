@@ -525,11 +525,11 @@ def response_to_radio_item_pull(pull):  # TODO: add system of measurement prefer
 
 
 def init_radio_menu_on_birth_spark(spark_dt):
-    print(spark_dt)
+    # print(spark_dt)
     player_group_id = spark_dt['data']['group_id']
     player_name = spark_dt['data']['name']
     player_runtime_id = spark_dt['data']['runtime_id']
-    print(player_group_id, player_name, player_runtime_id)
+    # print(player_group_id, player_name, player_runtime_id)
 
     SanitizeRadioItem(player_group_id).send()  # remove all existing radio items from this group
     # init_radio_menu_for_group(player_group_id)
