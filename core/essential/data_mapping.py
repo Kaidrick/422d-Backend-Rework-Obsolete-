@@ -171,19 +171,19 @@ def group_data_process(res_group):
     for group_data in res_group:  # check each group
         for unit in group_data['units']:  # check units in each group
             if unit['player_control']:  # if player control flag is True
-                kn_player = parse_player_unit(group_data['id'], group_data['name'], group_data['coalition'],
-                                              group_data['category'], unit)
-                if kn_player.player_name == "":
-                    print("catch!")
-                    
-                check_player_names.append(kn_player.player_name)
-                p_edit[kn_player.player_name] = kn_player
+                if unit['player_name'] != "":
+                    kn_player = parse_player_unit(group_data['id'], group_data['name'], group_data['coalition'],
+                                                  group_data['category'], unit)
+
+                    check_player_names.append(kn_player.player_name)
+                    p_edit[kn_player.player_name] = kn_player
 
             else:  # if player control flag is False
-                kn_other = parse_other_unit(group_data['id'], group_data['name'], group_data['coalition'],
-                                            group_data['category'], unit)
-                check_other_names.append(kn_other.unit_name)
-                o_edit[kn_other.unit_name] = kn_other
+                if unit['name'] != "":
+                    kn_other = parse_other_unit(group_data['id'], group_data['name'], group_data['coalition'],
+                                                group_data['category'], unit)
+                    check_other_names.append(kn_other.unit_name)
+                    o_edit[kn_other.unit_name] = kn_other
 
     # after loop, push data
     cdi.active_players_by_name = p_edit
