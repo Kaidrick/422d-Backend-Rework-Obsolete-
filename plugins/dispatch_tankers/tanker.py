@@ -390,7 +390,7 @@ tanker_flight_plan = {
 
 
 def group_single_unit_dead(group_name):
-    for unit_id_name, unit_dt in cdi.other_units_by_runtime_id.items():  # check if this group name exist in objects
+    for unit_name, unit_dt in cdi.other_units_by_name.items():  # check if this group name exist in objects
         try:
             unit_group_name = unit_dt.group_name
             if group_name == unit_group_name:
@@ -410,10 +410,10 @@ def group_single_unit_dead(group_name):
 
 
 def find_unit(group_name):
-    for unit_id_name, unit_dt in cdi.other_units_by_runtime_id.items():
+    for unit_name, unit_dt in cdi.other_units_by_name.items():
         try:
             if group_name == unit_dt.group_name:
-                return unit_id_name
+                return unit_name
         except AttributeError:  # this unit does not have a group name
             pass
 
@@ -469,8 +469,8 @@ def tanker_control(tanker_group_name,
             tanker_dead = True
             break
         else:  # group is still alive
-            unit_id_name = find_unit(tanker_group_name)
-            unit = cdi.other_units_by_runtime_id[unit_id_name]
+            unit_name = find_unit(tanker_group_name)
+            unit = cdi.other_units_by_name[unit_name]
             pos = unit.unit_pos
 
             # tkr_group = db.env_group_dict_by_name[tanker_group_name]
@@ -579,16 +579,16 @@ def tanker_control(tanker_group_name,
             tanker_dead = True
             break
         else:
-            unit_id_name = find_unit(tanker_group_name)
-            unit = cdi.other_units_by_runtime_id[unit_id_name]
+            unit_name = find_unit(tanker_group_name)
+            unit = cdi.other_units_by_name[unit_name]
             last_pos = unit.unit_pos
             # tkr_group = db.env_group_dict_by_name[tanker_group_name]
             # last_pos = tkr_group.lead_pos
             # print(last_pos)
 
             time.sleep(60)
-            unit_id_name = find_unit(tanker_group_name)
-            unit = cdi.other_units_by_runtime_id[unit_id_name]
+            unit_name = find_unit(tanker_group_name)
+            unit = cdi.other_units_by_name[unit_name]
             pos = unit.unit_pos
 
             # tkr_group = db.env_group_dict_by_name[tanker_group_name]

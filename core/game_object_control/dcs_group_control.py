@@ -55,7 +55,7 @@ class Flight:  # Control the init of an aircraft or helicopter group
             ac_unit.type = self.init_data['units']['type']
             ac_unit.payload = {  # find payload method?
                 'pylons': {},
-                'fuel': 999999999,  # how to get fuel number 20830
+                'fuel': 10000,  # how to get fuel number 20830
                 'flare': 60,
                 'chaff': 120,
                 'gun': 100
