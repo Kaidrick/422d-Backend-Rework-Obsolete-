@@ -35,12 +35,11 @@ playable_unit_info_by_unit_name = {}  # indexed by unit name
 playable_unit_info_by_group_id = {}  # indexed by group id
 playable_unit_info_by_group_name = {}  # indexed by group name
 
+# AI Controlled Units
+other_units_by_name = {}  # indexed by unit name
+
 # player preferences
 player_net_config_by_ucid = {}
-
-# all other AI units
-other_units_by_runtime_id = {}
-
 
 # -----------------------------------------------------------------------------------------------------------
 

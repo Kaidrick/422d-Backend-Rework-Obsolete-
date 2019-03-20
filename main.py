@@ -4,7 +4,7 @@ import threading
 
 # -- basic data mapping function
 from core.essential.data_mapping import get_all_players_data, map_playable_group_info, \
-    get_all_groups_data, get_all_statics_data
+    get_all_groups_data, get_all_statics_data, group_data_process
 
 # -- player preferences
 from core.request.api.player_preference import get_player_preference_settings
@@ -31,7 +31,7 @@ def step():
     :return:
     """
     while True:
-        get_all_players_data()
+        # get_all_players_data()
         time.sleep(0.1)
 
 
@@ -41,17 +41,19 @@ def prec_step():
     :return:
     """
     while True:
-        get_all_players_data()
+        # get_all_players_data()
         res_group = get_all_groups_data()
-        res_static = get_all_statics_data()
+        # res_static = get_all_statics_data()
+        # print(res_static)
 
+        # group_data_process(res_group)
         # res = RequestExportUnitsData().send()
         # FIXME: object runtime id from Export.lua is not reliable. Avoid using Export.lua at all
 
 
 
         # other_data_process(res)
-        time.sleep(0.01)
+        time.sleep(0.1)
 
 
 def pull_loop():

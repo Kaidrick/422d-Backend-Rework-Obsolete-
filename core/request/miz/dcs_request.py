@@ -71,7 +71,7 @@ class RequestDcs:
             break
 
         try:
-            q_result = json.loads(tm.decode('utf-8')[:-1])
+            q_result = json.loads(tm.decode('utf-8', errors='ignore')[:-1])
         except json.decoder.JSONDecodeError as e:
             print(__file__, "Error: ", e)
             return None  # maybe better than return an empty dictionary

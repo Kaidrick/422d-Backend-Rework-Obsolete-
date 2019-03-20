@@ -47,7 +47,7 @@ class RequestMarkPanel(RequestDcsInfo):
 
 
 if __name__ == '__main__':
-    print(RequestDcsAllStaticObjects().send())
+    print(RequestDcsAllGroups().send())
     # from core.request.miz.dcs_debug import RequestDcsDebugCommand
     #
     # mark_panels = RequestMarkPanel().send()

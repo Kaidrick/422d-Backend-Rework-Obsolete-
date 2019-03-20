@@ -8,7 +8,8 @@ import core.spark as spark
 from core.request.miz.dcs_debug import RequestDcsDebugCommand
 from core.request.miz.dcs_query import RequestDcsAllGroups, RequestDcsAllStaticObjects
 from core.request.api.api_debug import RequestAPINetDostring
-from core.essential.other_unit import OtherUnits
+from core.essential.other_unit import parse_other_unit
+from core.essential.player import parse_player_unit
 
 
 f_map_playable_group_info = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'scripts', 'map_playable.lua')
@@ -40,11 +41,11 @@ def map_playable_group_info():
 
 
 def get_all_groups_data():
-    RequestDcsAllGroups().send()
+    return RequestDcsAllGroups().send()
 
 
 def get_all_statics_data():
-    RequestDcsAllStaticObjects().send()
+    return RequestDcsAllStaticObjects().send()
 
 
 # get all players data from mission env
@@ -152,7 +153,14 @@ def group_data_process(res_group):
     :param res_group:
     :return:
     """
+    p_edit = {}
+    o_edit = {}
 
+    active_player_names = cdi.active_players_by_name.keys()
+    active_other_names = cdi.other_units_by_name.keys()
+
+    check_player_names = []
+    check_other_names = []
     # if this group is a player group, then call parse_player
 
     # if this group is a AI group, then call parse_other
@@ -160,7 +168,39 @@ def group_data_process(res_group):
     for group_data in res_group:  # check each group
         for unit in group_data['units']:  # check units in each group
             if unit['player_control']:  # if player control flag is True
-                print(unit)
+                kn_player = parse_player_unit(group_data['id'], group_data['name'], group_data['coalition'],
+                                              group_data['category'], unit)
+                check_player_names.append(kn_player.player_name)
+                p_edit[kn_player.player_name] = kn_player
+
+            else:  # if player control flag is False
+                kn_other = parse_other_unit(group_data['id'], group_data['name'], group_data['coalition'],
+                                            group_data['category'], unit)
+                check_other_names.append(kn_other.unit_name)
+                o_edit[kn_other.unit_name] = kn_other
+
+    # after loop, push data
+    cdi.active_players_by_name = p_edit
+    cdi.other_units_by_name = o_edit
+
+    # check if new unit spawn --> list does not contain unit name
+    for check_name in check_player_names:
+        if check_name not in active_player_names:  # new player spawn
+            kn_check = p_edit[check_name]
+            spk_dt = {
+                'type': 'player_spawn',
+                'data': {
+                    'name': kn_check.player_name,
+                    'group_id': kn_check.group_id,
+                    'unit_name': kn_check.unit_name,
+                    'runtime_id': kn_check.runtime_id
+                }
+            }
+            spark.player_spawn(spk_dt)
+            print(f"Player >>>{spk_dt['data']['name']}<<< has spawned. "
+                  f"GroupID: {spk_dt['data']['group_id']}, "
+                  f"RuntimeID: {spk_dt['data']['runtime_id']}. ")
+    # check if obsolete unit de-spawn -->
 
 
 if __name__ == '__main__':
