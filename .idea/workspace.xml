@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="600c2c46-9673-4fc9-98d6-73a0b6339ae7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/essential/data_mapping.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/essential/data_mapping.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +68,7 @@
             <file pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/main.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="563">
+                  <state relative-caret-position="1081">
                     <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
                     <folding>
                       <element signature="e#12#23#0" expanded="true" />
@@ -134,43 +134,55 @@
           <entry key="cfg" value="2" />
           <entry key="gitignore" value="1" />
           <entry key="lua" value="4" />
-          <entry key="py" value="74" />
+          <entry key="py" value="75" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Ini" value="2" />
           <entry key="PLAIN_TEXT" value="6" />
-          <entry key="Python" value="74" />
+          <entry key="Python" value="75" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="4" />
           <entry key="lua" value="570" />
-          <entry key="py" value="11473" />
+          <entry key="py" value="11520" />
           <entry key="txt" value="113" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="687" />
-          <entry key="Python" value="11473" />
+          <entry key="Python" value="11520" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/request/miz/dcs_radio_menu.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="531" column="38" selection-start-line="531" selection-start-column="27" selection-end-line="531" selection-end-column="38" />
+              <folding>
+                <element signature="e#0#61#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core/essential/data_mapping.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="683">
-              <caret line="208" column="42" lean-forward="true" selection-start-line="208" selection-start-column="42" selection-end-line="208" selection-end-column="42" />
+            <state relative-caret-position="591">
+              <caret line="177" column="20" selection-start-line="177" selection-start-column="20" selection-end-line="177" selection-end-column="20" />
               <folding>
                 <element signature="e#147#156#0" expanded="true" />
-                <marker date="1553068773570" expanded="true" signature="1701:1849" ph="..." />
-                <marker date="1553068773570" expanded="true" signature="1799:1849" ph="..." />
+                <marker date="1553069483387" expanded="true" signature="1701:1849" ph="..." />
+                <marker date="1553069483387" expanded="true" signature="1799:1849" ph="..." />
               </folding>
             </state>
           </provider>
@@ -272,8 +284,8 @@
         <option value="$PROJECT_DIR$/plugins/dispatch_tankers/tanker.py" />
         <option value="$PROJECT_DIR$/core/essential/other_unit.py" />
         <option value="$PROJECT_DIR$/core/essential/player.py" />
-        <option value="$PROJECT_DIR$/core/essential/data_mapping.py" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/core/essential/data_mapping.py" />
       </list>
     </option>
   </component>
@@ -789,16 +801,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/request/miz/dcs_radio_menu.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5520">
-          <caret line="260" selection-start-line="260" selection-end-line="260" />
-          <folding>
-            <element signature="e#0#61#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/request/miz/dcs_message.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1357">
@@ -936,6 +938,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1081">
+          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+          <folding>
+            <element signature="e#12#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/request/miz/dcs_radio_menu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="531" column="38" selection-start-line="531" selection-start-column="27" selection-end-line="531" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/core/spark.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="421">
@@ -945,22 +967,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core/essential/data_mapping.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="683">
-          <caret line="208" column="42" lean-forward="true" selection-start-line="208" selection-start-column="42" selection-end-line="208" selection-end-column="42" />
+        <state relative-caret-position="591">
+          <caret line="177" column="20" selection-start-line="177" selection-start-column="20" selection-end-line="177" selection-end-column="20" />
           <folding>
             <element signature="e#147#156#0" expanded="true" />
-            <marker date="1553068773570" expanded="true" signature="1701:1849" ph="..." />
-            <marker date="1553068773570" expanded="true" signature="1799:1849" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="563">
-          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
-          <folding>
-            <element signature="e#12#23#0" expanded="true" />
+            <marker date="1553069483387" expanded="true" signature="1701:1849" ph="..." />
+            <marker date="1553069483387" expanded="true" signature="1799:1849" ph="..." />
           </folding>
         </state>
       </provider>
