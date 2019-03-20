@@ -174,7 +174,8 @@ def group_data_process(res_group):
                 if unit['player_name'] != "":
                     kn_player = parse_player_unit(group_data['id'], group_data['name'], group_data['coalition'],
                                                   group_data['category'], unit)
-
+                    if kn_player.player_name == "":
+                        print("wtf? " + str(unit))
                     check_player_names.append(kn_player.player_name)
                     p_edit[kn_player.player_name] = kn_player
 
