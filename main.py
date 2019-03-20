@@ -43,10 +43,10 @@ def prec_step():
     while True:
         # get_all_players_data()
         res_group = get_all_groups_data()
-        # res_static = get_all_statics_data()
+        res_static = get_all_statics_data()
         # print(res_static)
 
-        # group_data_process(res_group)
+        group_data_process(res_group)
         # res = RequestExportUnitsData().send()
         # FIXME: object runtime id from Export.lua is not reliable. Avoid using Export.lua at all
 

@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="600c2c46-9673-4fc9-98d6-73a0b6339ae7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/data_interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/data_interface.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/essential/data_mapping.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/essential/data_mapping.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/essential/other_unit.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/essential/other_unit.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/essential/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/essential/player.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/game_object_control/dcs_group_control.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/game_object_control/dcs_group_control.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/request/miz/dcs_query.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/request/miz/dcs_query.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/request/miz/dcs_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/request/miz/dcs_request.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/dispatch_tankers/tanker.py" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/dispatch_tankers/tanker.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,8 +68,8 @@
             <file pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/main.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="609">
-                    <caret line="49" column="8" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="8" />
+                  <state relative-caret-position="563">
+                    <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
                     <folding>
                       <element signature="e#12#23#0" expanded="true" />
                     </folding>
@@ -142,28 +134,28 @@
           <entry key="cfg" value="2" />
           <entry key="gitignore" value="1" />
           <entry key="lua" value="4" />
-          <entry key="py" value="73" />
+          <entry key="py" value="74" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Ini" value="2" />
           <entry key="PLAIN_TEXT" value="6" />
-          <entry key="Python" value="73" />
+          <entry key="Python" value="74" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="4" />
           <entry key="lua" value="570" />
-          <entry key="py" value="11208" />
+          <entry key="py" value="11473" />
           <entry key="txt" value="113" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="687" />
-          <entry key="Python" value="11208" />
+          <entry key="Python" value="11473" />
         </counts>
       </usages-collector>
     </session>
@@ -173,13 +165,22 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core/essential/data_mapping.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="523">
-              <caret line="173" column="57" lean-forward="true" selection-start-line="173" selection-start-column="57" selection-end-line="173" selection-end-column="57" />
+            <state relative-caret-position="683">
+              <caret line="208" column="42" lean-forward="true" selection-start-line="208" selection-start-column="42" selection-end-line="208" selection-end-column="42" />
               <folding>
                 <element signature="e#147#156#0" expanded="true" />
-                <marker date="1553067527132" expanded="true" signature="1701:1849" ph="..." />
-                <marker date="1553067527132" expanded="true" signature="1799:1849" ph="..." />
+                <marker date="1553068773570" expanded="true" signature="1701:1849" ph="..." />
+                <marker date="1553068773570" expanded="true" signature="1799:1849" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/spark.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="421">
+              <caret line="48" column="18" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -558,12 +559,12 @@
     <frame x="1235" y="60" width="1308" height="1349" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2616" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2616" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32890365" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32890365" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -697,13 +698,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core/request/exp/export_debug.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/spark.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="41" column="35" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/airspace/airspace.cfg">
       <provider selected="true" editor-type-id="text-editor" />
@@ -942,22 +936,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/core/spark.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="48" column="18" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/core/essential/data_mapping.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="173" column="57" lean-forward="true" selection-start-line="173" selection-start-column="57" selection-end-line="173" selection-end-column="57" />
+        <state relative-caret-position="683">
+          <caret line="208" column="42" lean-forward="true" selection-start-line="208" selection-start-column="42" selection-end-line="208" selection-end-column="42" />
           <folding>
             <element signature="e#147#156#0" expanded="true" />
-            <marker date="1553067527132" expanded="true" signature="1701:1849" ph="..." />
-            <marker date="1553067527132" expanded="true" signature="1799:1849" ph="..." />
+            <marker date="1553068773570" expanded="true" signature="1701:1849" ph="..." />
+            <marker date="1553068773570" expanded="true" signature="1799:1849" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="49" column="8" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="8" />
+        <state relative-caret-position="563">
+          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
           <folding>
             <element signature="e#12#23#0" expanded="true" />
           </folding>

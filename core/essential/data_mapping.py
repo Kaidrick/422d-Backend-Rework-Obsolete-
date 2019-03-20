@@ -153,6 +153,9 @@ def group_data_process(res_group):
     :param res_group:
     :return:
     """
+    p_omni = cdi.active_players_by_name
+    o_omni = cdi.other_units_by_name
+
     p_edit = {}
     o_edit = {}
 
@@ -183,24 +186,52 @@ def group_data_process(res_group):
     cdi.active_players_by_name = p_edit
     cdi.other_units_by_name = o_edit
 
+    # -- Player spark detection
     # check if new unit spawn --> list does not contain unit name
     for check_name in check_player_names:
         if check_name not in active_player_names:  # new player spawn
-            kn_check = p_edit[check_name]
-            spk_dt = {
-                'type': 'player_spawn',
-                'data': {
-                    'name': kn_check.player_name,
-                    'group_id': kn_check.group_id,
-                    'unit_name': kn_check.unit_name,
-                    'runtime_id': kn_check.runtime_id
-                }
-            }
-            spark.player_spawn(spk_dt)
-            print(f"Player >>>{spk_dt['data']['name']}<<< has spawned. "
-                  f"GroupID: {spk_dt['data']['group_id']}, "
-                  f"RuntimeID: {spk_dt['data']['runtime_id']}. ")
+            trigger_spark_player_spawn(check_name, p_edit)
+
     # check if obsolete unit de-spawn -->
+    for check_name in active_player_names:
+        if check_name not in check_player_names:  # player de-spawn
+            trigger_spark_player_despawn(check_name, p_omni)
+
+    # -- Other spark detection
+
+
+def trigger_spark_player_despawn(check_name, p_omni):
+    kn_check = p_omni[check_name]
+    spk_dt = {
+        'type': 'player_despawn',
+        'data': {
+            'name': kn_check.player_name,
+            'group_id': kn_check.group_id,
+            'unit_name': kn_check.unit_name,
+            'runtime_id': kn_check.runtime_id
+        }
+    }
+    spark.player_despawn(spk_dt)
+    print(f"Player >>>{spk_dt['data']['name']}<<< has de-spawned. "
+          f"Old GroupID: {spk_dt['data']['group_id']}, "
+          f"Old RuntimeID: {spk_dt['data']['runtime_id']}. ")
+
+
+def trigger_spark_player_spawn(check_name, p_edit):
+    kn_check = p_edit[check_name]
+    spk_dt = {
+        'type': 'player_spawn',
+        'data': {
+            'name': kn_check.player_name,
+            'group_id': kn_check.group_id,
+            'unit_name': kn_check.unit_name,
+            'runtime_id': kn_check.runtime_id
+        }
+    }
+    spark.player_spawn(spk_dt)
+    print(f"Player >>>{spk_dt['data']['name']}<<< has spawned. "
+          f"GroupID: {spk_dt['data']['group_id']}, "
+          f"RuntimeID: {spk_dt['data']['runtime_id']}. ")
 
 
 if __name__ == '__main__':
