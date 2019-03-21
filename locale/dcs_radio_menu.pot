@@ -1,0 +1,346 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2018-12-16 17:02+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=cp1252\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#: dcs_radio_menu.py:23
+msgid "Persian Gulf Proving Ground hosted by 422d TES."
+msgstr ""
+
+#: dcs_radio_menu.py:24
+msgid "Nevada Test and Training Range hosted by 422d TES."
+msgstr ""
+
+#: dcs_radio_menu.py:25
+msgid "Black Sea Free Roaming Map hosted by 422d TEST."
+msgstr ""
+
+#: dcs_radio_menu.py:31
+msgid "My Position"
+msgstr ""
+
+#: dcs_radio_menu.py:31 dcs_radio_menu.py:32 dcs_radio_menu.py:190
+msgid "Nav Link"
+msgstr ""
+
+#: dcs_radio_menu.py:32 dcs_radio_menu.py:191
+msgid "Nearest Airport"
+msgstr ""
+
+#: dcs_radio_menu.py:34 dcs_radio_menu.py:35 dcs_radio_menu.py:185
+msgid "Wx Link"
+msgstr ""
+
+#: dcs_radio_menu.py:34 dcs_radio_menu.py:186
+msgid "Atmosphere Data At My Position"
+msgstr ""
+
+#: dcs_radio_menu.py:35 dcs_radio_menu.py:187
+msgid "D-ATIS From the Nearest Airport"
+msgstr ""
+
+#: dcs_radio_menu.py:37 dcs_radio_menu.py:194
+msgid "Utils Link"
+msgstr ""
+
+#: dcs_radio_menu.py:37 dcs_radio_menu.py:195
+msgid "Tankers on Station"
+msgstr ""
+
+#: dcs_radio_menu.py:39 dcs_radio_menu.py:40 dcs_radio_menu.py:42
+#: dcs_radio_menu.py:43 dcs_radio_menu.py:44 dcs_radio_menu.py:45
+#: dcs_radio_menu.py:198
+msgid "Preferences"
+msgstr ""
+
+#: dcs_radio_menu.py:39 dcs_radio_menu.py:40 dcs_radio_menu.py:204
+msgid "Language Settings"
+msgstr ""
+
+#: dcs_radio_menu.py:39 dcs_radio_menu.py:205
+msgid "Set English as default language"
+msgstr ""
+
+#: dcs_radio_menu.py:40 dcs_radio_menu.py:206
+msgid "Set Chinese as default language"
+msgstr ""
+
+#: dcs_radio_menu.py:42 dcs_radio_menu.py:43 dcs_radio_menu.py:44
+#: dcs_radio_menu.py:45 dcs_radio_menu.py:208
+msgid "System of Measurement"
+msgstr ""
+
+#: dcs_radio_menu.py:42 dcs_radio_menu.py:210
+msgid "Metric, always use"
+msgstr ""
+
+#: dcs_radio_menu.py:43 dcs_radio_menu.py:209
+msgid "Imperial, always use"
+msgstr ""
+
+#: dcs_radio_menu.py:44 dcs_radio_menu.py:211
+msgid "Either, usage depends on aircraft type"
+msgstr ""
+
+#: dcs_radio_menu.py:45 dcs_radio_menu.py:212
+msgid "Metric Plus Imperial, always show me data in both"
+msgstr ""
+
+#: dcs_radio_menu.py:47 dcs_radio_menu.py:48 dcs_radio_menu.py:49
+#: dcs_radio_menu.py:172
+msgid "Server Information"
+msgstr ""
+
+#: dcs_radio_menu.py:47 dcs_radio_menu.py:48 dcs_radio_menu.py:49
+#: dcs_radio_menu.py:174
+msgid "Administrative"
+msgstr ""
+
+#: dcs_radio_menu.py:47 dcs_radio_menu.py:176
+msgid "View Message Of The Day"
+msgstr ""
+
+#: dcs_radio_menu.py:48 dcs_radio_menu.py:178
+msgid "Rules"
+msgstr ""
+
+#: dcs_radio_menu.py:49 dcs_radio_menu.py:180
+msgid "FAQ"
+msgstr ""
+
+#: dcs_radio_menu.py:153
+msgid ""
+"Based on your DCS World client language setting, 422d TES server has automatically set English as your default display language.\n"
+"You can always set your preference via in-game radio menu option <F.10 Other>"
+msgstr ""
+
+#: dcs_radio_menu.py:161
+msgid ", welcome to "
+msgstr ""
+
+#: dcs_radio_menu.py:162
+msgid "Here is your connection info:"
+msgstr ""
+
+#: dcs_radio_menu.py:163
+msgid "IP Address: "
+msgstr ""
+
+#: dcs_radio_menu.py:164
+msgid "UCID: "
+msgstr ""
+
+#: dcs_radio_menu.py:166
+msgid "Check Radio Menu <F.10 Other> for more information and options."
+msgstr ""
+
+#: dcs_radio_menu.py:183
+msgid "Battle Link"
+msgstr ""
+
+#: dcs_radio_menu.py:199
+msgid "Translation Settings"
+msgstr ""
+
+#: dcs_radio_menu.py:200
+msgid "Translate Unit of Measurement"
+msgstr ""
+
+#: dcs_radio_menu.py:201
+msgid "Enable"
+msgstr ""
+
+#: dcs_radio_menu.py:202
+msgid "Disable"
+msgstr ""
+
+#: dcs_radio_menu.py:293
+msgid "Calm"
+msgstr ""
+
+#: dcs_radio_menu.py:293 dcs_radio_menu.py:296 dcs_radio_menu.py:299
+#: dcs_radio_menu.py:302
+msgid "Wind: "
+msgstr ""
+
+#: dcs_radio_menu.py:296 dcs_radio_menu.py:302
+msgid "kts"
+msgstr ""
+
+#: dcs_radio_menu.py:297 dcs_radio_menu.py:300 dcs_radio_menu.py:303
+msgid "Wind Direction: "
+msgstr ""
+
+#: dcs_radio_menu.py:299 dcs_radio_menu.py:302
+msgid "m/s"
+msgstr ""
+
+#: dcs_radio_menu.py:302 dcs_radio_menu.py:321 dcs_radio_menu.py:324
+#: dcs_radio_menu.py:325 dcs_radio_menu.py:364
+msgid "or"
+msgstr ""
+
+#: dcs_radio_menu.py:307 dcs_radio_menu.py:314 dcs_radio_menu.py:321
+msgid "Weather at your Location: "
+msgstr ""
+
+#: dcs_radio_menu.py:307 dcs_radio_menu.py:314 dcs_radio_menu.py:321
+msgid "at"
+msgstr ""
+
+#: dcs_radio_menu.py:307 dcs_radio_menu.py:321
+msgid "ft"
+msgstr ""
+
+#: dcs_radio_menu.py:310 dcs_radio_menu.py:317 dcs_radio_menu.py:324
+msgid "OAT: "
+msgstr ""
+
+#: dcs_radio_menu.py:310 dcs_radio_menu.py:324
+msgid "°F"
+msgstr ""
+
+#: dcs_radio_menu.py:311 dcs_radio_menu.py:318
+msgid "QNH: "
+msgstr ""
+
+#: dcs_radio_menu.py:311 dcs_radio_menu.py:325
+msgid "inHg"
+msgstr ""
+
+#: dcs_radio_menu.py:314 dcs_radio_menu.py:321
+msgid "m"
+msgstr ""
+
+#: dcs_radio_menu.py:317 dcs_radio_menu.py:324
+msgid "°C"
+msgstr ""
+
+#: dcs_radio_menu.py:318 dcs_radio_menu.py:325
+msgid "hP"
+msgstr ""
+
+#: dcs_radio_menu.py:325
+msgid "Pressure: "
+msgstr ""
+
+#: dcs_radio_menu.py:352 dcs_radio_menu.py:357 dcs_radio_menu.py:363
+msgid ". Fly heading "
+msgstr ""
+
+#: dcs_radio_menu.py:352 dcs_radio_menu.py:357 dcs_radio_menu.py:363
+msgid "Nearest airport is "
+msgstr ""
+
+#: dcs_radio_menu.py:353 dcs_radio_menu.py:358 dcs_radio_menu.py:364
+msgid " for "
+msgstr ""
+
+#: dcs_radio_menu.py:353 dcs_radio_menu.py:364
+msgid "nm"
+msgstr ""
+
+#: dcs_radio_menu.py:358 dcs_radio_menu.py:364
+msgid "km"
+msgstr ""
+
+#: dcs_radio_menu.py:385
+msgid "D-ATIS Uplink from "
+msgstr ""
+
+#: dcs_radio_menu.py:386
+msgid "Info "
+msgstr ""
+
+#: dcs_radio_menu.py:387
+msgid " at "
+msgstr ""
+
+#: dcs_radio_menu.py:387
+msgid " kts"
+msgstr ""
+
+#: dcs_radio_menu.py:387
+msgid "Wind "
+msgstr ""
+
+#: dcs_radio_menu.py:387 dcs_radio_menu.py:389
+msgid " or "
+msgstr ""
+
+#: dcs_radio_menu.py:388
+msgid " mps"
+msgstr ""
+
+#: dcs_radio_menu.py:388
+msgid "Temperature "
+msgstr ""
+
+#: dcs_radio_menu.py:389
+msgid "Altimeter "
+msgstr ""
+
+#: dcs_radio_menu.py:390
+msgid " End"
+msgstr ""
+
+#: dcs_radio_menu.py:390
+msgid " in use"
+msgstr ""
+
+#: dcs_radio_menu.py:390
+msgid "Information "
+msgstr ""
+
+#: dcs_radio_menu.py:390
+msgid "Runway "
+msgstr ""
+
+#: dcs_radio_menu.py:393
+msgid "D-ATIS download failed. No available D-ATIS from nearest station."
+msgstr ""
+
+#: dcs_radio_menu.py:398
+msgid "Tanker Unit(s) on Station: "
+msgstr ""
+
+#: dcs_radio_menu.py:411
+msgid " at Angel "
+msgstr ""
+
+#: dcs_radio_menu.py:411
+msgid "Track "
+msgstr ""
+
+#: dcs_radio_menu.py:420
+msgid "No tanker on station at the moment."
+msgstr ""
+
+#: dcs_radio_menu.py:456
+msgid "You have set Imperial Units as your preferred system of measurement."
+msgstr ""
+
+#: dcs_radio_menu.py:463
+msgid "You have set Metric System as your preferred system of measurement."
+msgstr ""
+
+#: dcs_radio_menu.py:470
+msgid "You have set Mixed Units as your preferred system of measurement."
+msgstr ""
+
+#: dcs_radio_menu.py:477
+msgid "You have set to display data in both Imperial and Metric System of measurement."
+msgstr ""
+

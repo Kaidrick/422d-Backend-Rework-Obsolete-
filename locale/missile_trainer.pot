@@ -1,0 +1,61 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2019-01-07 21:35+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=cp1252\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#: missile.py:145 missile.py:165 missile.py:182 missile.py:342
+msgid "Electronic Combat Simulation"
+msgstr ""
+
+#: missile.py:147 missile.py:167 missile.py:184
+msgid "Missile Type: "
+msgstr ""
+
+#: missile.py:149
+msgid "(by Out Maneuvering Missile)"
+msgstr ""
+
+#: missile.py:149 missile.py:169 missile.py:186
+msgid "Simulation Result: "
+msgstr ""
+
+#: missile.py:149 missile.py:186
+msgid "Missile Defeated "
+msgstr ""
+
+#: missile.py:169
+msgid "Missile Hit"
+msgstr ""
+
+#: missile.py:186
+msgid "(by Breaking Radar Lock)"
+msgstr ""
+
+#: missile.py:344
+msgid "Missile Launch: "
+msgstr ""
+
+#: missile.py:345
+msgid " for "
+msgstr ""
+
+#: missile.py:345
+msgid "HDG "
+msgstr ""
+
+#: missile.py:346
+msgid " nm"
+msgstr ""
+

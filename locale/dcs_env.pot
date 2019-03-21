@@ -1,0 +1,101 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2018-10-21 14:45+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=cp1252\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#: dcs_env.py:15
+msgid "Anapa"
+msgstr ""
+
+#: dcs_env.py:16
+msgid "Batumi"
+msgstr ""
+
+#: dcs_env.py:17
+msgid "Beslan"
+msgstr ""
+
+#: dcs_env.py:18
+msgid "Gelendzhik"
+msgstr ""
+
+#: dcs_env.py:19
+msgid "Gudauta"
+msgstr ""
+
+#: dcs_env.py:20
+msgid "Khanskaya"
+msgstr ""
+
+#: dcs_env.py:21
+msgid "Kobuleti"
+msgstr ""
+
+#: dcs_env.py:22
+msgid "Kolkhi"
+msgstr ""
+
+#: dcs_env.py:23
+msgid "Krasnodar"
+msgstr ""
+
+#: dcs_env.py:24
+msgid "Krymsk"
+msgstr ""
+
+#: dcs_env.py:25
+msgid "Kutaisi"
+msgstr ""
+
+#: dcs_env.py:26
+msgid "Lochini"
+msgstr ""
+
+#: dcs_env.py:27
+msgid "MinVody"
+msgstr ""
+
+#: dcs_env.py:28
+msgid "Mozdok"
+msgstr ""
+
+#: dcs_env.py:29
+msgid "Nalchik"
+msgstr ""
+
+#: dcs_env.py:30
+msgid "Novorossiysk"
+msgstr ""
+
+#: dcs_env.py:31
+msgid "Pashkovsky"
+msgstr ""
+
+#: dcs_env.py:32
+msgid "Sochi"
+msgstr ""
+
+#: dcs_env.py:33
+msgid "Soganlug"
+msgstr ""
+
+#: dcs_env.py:34
+msgid "Sukhumi"
+msgstr ""
+
+#: dcs_env.py:35
+msgid "Vaziani"
+msgstr ""
+

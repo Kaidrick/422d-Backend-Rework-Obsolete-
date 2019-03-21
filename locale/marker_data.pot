@@ -1,0 +1,127 @@
+#
+msgid ""
+msgstr ""
+
+msgid "Sedan Crater"
+msgstr ""
+
+msgid ""
+"Sedan Crater is the result of the Sedan nuclear test and is located within the Nevada Test Site. The 1,280 by 320 ft (390 by 100 m) crater was created on July 6, 1962 by a 104-kiloton-of-TNT (440 TJ) thermonuclear explosion. \n"
+"Because the craters at the Nevada Test Site (NTS) have features similar to the topography of Moon craters, 11 of the 12 American astronauts who walked on the moon trained in Nevada before their missions."
+msgstr ""
+
+msgid "Alamo"
+msgstr ""
+
+msgid "from/to Sally Corridor or other ranges if scheduled"
+msgstr ""
+
+msgid ""
+"Alamo lies within the Desert National Wildlife Range. This area provides a "
+"buffer zone between 62A, 62B and Sally Corridor. Remain above 2,000ft AGL "
+"unless lower altitude is required for tactical training. Avoid animal "
+"concentrations and watering holes."
+msgstr ""
+
+msgid "Elgin"
+msgstr ""
+
+msgid "normally from the Sally Corridor or Caliente"
+msgstr ""
+
+msgid ""
+"Elgin is located east of the Sally Corridor and is the primary air-to-air "
+"training area."
+msgstr ""
+
+msgid "Range 62"
+msgstr ""
+
+msgid "Alamo B/C or as directed"
+msgstr ""
+
+msgid ""
+"Located on the east side of R-4806. The majority of the targets are located "
+"in and around Dogbone Lake. The targets include nuclear bomb circles and "
+"tactical targets consisting of an airfield, supply area, anti-aircraft "
+"artillery, convoys, and a surface-to-air missile site."
+msgstr ""
+
+msgid "Small Town Square With Airport Mock-up"
+msgstr ""
+
+msgid "West (Alamo Charlie), keep above 8000 feet MSL in transition."
+msgstr ""
+
+msgid "Only inert or training ordinance is allowed in this area."
+msgstr ""
+
+msgid "Convoy Targets"
+msgstr ""
+
+msgid "All Direction"
+msgstr ""
+
+msgid ""
+"Targets consist of light armored ground units. Only inert or training "
+"ordinance is allowed in this area."
+msgstr ""
+
+msgid "Military Compound Targets"
+msgstr ""
+
+msgid ""
+"Targets consist of armored ground units and buildings. Only inert or "
+"training ordinance is allowed in this area."
+msgstr ""
+
+msgid "63B Bomb Circle"
+msgstr ""
+
+msgid "Target circle can be used for precision ammunition."
+msgstr ""
+
+msgid "Range 66"
+msgstr ""
+
+msgid "Range entry and departure is conducted from adjacent range airspace."
+msgstr ""
+
+msgid ""
+"Range 66 (Leach Lake Air Gunnery Range) is located in R-2502N. It includes "
+"several tactical targets such as armored convoys, airfields, artillery and "
+"insurgent village mock-up."
+msgstr ""
+
+msgid "Range 75"
+msgstr ""
+
+msgid ""
+"Unmanned range consisting of missile sites and a convoy located in the "
+"central portion of R-4807. Training and inert ordnance and live ordnance "
+"(except for CBU munitions) are authorized."
+msgstr ""
+
+msgid "Sally Corridor"
+msgstr ""
+
+msgid "Directly from/to Nellis AFB"
+msgstr ""
+
+msgid ""
+"The Sally corridor is part of the Desert MOA and is located between Elgin "
+"and Alamo training areas. Sally is the main transition route/corridor to the"
+" northern training areas."
+msgstr ""
+
+msgid "X-Ray"
+msgstr ""
+
+msgid "from/to Nellis AFB or Sally Corridor"
+msgstr ""
+
+msgid ""
+"X-Ray is control by Nellis Control and is an extension of Nellis AFB "
+"airspace. Aircraft from Nellis en route to the North Range are usually sent "
+"to this area first before being given the permission to enter NTTR."
+msgstr ""
