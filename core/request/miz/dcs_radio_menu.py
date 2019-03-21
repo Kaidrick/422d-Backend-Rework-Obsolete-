@@ -135,7 +135,7 @@ class SanitizeRadioItem(DcsAction):
 def init_radio_menu_for_group(group_id, player_name):  # TODO: Add more radio items
     go = []
 
-    ref_player = cdi.active_players[player_name]
+    ref_player = cdi.active_players_by_name[player_name]
 
     # pref = find_player_preferences_by_group_id(group_id)
     # group_lang = pref['lang']
@@ -239,9 +239,9 @@ def init_radio_menu_for_group(group_id, player_name):  # TODO: Add more radio it
 def response_to_radio_item_pull(pull):  # TODO: add system of measurement preferences
     # get pull group info
     group_id = pull['group_id']
-    if group_id not in cdi.active_players_by_group_id.keys():  # no such group active in game
-        print(f"group id {group_id} not active in mission env")
-        return
+    # if group_id not in cdi.active_players_by_group_id.keys():  # no such group active in game
+    #     print(f"group id {group_id} not active in mission env")
+    #     return
 
     # pos = {}
     # # check group name
@@ -256,8 +256,12 @@ def response_to_radio_item_pull(pull):  # TODO: add system of measurement prefer
     # group_dict = db.env_group_dict[group_id]
     # player_name = group_dict.lead['player_name']
 
-    player_dt = cdi.active_players_by_group_id[group_id]
-    player_name = player_dt.player_name
+    # search for player name by id
+    player_dt = None
+    for p_name, p_dt in cdi.active_players_by_name.items():
+        if p_dt.group_id == group_id:
+            player_dt = p_dt
+            break
 
     ucid = player_dt.ucid
 
@@ -271,14 +275,14 @@ def response_to_radio_item_pull(pull):  # TODO: add system of measurement prefer
 
     pos = player_dt.unit_pos
     # ll_coord = group_dict.lead['coord']['LL']
-    ll_coord = [player_dt.unit_ll['Lat'], player_dt.unit_ll['Long'], player_dt.unit_ll['Alt']]
+    ll_coord = [player_dt.unit_ll[0], player_dt.unit_ll[1], player_dt.unit_ll[2]]
     # mgrs = group_dict.lead['coord']['MGRS']
     mgrs_str = "<MGRS string placeholder>"  # generate_mgrs_std(mgrs)
 
-    lang = env_player_dict[player_name].language  # current language
+    lang = player_dt.language  # current language
 
     # what unit does the player want?
-    unit = env_player_dict[player_name].preferred_system
+    unit = player_dt.preferred_system
 
     if unit == 'mixed':
         if type_name in mixed_system_of_measurement_dict.keys():
@@ -445,13 +449,13 @@ def response_to_radio_item_pull(pull):  # TODO: add system of measurement prefer
         player_dt.language = 'cn'
 
         try:
-            cdi.active_players_by_group_id[group_id].lang_on_ip = False
+            cdi.active_players_by_name[player_dt.player_name].lang_on_ip = False
         except Exception as e:
             print(e)
             print("Error caught, continue")
 
         SanitizeRadioItem(group_id).send()  # remove all radio items
-        init_radio_menu_for_group(group_id)  # repopulate radio items?
+        init_radio_menu_for_group(group_id, player_dt.player_name)  # repopulate radio items?
 
     elif pull['path'] == _RadioPull.Preference_set_english:  # Response: Change preferred display language to EN
         # ucid = find_ucid_by_group_id(group_id)
@@ -459,26 +463,26 @@ def response_to_radio_item_pull(pull):  # TODO: add system of measurement prefer
         player_dt.language = 'en'
 
         try:
-            cdi.active_players_by_group_id[group_id].lang_on_ip = False
+            cdi.active_players_by_name[player_dt.player_name].lang_on_ip = False
         except Exception as e:
             print(e)
             print("Error caught, continue")
 
         SanitizeRadioItem(group_id).send()  # remove all radio items, use sanitize instead?
-        init_radio_menu_for_group(group_id)  # repopulate radio items?
+        init_radio_menu_for_group(group_id, player_dt.player_name)  # repopulate radio items?
 
     elif pull['path'] == _RadioPull.Preference_set_japanese:  # Response: Change preferred display language to JP
         set_player_preference_lang(ucid, 'jp')
         player_dt.language = 'jp'
 
         try:
-            cdi.active_players_by_group_id[group_id].lang_on_ip = False
+            cdi.active_players_by_name[player_dt.player_name].lang_on_ip = False
         except Exception as e:
             print(e)
             print("Error caught, continue")
 
         SanitizeRadioItem(group_id).send()  # remove all radio items, use sanitize instead?
-        init_radio_menu_for_group(group_id)  # repopulate radio items?
+        init_radio_menu_for_group(group_id, player_dt.player_name)  # repopulate radio items?
 
     elif pull['path'] == _RadioPull.Preference_set_imperial_unit:  # Response: Change preferred display unit to imperial
         # ucid = find_ucid_by_group_id(group_id)
@@ -532,10 +536,14 @@ def init_radio_menu_on_birth_spark(spark_dt):
     # print(player_group_id, player_name, player_runtime_id)
 
     SanitizeRadioItem(player_group_id).send()  # remove all existing radio items from this group
-    # init_radio_menu_for_group(player_group_id)
-    RequestDcsMessageForGroup(player_group_id, "Welcome! We are doing some major overhaul! Lots of functions"
-                                               " are currently missing from the server. Use this mission "
-                                               "as a free fly practice.").send()
+    init_radio_menu_for_group(player_group_id, player_name)
+    RequestDcsMessageForGroup(player_group_id, "Welcome! We are doing some major overhaul! Below is a list of "
+                                               "functions that are currently missing from the server:\n"
+                                               "1. Airspace control\n"
+                                               "2. Missile Trainer --> missile will still launch, so be aware.\n"
+                                               "3. Chat command\n"
+                                               "\nMaybe there are a few more.. \n"
+                                               "we are still working on that. Have fun!").send()
 
 
 spark.SparkHandler.PLAYER_SPAWN["dcs_radio_init_on_birth"] = init_radio_menu_on_birth_spark

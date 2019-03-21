@@ -26,9 +26,9 @@ active_players = {}  # indexed by player UCID
 active_players_by_group_id = {}  # indexed by player group id
 active_players_by_name = {}  # indexed by player name
 
-group_id_alloc_by_player_name = {}
-group_id_alloc_by_runtime_id = {}
-player_runtime_id_alloc_by_name = {}
+# group_id_alloc_by_player_name = {}
+# group_id_alloc_by_runtime_id = {}
+# player_runtime_id_alloc_by_name = {}
 
 # all playable units indexed by group id, group name and unit_name
 playable_unit_info_by_unit_name = {}  # indexed by unit name
@@ -40,6 +40,12 @@ other_units_by_name = {}  # indexed by unit name
 
 # player preferences
 player_net_config_by_ucid = {}
+
+# -----------------------------------------------------------------------------------------------------------
+# Export Data for look up
+export_units = {}
+export_ballistic = {}
+export_airdromes = {}
 
 # -----------------------------------------------------------------------------------------------------------
 
