@@ -38,6 +38,8 @@ class Player:
         self.unit_coalition = coalition  # blue - Enemies, red - ?
         self.unit_country = unit_data['country']
 
+        self.fuel = unit_data['fuel']
+
         # Data to keep updated
         self.last_unit_pos = unit_data['pos']
 

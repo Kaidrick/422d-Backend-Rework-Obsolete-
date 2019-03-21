@@ -519,6 +519,8 @@ def tanker_control(tanker_group_name,
         time.sleep(3)
 
     # dcs: check fuel
+    # FIXME: checking fuel sometimes cause miz env to crash
+    # probably because search name is wrong?
     plugin_log(plugin_name, f"{tanker_group_name} {ac_type} {tanker_track} - Stage 3")
     # check if tanker is dead and its fuel?
     while True:
@@ -530,7 +532,10 @@ def tanker_control(tanker_group_name,
             tanker_dead = True
             break
         else:
-            fuel = RequestDcsDebugCommand(f"return Group.getByName('{tanker_group_name}'):getUnit(1):getFuel()", True).send()  # query miz env
+            unit_name = find_unit(tanker_group_name)
+            unit = cdi.other_units_by_name[unit_name]
+            fuel = unit.fuel
+            # fuel = RequestDcsDebugCommand(f"return Group.getByName('{tanker_group_name}'):getUnit(1):getFuel()", True).send()  # query miz env
 
             # any request could fail though
             if fuel:  # if fuel is None

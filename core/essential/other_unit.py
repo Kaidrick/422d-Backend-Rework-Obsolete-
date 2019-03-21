@@ -23,6 +23,8 @@ class OtherUnit:  # AI units and static objects?
         self.unit_coalition = coalition  # blue - Enemies, red - ?
         self.unit_country = unit_data['country']
 
+        self.fuel = unit_data['fuel']
+
         # init record field
         self.recent_pos = [unit_data['pos']]  # keep 10 recent position for calculation
         self.recent_pos_time = [time.time()]  # 10 timestamp corresponding to recent position
