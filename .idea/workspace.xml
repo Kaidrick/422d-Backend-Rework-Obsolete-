@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="600c2c46-9673-4fc9-98d6-73a0b6339ae7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/essential/other_unit.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/essential/other_unit.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/essential/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/essential/player.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/dispatch_tankers/tanker.py" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/dispatch_tankers/tanker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,8 +25,8 @@
             <file pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/main.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="368">
-                    <caret line="34" column="23" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
+                  <state relative-caret-position="372">
+                    <caret line="48" column="20" lean-forward="true" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
                     <folding>
                       <element signature="e#12#23#0" expanded="true" />
                     </folding>
@@ -136,28 +133,28 @@
           <entry key="cfg" value="2" />
           <entry key="gitignore" value="1" />
           <entry key="lua" value="4" />
-          <entry key="py" value="78" />
+          <entry key="py" value="79" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Ini" value="2" />
           <entry key="PLAIN_TEXT" value="6" />
-          <entry key="Python" value="78" />
+          <entry key="Python" value="79" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="4" />
           <entry key="lua" value="570" />
-          <entry key="py" value="11986" />
+          <entry key="py" value="12034" />
           <entry key="txt" value="113" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="687" />
-          <entry key="Python" value="11986" />
+          <entry key="Python" value="12034" />
         </counts>
       </usages-collector>
     </session>
@@ -179,8 +176,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plugins/dispatch_tankers/tanker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="540" column="36" lean-forward="true" selection-start-line="540" selection-start-column="36" selection-end-line="540" selection-end-column="36" />
+            <state relative-caret-position="632">
+              <caret line="629" column="14" lean-forward="true" selection-start-line="629" selection-start-column="14" selection-end-line="629" selection-end-column="14" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -283,7 +280,6 @@
         <option value="$PROJECT_DIR$/core/request/miz/dcs_request.py" />
         <option value="$PROJECT_DIR$/core/request/api/player_preference.py" />
         <option value="$PROJECT_DIR$/core/data_interface.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/core/request/miz/dcs_radio_menu.py" />
         <option value="$PROJECT_DIR$/core/essential/data_mapping.py" />
         <option value="$PROJECT_DIR$/plugins/__init__.py" />
@@ -291,6 +287,7 @@
         <option value="$PROJECT_DIR$/core/essential/other_unit.py" />
         <option value="$PROJECT_DIR$/core/essential/player.py" />
         <option value="$PROJECT_DIR$/plugins/dispatch_tankers/tanker.py" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
@@ -676,16 +673,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/request/miz/dcs_pull.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="39" lean-forward="true" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#66#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plugins/declare_plugins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -912,23 +899,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/core/request/miz/dcs_radio_menu.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="34" column="23" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
+        <state relative-caret-position="1093">
+          <caret line="531" column="60" selection-start-line="531" selection-start-column="60" selection-end-line="531" selection-end-column="60" />
           <folding>
-            <element signature="e#12#23#0" expanded="true" />
+            <element signature="e#0#61#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/essential/player.py">
+    <entry file="file://$PROJECT_DIR$/plugins/dispatch_tankers/tanker.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="40" column="35" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
+        <state relative-caret-position="632">
+          <caret line="629" column="14" lean-forward="true" selection-start-line="629" selection-start-column="14" selection-end-line="629" selection-end-column="14" />
           <folding>
-            <element signature="e#220#231#0" expanded="true" />
-            <marker date="1553126473480" expanded="true" signature="344:706" ph="..." />
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -944,22 +930,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/request/miz/dcs_radio_menu.py">
+    <entry file="file://$PROJECT_DIR$/core/essential/player.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1093">
-          <caret line="531" column="60" selection-start-line="531" selection-start-column="60" selection-end-line="531" selection-end-column="60" />
+        <state relative-caret-position="506">
+          <caret line="40" column="35" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
           <folding>
-            <element signature="e#0#61#0" expanded="true" />
+            <element signature="e#220#231#0" expanded="true" />
+            <marker date="1553126473480" expanded="true" signature="344:706" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/dispatch_tankers/tanker.py">
+    <entry file="file://$PROJECT_DIR$/core/request/miz/dcs_pull.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="540" column="36" lean-forward="true" selection-start-line="540" selection-start-column="36" selection-end-line="540" selection-end-column="36" />
+        <state relative-caret-position="184">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#0#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="48" column="20" lean-forward="true" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
+          <folding>
+            <element signature="e#12#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
