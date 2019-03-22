@@ -135,17 +135,17 @@ def airspace_tracker():
     load_airspace()
 
     while True:
-        for runtime_id_name, player in cdi.active_players_by_unit_runtime_id.items():
-            player_pos = player.unit_pos
+        for player_name, player_dt in cdi.active_players_by_name.items():
+            player_pos = player_dt.unit_pos
 
-            last_airspace = player.get_airspace()
+            last_airspace = player_dt.get_airspace()
             player_airspace = locate_airspace(player_pos)
-            player.set_airspace(player_airspace)
+            player_dt.set_airspace(player_airspace)
 
             if not last_airspace == player_airspace:  # airspace change
                 # airspace change signal here
 
-                print(f"{player.player_name} ({player.unit_type}, ID: {runtime_id_name}) - Airspace Change: "
+                print(f"{player_dt.player_name} ({player_dt.unit_type}, ID: {player_dt.runtime_id}) - Airspace Change: "
                       f"{last_airspace} > {player_airspace}")
 
             # print(player_pos, player_airspace)

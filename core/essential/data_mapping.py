@@ -172,10 +172,15 @@ def group_data_process(res_group):
         for unit in group_data['units']:  # check units in each group
             if unit['player_control']:  # if player control flag is True
                 if unit['player_name'] != "":
-                    kn_player = parse_player_unit(group_data['id'], group_data['name'], group_data['coalition'],
-                                                  group_data['category'], unit)
-                    if kn_player.player_name == "":
-                        print("wtf? " + str(unit))
+                    # if player name is already in the name list
+                    if unit['player_name'] in active_player_names:
+                        kn_player = cdi.active_players_by_name[unit['player_name']].update(unit)
+                    else:
+                        kn_player = parse_player_unit(group_data['id'], group_data['name'], group_data['coalition'],
+                                                      group_data['category'], unit)
+                        if kn_player.player_name == "":
+                            print("wtf? " + str(unit))
+
                     check_player_names.append(kn_player.player_name)
                     p_edit[kn_player.player_name] = kn_player
 
@@ -248,4 +253,4 @@ def trigger_spark_player_spawn(check_name, p_edit):
 if __name__ == '__main__':
     map_playable_group_info()
 
-    get_all_players_data()
+    # get_all_players_data()

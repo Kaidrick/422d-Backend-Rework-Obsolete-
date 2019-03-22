@@ -530,6 +530,9 @@ def tanker_control(tanker_group_name,
         # search group_env_dict_by_name
         if group_single_unit_dead(tanker_group_name):
             tanker_dead = True
+            # remove tanker from on station list in data interface
+            if tanker_group_name in cdi.tanker_sta.keys():
+                del cdi.tanker_sta[tanker_group_name]
             break
         else:
             unit_name = find_unit(tanker_group_name)

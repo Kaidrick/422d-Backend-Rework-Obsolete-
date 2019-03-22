@@ -94,7 +94,18 @@ class Player:
         else:  # player's position has not changed
             return False
 
-    # def update(self, update_data):
+    def update(self, update_data):
+        self.fuel = update_data['fuel']
+        self.unit_pos = update_data['pos']
+        self.unit_ll = update_data['coord']['LL']
+        self.mgrs = update_data['coord']['MGRS']
+        self.unit_att = {  # FIXME
+            'pitch': update_data['att'],
+            'bank': update_data['att'],
+            'heading': update_data['att'],
+        }
+
+        return self
     #     # record last position
     #     self.last_unit_pos = self.unit_pos
     #
