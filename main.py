@@ -10,6 +10,9 @@ from core.essential.precise_data import extract_export_data
 
 from core.request.miz.dcs_airbases import init_airbases
 
+# -- chat command
+from core.essential import chat_commands
+
 # -- player preferences
 from core.request.api.player_preference import get_player_preference_settings
 

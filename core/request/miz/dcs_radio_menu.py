@@ -542,6 +542,7 @@ def init_radio_menu_on_birth_spark(spark_dt):
                                                "1. Airspace control\n"
                                                "2. Missile Trainer --> missile will still launch, so be aware.\n"
                                                "3. Chat command\n"
+                                               "4. Target Range Control and Weapon Delivery Evaluation\n"
                                                "\nMaybe there are a few more.. \n"
                                                "we are still working on that. Have fun!").send()
 
