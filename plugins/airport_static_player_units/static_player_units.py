@@ -190,15 +190,22 @@ def matching_playable_unit_with_parking():
               "AttributeError@def matching_playable_unit_with_parking", "no match units")
 
 
+filter_list = ['SA342M', 'SA342L', 'SA342Mistral', 'SA342Minigun']
+
+
 def spawn_playable_statics():
     # remove aircraft hanger or shader or anything that is controlled by flag
 
     for unit_id, static_data in static_player_unit_matching_dict.items():
+        # ignore filter list
+        if static_data['type'] not in filter_list:
 
-        AddStaticObject(static_data['unitName'], static_data['type'],
-                        static_data['x'], static_data['y'],
-                        livery_id=static_data['livery_id'],
-                        onboard_num=static_data['onboard_num'], heading=static_data['heading']).send()
+            AddStaticObject(static_data['unitName'], static_data['type'],
+                            static_data['x'], static_data['y'],
+                            livery_id=static_data['livery_id'],
+                            onboard_num=static_data['onboard_num'], heading=static_data['heading']).send()
+        else:
+            pass
 
         # elif static_data['parking_type'] == 72:  # TODO: add more options
         #     # print(static_data['parking_type'])
