@@ -23,12 +23,8 @@ print(f"Initiate Backend For {theatre}, Mission Start Time: {mission_start_time 
 # active players --> miz env dependent: the mission env decides when a player is active and when a player is inactive
 # through in-game events
 active_players = {}  # indexed by player UCID
-active_players_by_group_id = {}  # indexed by player group id
-active_players_by_name = {}  # indexed by player name
 
-# group_id_alloc_by_player_name = {}
-# group_id_alloc_by_runtime_id = {}
-# player_runtime_id_alloc_by_name = {}
+active_players_by_name = {}  # indexed by player name
 
 # all playable units indexed by group id, group name and unit_name
 playable_unit_info_by_unit_name = {}  # indexed by unit name
@@ -48,6 +44,13 @@ export_ballistic = {}
 export_airdromes = {}
 
 # -----------------------------------------------------------------------------------------------------------
+# Data Models
+active_munition = {}
+
+# -----------------------------------------------------------------------------------------------------------
+# Other useful thingy
+weapon_shot_event_log = {}  # del entry when a search is done
+dead_other_units = {}  #
 
 # plugins
 d_atis = {}  # airport_atis

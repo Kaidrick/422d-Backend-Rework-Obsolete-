@@ -48,105 +48,6 @@ def get_all_statics_data():
     return RequestDcsAllStaticObjects().send()
 
 
-# get all players data from mission env
-# this data is used to determine if a player is active or not
-# compare player names to a list.
-# if new names, then relevant players have spawned. if missing names, players have de-spawned.
-# def get_all_players_data():
-#     """
-#     This method is supposed to be run every 0.01 second or so.
-#     Since a player name is unique per server, those player names can be thrown into a set
-#     There are two sets: active set and check set. Check set is always the newest player name list
-#     while active set is a set of player who have been active (in mission) during the last iteration
-#
-#     if a name is in check but is not in active, then this is a new name --> new player spawn
-#     if a name is in active but is not in check, then this is a obsolete name --> player has de-spawn
-#
-#     there are multiple possibilities:
-#     1. there is no player in the mission, and a player joins
-#     2. there is at least a player in mission, and a player joins
-#     3. there is only one player in the mission, and this player leaves
-#     4. there is at least two players in the mission, and one of them leaves
-#     5. for some reason, all players leaves at once
-#
-#     :return:
-#     """
-#     _check_players_name_set = set()
-#
-#     with open(f_get_all_players_data, 'r') as f:
-#         cmd = f.read()  # read lua script
-#
-#     res = RequestDcsDebugCommand(cmd, True).send()  # do script
-#     if res:  # that is, if there is at least one player that is active in game
-#         # print(res)
-#         for player_name, player_info in res.items():
-#             _check_players_name_set.add(player_name)  # add to set
-#
-#         global _active_players_name_set
-#
-#         # player spawn
-#         new_names = _check_players_name_set.difference(_active_players_name_set)  # name in check, but no in active
-#         for name in new_names:
-#             if name != '':
-#                 print(f"Player >>>{name}<<< has entered mission.")
-#                 # trigger spawn signal here?
-#                 try:
-#                     player_unit_name = res[name]['unit_name'].rstrip(' ')
-#                     player_group_id = cdi.playable_unit_info_by_unit_name[player_unit_name]['group_id']
-#                     player_runtime_id_name = res[name]['unit_runtime_id_name'].rstrip(' ')
-#                     # player_runtime_id is a string start with id_, not a number
-#                 except KeyError:
-#                     print(res)
-#                     # print(cdi.playable_unit_info_by_unit_name)
-#                     # print(cdi.playable_unit_info_by_group_id)
-#                     # print(cdi.playable_unit_info_by_group_name)
-#                 else:
-#                     # trigger signal here
-#                     # RequestDcsDebugCommand(f"trigger.action.outTextForGroup({player_group_id}, 'Welcome!', 10)").send()
-#                     spk_dt = {
-#                         'type': 'player_spawn',
-#                         'data': {
-#                             'name': name,
-#                             'group_id': player_group_id,
-#                             'unit_name': player_unit_name,
-#                             'runtime_id': player_runtime_id_name
-#                         }
-#                     }
-#
-#                     cdi.group_id_alloc_by_player_name[name] = player_group_id
-#                     cdi.group_id_alloc_by_runtime_id[player_runtime_id_name] = player_group_id
-#                     cdi.player_runtime_id_alloc_by_name[name] = player_runtime_id_name
-#
-#                     spark.player_spawn(spk_dt)
-#                     print(f"Player >>>{spk_dt['data']['name']}<<< has spawned. "
-#                           f"GroupID: {spk_dt['data']['group_id']}, "
-#                           f"RuntimeID: {spk_dt['data']['runtime_id']}. ")
-#
-#         # player de-spawn
-#         # print("before save:" + str(_active_players_name_set))
-#         obs_names = _active_players_name_set.difference(_check_players_name_set)
-#         for name in obs_names:
-#             if name != '':
-#                 print(f"Player >>>{name}<<< has left the mission.")
-#                 del cdi.group_id_alloc_by_player_name[name]
-#                 kn_runtime_id = cdi.player_runtime_id_alloc_by_name[name]
-#                 del cdi.group_id_alloc_by_runtime_id[kn_runtime_id]
-#
-#         # pass current name set to active set
-#         _active_players_name_set = _check_players_name_set
-#
-#     else:  # no player at the moment (in the newest iteration), but maybe all the player is leaving in this check
-#         _check_players_name_set = set()
-#
-#         obs_names = _active_players_name_set.difference(_check_players_name_set)
-#         for name in obs_names:
-#             if name != '':
-#                 print(f"Player >>>{name}<<< has left the mission.")
-#                 del cdi.group_id_alloc_by_player_name[name]
-#
-#         _active_players_name_set = _check_players_name_set
-
-
 def group_data_process(res_group):
     """
     This method process all group data in the mission environment
@@ -167,6 +68,8 @@ def group_data_process(res_group):
     # if this group is a player group, then call parse_player
 
     # if this group is a AI group, then call parse_other
+
+    # FIXME: maybe a numeric name will cause some problem? say, 18.3K ? once a player named this joined
 
     for group_data in res_group:  # check each group
         for unit in group_data['units']:  # check units in each group
@@ -209,11 +112,50 @@ def group_data_process(res_group):
     # -- Other spark detection
     for check_name in check_other_names:
         if check_name not in active_other_names:  # new player spawn
-            print(check_name + " has spawned")
+            # print(check_name + " has spawned")
+            trigger_spark_other_spawn(check_name, o_edit)
 
     for check_name in active_other_names:
         if check_name not in check_other_names:  # player de-spawn
-            print(check_name + " has de-spawned")
+            # print(check_name + " has de-spawned")
+            # dead unit or removed unit; add to dead_other_units dictionary
+            trigger_spark_other_despawn(check_name, o_omni)
+
+
+def trigger_spark_other_despawn(check_name, o_omni):
+    kn_check = o_omni[check_name]
+    spk_dt = {
+        'type': 'other_despawn',
+        'data': {
+            'unit_name': kn_check.unit_name,
+            'unit_type': kn_check.unit_type,
+            'runtime_id': kn_check.runtime_id,
+            'self': kn_check
+        }
+    }
+    spark.other_despawn(spk_dt)
+    print(f"Unit >>>"
+          f"{spk_dt['data']['unit_name']}({spk_dt['data']['unit_type']}"
+          f" - {spk_dt['data']['runtime_id']})"
+          f"<<< has de-spawned. ")
+
+
+def trigger_spark_other_spawn(check_name, o_edit):
+    kn_check = o_edit[check_name]
+    spk_dt = {
+        'type': 'other_spawn',
+        'data': {
+            'unit_name': kn_check.unit_name,
+            'unit_type': kn_check.unit_type,
+            'runtime_id': kn_check.runtime_id,
+            'self': kn_check
+        }
+    }
+    spark.other_spawn(spk_dt)
+    print(f"Unit >>>"
+          f"{spk_dt['data']['unit_name']}({spk_dt['data']['unit_type']}"
+          f" - {spk_dt['data']['runtime_id']})"
+          f"<<< has spawned. ")
 
 
 def trigger_spark_player_despawn(check_name, p_omni):

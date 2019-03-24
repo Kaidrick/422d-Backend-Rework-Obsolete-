@@ -1,9 +1,8 @@
 # import configparser
 import os
-from plugin_functions.declare_plugins import plugin_log
+from plugins.declare_plugins import plugin_log
 import core.data_interface as cdi
 from core.request.miz.dcs_mark_panel import RequestAddMarkPanel, RequestRemoveMarkPanel, MarkPanel
-import core.signal as sig
 import json
 import gettext
 from core.request.miz.dcs_env import set_msg_locale, search_localized_string
@@ -13,31 +12,17 @@ _ = gettext.gettext
 
 plugin_name = "Tactical Map Marker"
 
-# read markers config from the config file
-# cfg = configparser.ConfigParser()
-
-# get theatre
-theatre = cdi.theatre
-
-marker_files = {
-    'Nevada': 'Nevada.json',
-    # 'Caucasus': 'Caucasus.json',
-    # 'PersianGulf': 'PersianGulf.json'
-}
-
-# cfg_file = marker_files[theatre]
-cfg_file = 'Nevada.json'
-#
-# cfg.read(os.path.join(os.path.abspath(os.path.dirname(__file__)), cfg_file))
-
-plugin_log(plugin_name, f"Read Marker Data from file '{cfg_file}'")
+# TODO: the in-game panel no longer seems to support multiple lines of text diplay
+# TODO: thus, the panel it self should probably only display basic information, while the chat command
+# TODO: can be used to access detailed information?
 
 
-def cdi_unit_data_search():
-    pass
+plugin_log(plugin_name, f"Set Marker Data for '{cdi.theatre}'")
+
+# player-panels dictionary
+marker_panels_by_player_name = {}  # str: player_name, list: panels
 
 
-# TODO: for marker data, each json file is a small package of marker data for a specific location/area
 def load_data():
     search_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'data', cdi.theatre)
     res = {}
@@ -52,8 +37,20 @@ def load_data():
 
 tactical_markers_data = load_data()
 
+"""
+spk_dt = {
+        'type': 'player_spawn',
+        'data': {
+            'name': kn_check.player_name,
+            'group_id': kn_check.group_id,
+            'unit_name': kn_check.unit_name,
+            'runtime_id': kn_check.runtime_id
+        }
+    }
+"""
 
-def map_markers(signal_data):  # this method should be added to signal handler list
+
+def map_markers(spk_dt):  # this method should be added to signal handler list
     # sig_dt = {
     #     'initiator': unit_id_name,
     #     'type': "spawn",
@@ -62,8 +59,9 @@ def map_markers(signal_data):  # this method should be added to signal handler l
     # }
     kn_markers = []  # temporary container var
     # in order to add marker, first need to know --> group_id
-    group_id = signal_data['player_group_id']
-    player_lang = cdi.active_players_by_group_id[group_id].language
+    group_id = spk_dt['data']['group_id']
+    player_name = spk_dt['data']['name']
+    player_lang = cdi.active_players_by_name[player_name].language
 
     _ = set_msg_locale(player_lang, "map_markers")
 
@@ -129,14 +127,16 @@ def map_markers(signal_data):  # this method should be added to signal handler l
             kn_mk = MarkPanel(group_id, text).set_pos(pos['x'], pos['z'])
             kn_markers.append(kn_mk)
 
-    cdi.active_players_by_group_id[group_id].marker_panels = kn_markers
+    # cdi.active_players_by_name[player_name].marker_panels = kn_markers
+    marker_panels_by_player_name[player_name] = kn_markers
 
     RequestAddMarkPanel(kn_markers).send()
 
 
 # TODO: maybe make language and preference change as a signal as well?
-def clean_markers(signal_data):  # remove marker panel for player group when player leaves
-    group_id = signal_data['player_group_id']
-    player_mark_panels = cdi.active_players_by_group_id[group_id].marker_panels
-
+def clean_markers(spk_dt):  # remove marker panel for player group when player leaves
+    # group_id = spk_dt['group_id']
+    player_name = spk_dt['data']['name']
+    player_mark_panels = marker_panels_by_player_name[player_name]
     RequestRemoveMarkPanel(player_mark_panels).send()
+    del marker_panels_by_player_name[player_name]  # remove entry on player de-spawn

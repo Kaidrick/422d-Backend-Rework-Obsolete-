@@ -118,7 +118,7 @@ def load_airspace():  # load data from config files according to initial theatre
     cfg = configparser.ConfigParser()
     cfg.read(file_path)
 
-    print(str(len(cfg.sections())) + "airspace for " + theatre + " initiated")
+    print(str(len(cfg.sections())) + " section(s) of airspace for " + theatre + " loaded")
 
     for section in cfg.sections():
         new_air_space = Airspace(cfg[section])
