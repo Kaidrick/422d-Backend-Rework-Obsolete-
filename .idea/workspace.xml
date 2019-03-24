@@ -1,30 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="600c2c46-9673-4fc9-98d6-73a0b6339ae7" name="Default Changelist" comment="cleaned up some cmd output">
-      <change afterPath="$PROJECT_DIR$/core/essential/weapons/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/essential/weapons/aam.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/essential/weapons/asm.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/essential/weapons/bomb.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/essential/weapons/projectile.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/essential/weapons/rocket.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/essential/weapons/weapon.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/essential/weapons/weapon_data_mapping.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plugins/range_control/obsolete/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/data_interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/data_interface.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/essential/data_mapping.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/essential/data_mapping.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/essential/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/essential/player.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/essential/precise_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/essential/precise_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/request/exp/export_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/request/exp/export_request.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/spark.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/spark.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/airspace/region.py" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/airspace/region.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/dispatch_tankers/tanker.py" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/dispatch_tankers/tanker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/tactical_map_marker/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/tactical_map_marker/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/tactical_map_marker/map_markers.py" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/tactical_map_marker/map_markers.py" afterDir="false" />
-    </list>
+    <list default="true" id="600c2c46-9673-4fc9-98d6-73a0b6339ae7" name="Default Changelist" comment="cleaned up some cmd output" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,8 +63,8 @@
             <file pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/core/essential/data_mapping.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="504">
-                    <caret line="123" lean-forward="true" selection-start-line="123" selection-end-line="123" />
+                  <state relative-caret-position="1010">
+                    <caret line="145" column="30" lean-forward="true" selection-start-line="145" selection-start-column="30" selection-end-line="145" selection-end-column="30" />
                     <folding>
                       <element signature="e#147#156#0" expanded="true" />
                       <marker date="1553417565204" expanded="true" signature="1701:1848" ph="..." />
@@ -233,8 +210,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core/essential/weapons/weapon_data_mapping.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="164" column="40" lean-forward="true" selection-start-line="164" selection-start-column="40" selection-end-line="164" selection-end-column="40" />
+            <state relative-caret-position="99">
+              <caret line="138" column="67" lean-forward="true" selection-start-line="138" selection-start-column="67" selection-end-line="138" selection-end-column="67" />
               <folding>
                 <element signature="e#71#89#0" expanded="true" />
                 <marker date="1553418291853" expanded="true" signature="321:659" ph="..." />
@@ -345,10 +322,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1230" />
-    <option name="y" value="56" />
-    <option name="width" value="1308" />
-    <option name="height" value="1349" />
+    <option name="x" value="1083" />
+    <option name="y" value="70" />
+    <option name="width" value="1416" />
+    <option name="height" value="1355" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -608,14 +585,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1230" y="56" width="1308" height="1349" extended-state="0" />
+    <frame x="0" y="6" width="136" height="145" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2896" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="1.0" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4992" visible="true" weight="0.32890365" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4992" visible="true" weight="NaN" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1042,28 +1020,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/essential/data_mapping.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="123" lean-forward="true" selection-start-line="123" selection-end-line="123" />
-          <folding>
-            <element signature="e#147#156#0" expanded="true" />
-            <marker date="1553417565204" expanded="true" signature="1701:1848" ph="..." />
-            <marker date="1553417565204" expanded="true" signature="1799:1848" ph="..." />
-            <marker date="1553417565204" expanded="true" signature="5593:6081" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/essential/weapons/weapon_data_mapping.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="164" column="40" lean-forward="true" selection-start-line="164" selection-start-column="40" selection-end-line="164" selection-end-column="40" />
+        <state relative-caret-position="99">
+          <caret line="138" column="67" lean-forward="true" selection-start-line="138" selection-start-column="67" selection-end-line="138" selection-end-column="67" />
           <folding>
             <element signature="e#71#89#0" expanded="true" />
             <marker date="1553418291853" expanded="true" signature="321:659" ph="..." />
             <marker date="1553418291853" expanded="true" signature="699:3626" ph="..." />
             <marker date="1553418291853" expanded="true" signature="6727:7805" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/essential/data_mapping.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1010">
+          <caret line="145" column="30" lean-forward="true" selection-start-line="145" selection-start-column="30" selection-end-line="145" selection-end-column="30" />
+          <folding>
+            <element signature="e#147#156#0" expanded="true" />
+            <marker date="1553417565204" expanded="true" signature="1701:1848" ph="..." />
+            <marker date="1553417565204" expanded="true" signature="1799:1848" ph="..." />
+            <marker date="1553417565204" expanded="true" signature="5593:6081" ph="..." />
           </folding>
         </state>
       </provider>
