@@ -539,10 +539,8 @@ def init_radio_menu_on_birth_spark(spark_dt):
     init_radio_menu_for_group(player_group_id, player_name)
     RequestDcsMessageForGroup(player_group_id, "Welcome! We are doing some major overhaul! Below is a list of "
                                                "functions that are currently missing from the server:\n"
-                                               "1. Airspace control\n"
-                                               "2. Missile Trainer --> missile will still launch, so be aware.\n"
-                                               "3. Chat command\n"
-                                               "4. Target Range Control and Weapon Delivery Evaluation\n"
+                                               "1. Missile Trainer --> missile will still launch, so be aware.\n"
+                                               "2. Target Range Control and Weapon Delivery Evaluation\n"
                                                "\nMaybe there are a few more.. \n"
                                                "we are still working on that. Have fun!").send()
 
