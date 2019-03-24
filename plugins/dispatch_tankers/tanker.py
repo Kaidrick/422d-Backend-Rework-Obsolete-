@@ -588,7 +588,12 @@ def tanker_control(tanker_group_name,
             break
         else:
             unit_name = find_unit(tanker_group_name)
+            if not unit_name:  # find_unit returns None, cannot find unit, better respawn
+                plugin_log(plugin_name, f"{tanker_group_name} {ac_type} {tanker_track} - Cannot find tanker, Remove")
+                tanker_dead = True
+                break
             unit = cdi.other_units_by_name[unit_name]
+
             last_pos = unit.unit_pos
             # tkr_group = db.env_group_dict_by_name[tanker_group_name]
             # last_pos = tkr_group.lead_pos
@@ -596,7 +601,12 @@ def tanker_control(tanker_group_name,
 
             time.sleep(60)
             unit_name = find_unit(tanker_group_name)
-            unit = cdi.other_units_by_name[unit_name]
+            if not unit_name:  # find_unit returns None, cannot find unit, better respawn
+                plugin_log(plugin_name, f"{tanker_group_name} {ac_type} {tanker_track}"
+                                        f" - Cannot find tanker after 60s, Remove")
+                tanker_dead = True
+                break
+            unit = cdi.other_units_by_name[unit_name]  # FIXME: sometimes throws a KeyError
             pos = unit.unit_pos
 
             # tkr_group = db.env_group_dict_by_name[tanker_group_name]

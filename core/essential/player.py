@@ -106,61 +106,6 @@ class Player:
         }
 
         return self
-    #     # record last position
-    #     self.last_unit_pos = self.unit_pos
-    #
-    #     # record pos data
-    #     # parse.record_position_time_pair(
-    #     #     update_data['Position'], self.recent_pos, self.recent_pos_time
-    #     # )
-    #     # self.recent_pos, self.recent_pos_time = parse.record_position_time_pair(
-    #     #     update_data['Position'], self.recent_pos, self.recent_pos_time
-    #     # )
-    #
-    #     self.unit_pos = update_data['Position']
-    #     self.unit_ll = update_data['LatLongAlt']
-    #     self.unit_att = {
-    #         'pitch': update_data['Pitch'],
-    #         'bank': update_data['Bank'],
-    #         'heading': update_data['Heading'],
-    #     }
-    #
-    #     # sync update active_players_by_group_id
-    #     cdi.active_players_by_group_id[self.group_id].unit_pos = update_data['Position']
-    #     cdi.active_players_by_group_id[self.group_id].unit_ll = update_data['LatLongAlt']
-    #     cdi.active_players_by_group_id[self.group_id].unit_att = {
-    #         'pitch': update_data['Pitch'],
-    #         'bank': update_data['Bank'],
-    #         'heading': update_data['Heading'],
-    #     }
-    #     cdi.active_players_by_group_id[self.group_id].unit_flags = update_data['Flags']
-    #     cdi.active_players_by_group_id[self.group_id].recent_pos = self.recent_pos
-    #     cdi.active_players_by_group_id[self.group_id].recent_pos_time = self.recent_pos_time
-    #
-    #     # sync update active_players_by_unit_runtime_id
-    #     cdi.active_players_by_unit_runtime_id[self.runtime_id_name].unit_pos = update_data['Position']
-    #     cdi.active_players_by_unit_runtime_id[self.runtime_id_name].unit_ll = update_data['LatLongAlt']
-    #     cdi.active_players_by_unit_runtime_id[self.runtime_id_name].unit_att = {
-    #         'pitch': update_data['Pitch'],
-    #         'bank': update_data['Bank'],
-    #         'heading': update_data['Heading'],
-    #     }
-    #     cdi.active_players_by_unit_runtime_id[self.runtime_id_name].unit_flags = update_data['Flags']
-    #     cdi.active_players_by_unit_runtime_id[self.runtime_id_name].recent_pos = self.recent_pos
-    #     cdi.active_players_by_unit_runtime_id[self.runtime_id_name].recent_pos_time = self.recent_pos_time
-    #
-    #     if self.check_movement():  # if player has moved
-    #         sig_dt = {
-    #             'initiator': self.runtime_id_name,
-    #             'type': "distance",
-    #             'player_name': self.player_name,
-    #             'player_group_id': self.group_id,
-    #         }
-    #         # spark.player_distance(sig_dt)
-
-    # def drop(self):  # drop player data from dictionary, used when player unit no longer exists in miz
-    #     del cdi.active_players_by_group_id[self.group_id]
-    #     del cdi.active_players_by_unit_runtime_id[self.runtime_id_name]
 
     def set_airspace(self, airspace_name):
         self._airspace = airspace_name
@@ -190,3 +135,8 @@ class Player:
 
     def drop_data(self):
         del cdi.active_players_by_name[self.player_name]
+
+
+class PlayerStats:
+    def __init__(self):
+        self.weapons_released = []

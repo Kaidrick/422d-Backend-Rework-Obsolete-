@@ -36,7 +36,7 @@ class RequestExport:
                     tm = b""
 
                     while True:
-                        mp = s.recv(256)  # 1024
+                        mp = s.recv(2048)  # 1024
                         tm += mp
 
                         if tm.endswith(b"\n"):

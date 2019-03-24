@@ -5,6 +5,7 @@ whenever a spark is sent by the backend, it should run the spark methods
 
 
 class SparkHandler:
+    # player
     PLAYER_SPAWN = {}  # definitive signal of player spawn
     PLAYER_DESPAWN = {}  # definitive signal of player de-spawn
     CRASH = {}
@@ -17,6 +18,13 @@ class SparkHandler:
     LAND = {}
     PLAYER_DISTANCE = {}  # player's position changes
 
+    # weapon
+    WEAPON_RELEASE = {}
+    WEAPON_TERMINAL = {}
+
+    # AI unit
+    OTHER_SPAWN = {}
+    OTHER_DESPAWN = {}
 
 # """
 # Signal data is a dictionary. It contains data similar to that of in-game event
@@ -53,4 +61,27 @@ def player_despawn(spark_dt):
 
 def player_distance(spark_dt):
     for handler_id, handler_method in SparkHandler.PLAYER_DISTANCE.items():
+        handler_method(spark_dt)
+
+
+# -----------------------------------------------------------------------
+def weapon_release(spark_dt):
+    for handler_id, handler_method in SparkHandler.WEAPON_RELEASE.items():
+        handler_method(spark_dt)
+
+
+def weapon_terminal(spark_dt):
+    for handler_id, handler_method in SparkHandler.WEAPON_TERMINAL.items():
+        handler_method(spark_dt)
+
+
+# -------------------------------------------------------------------------
+# AI unit
+def other_spawn(spark_dt):
+    for handler_id, handler_method in SparkHandler.OTHER_SPAWN.items():
+        handler_method(spark_dt)
+
+
+def other_despawn(spark_dt):
+    for handler_id, handler_method in SparkHandler.OTHER_DESPAWN.items():
         handler_method(spark_dt)

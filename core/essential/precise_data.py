@@ -1,5 +1,21 @@
 from core.request.exp.export_data import RequestExportUnitsData, RequestExportBallisticData
 import core.data_interface as cdi
+import time
+
+
+class ExportParseHandler:
+    BeforeExport = {}
+    AfterExport = {}
+
+
+def exec_before_export(export_timestamp):
+    for handler_id, handler_method in ExportParseHandler.BeforeExport.items():
+        handler_method(export_timestamp)
+
+
+def exec_after_export(export_timestamp):
+    for handler_id, handler_method in ExportParseHandler.AfterExport.items():
+        handler_method(export_timestamp)
 
 
 def extract_export_data():
@@ -12,6 +28,15 @@ def extract_export_data():
     if res_ballistic:
         cdi.export_ballistic = res_ballistic
         # print(res_ballistic)
+
+
+def export_step():
+    export_timestamp = time.time()
+    exec_before_export(export_timestamp)
+    extract_export_data()  # Export from Export.lua
+    exec_after_export(export_timestamp)
+
+    # print("tick", time.time())
 
 
 if __name__ == '__main__':
