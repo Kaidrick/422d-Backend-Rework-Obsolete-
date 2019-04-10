@@ -140,7 +140,12 @@ def init_radio_menu_for_group(group_id, player_name):  # TODO: Add more radio it
     # pref = find_player_preferences_by_group_id(group_id)
     # group_lang = pref['lang']
     # group_lang = cdi.active_players_by_group_id[group_id].language
-    group_lang = ref_player.language
+    try:
+        group_lang = ref_player.language
+    except AttributeError as e:
+        print(e)
+        group_lang = 'en'
+        
     # group_lang = 'en'
     # print("set language to: " + group_lang)
     global _
