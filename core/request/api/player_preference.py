@@ -59,55 +59,61 @@ def get_player_preference_settings():  # FIXME: don't i/o file every second!
     if all_connected_players:
         file_name = 'data/ucid_settings.json'
         with open(file_name, 'r+') as f_obj:
-            ucid_setting_kv_dict = json.load(f_obj)
+            try:
+                ucid_setting_kv_dict = json.load(f_obj)  # so this line sometimes threw an exception
+            # JSONDecodeError: Expecting ',' delimiter
+            # add a try block at the moment
+            except json.JSONDecodeError as e:
+                print(e)
+                print(f_obj[:-10])
+            else:
+                for ucid, player_info in all_connected_players.items():
+                    ipaddr = player_info['ipaddr']
+                    player_name = player_info['name']  # current name for this player
+                    net_id = player_info['playerID']
 
-            for ucid, player_info in all_connected_players.items():
-                ipaddr = player_info['ipaddr']
-                player_name = player_info['name']  # current name for this player
-                net_id = player_info['playerID']
+                    new_player = DcsPlayer(ucid, ipaddr, net_id=net_id, name=player_name)
 
-                new_player = DcsPlayer(ucid, ipaddr, net_id=net_id, name=player_name)
+                    if ucid in ucid_setting_kv_dict.keys():  # existing user
+                        new_player.language = ucid_setting_kv_dict[ucid]['lang']
+                        new_player.preferred_system = ucid_setting_kv_dict[ucid]['unit']
+                        try:
+                            new_player.lang_on_ip = ucid_setting_kv_dict[ucid]['lang_on_ip']
+                        except KeyError:
+                            ucid_setting_kv_dict[ucid]['lang_on_ip'] = False
+                            new_player.lang_on_ip = ucid_setting_kv_dict[ucid]['lang_on_ip']
 
-                if ucid in ucid_setting_kv_dict.keys():  # existing user
-                    new_player.language = ucid_setting_kv_dict[ucid]['lang']
-                    new_player.preferred_system = ucid_setting_kv_dict[ucid]['unit']
-                    try:
-                        new_player.lang_on_ip = ucid_setting_kv_dict[ucid]['lang_on_ip']
-                    except KeyError:
-                        ucid_setting_kv_dict[ucid]['lang_on_ip'] = False
-                        new_player.lang_on_ip = ucid_setting_kv_dict[ucid]['lang_on_ip']
+                    else:  # new user, add preference? set default?
+                        init_lang = RequestApiLoadString(f'return net.get_player_info({net_id}).lang').send()
 
-                else:  # new user, add preference? set default?
-                    init_lang = RequestApiLoadString(f'return net.get_player_info({net_id}).lang').send()
+                        print(f"New player [{player_name}]{new_player}({ucid}) using {init_lang} client has joined.")
 
-                    print(f"New player [{player_name}]{new_player}({ucid}) using {init_lang} client has joined.")
+                        # print("debug info", "player_preference.py", "ln 88", "init_lang: ", init_lang)
+                        # init_lang = 'en'
+                        supported_lang = ['cn', 'en', 'jp']
+                        if init_lang not in supported_lang:
+                            init_lang = 'en'
 
-                    # print("debug info", "player_preference.py", "ln 88", "init_lang: ", init_lang)
-                    # init_lang = 'en'
-                    supported_lang = ['cn', 'en', 'jp']
-                    if init_lang not in supported_lang:
-                        init_lang = 'en'
+                        if init_lang == 'cn':
+                            init_system = 'metric'
+                        else:
+                            init_system = 'imperial'
 
-                    if init_lang == 'cn':
-                        init_system = 'metric'
-                    else:
-                        init_system = 'imperial'
+                        new_player.language = init_lang
+                        new_player.preferred_system = init_system
+                        new_player.lang_on_ip = True
+                        new_player.player_id = net_id
 
-                    new_player.language = init_lang
-                    new_player.preferred_system = init_system
-                    new_player.lang_on_ip = True
-                    new_player.player_id = net_id
+                        ucid_setting_kv_dict[ucid] = {
+                            'lang': init_lang,
+                            'lang_on_ip': True,
+                            'unit': init_system,
+                            'player_id': net_id
+                        }
 
-                    ucid_setting_kv_dict[ucid] = {
-                        'lang': init_lang,
-                        'lang_on_ip': True,
-                        'unit': init_system,
-                        'player_id': net_id
-                    }
+                    env_player_dict[player_name] = new_player
+                    cdi.player_net_config_by_ucid[ucid] = new_player
 
-                env_player_dict[player_name] = new_player
-                cdi.player_net_config_by_ucid[ucid] = new_player
-
-            f_obj.seek(0)
-            json.dump(ucid_setting_kv_dict, f_obj)
-            f_obj.truncate()
+                f_obj.seek(0)
+                json.dump(ucid_setting_kv_dict, f_obj)
+                f_obj.truncate()

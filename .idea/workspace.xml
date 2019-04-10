@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="600c2c46-9673-4fc9-98d6-73a0b6339ae7" name="Default Changelist" comment="cleaned up some cmd output">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/request/miz/dcs_radio_menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/request/miz/dcs_radio_menu.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/airport_static_player_units/static_player_units.py" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/airport_static_player_units/static_player_units.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -124,11 +122,12 @@
     <session id="1719173253">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="12" />
+          <entry key="project.closed" value="13" />
           <entry key="project.open.time.0" value="4" />
-          <entry key="project.open.time.4" value="6" />
+          <entry key="project.open.time.4" value="7" />
           <entry key="project.open.time.5" value="2" />
-          <entry key="project.opened" value="12" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -137,28 +136,28 @@
           <entry key="cfg" value="3" />
           <entry key="gitignore" value="1" />
           <entry key="lua" value="4" />
-          <entry key="py" value="156" />
+          <entry key="py" value="157" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Ini" value="3" />
           <entry key="PLAIN_TEXT" value="6" />
-          <entry key="Python" value="156" />
+          <entry key="Python" value="157" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="4" />
           <entry key="lua" value="570" />
-          <entry key="py" value="26364" />
+          <entry key="py" value="26630" />
           <entry key="txt" value="113" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="687" />
-          <entry key="Python" value="26364" />
+          <entry key="Python" value="26630" />
         </counts>
       </usages-collector>
     </session>
@@ -177,11 +176,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core/request/miz/dcs_radio_menu.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="12098">
-              <caret line="546" selection-start-line="546" selection-end-line="546" />
+            <state relative-caret-position="769">
+              <caret line="147" column="8" lean-forward="true" selection-start-line="147" selection-start-column="8" selection-end-line="147" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -202,8 +201,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="621">
-              <caret line="72" column="7" lean-forward="true" selection-start-line="72" selection-start-column="7" selection-end-line="72" selection-end-column="7" />
+            <state relative-caret-position="851">
+              <caret line="72" column="7" selection-start-line="72" selection-start-column="7" selection-end-line="72" selection-end-column="7" />
               <folding>
                 <element signature="e#12#23#0" expanded="true" />
               </folding>
@@ -211,11 +210,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plugins/airport_static_player_units/static_player_units.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="529">
-              <caret line="194" lean-forward="true" selection-start-line="194" selection-end-line="194" />
+            <state relative-caret-position="-2346">
+              <caret line="183" column="80" lean-forward="true" selection-start-line="183" selection-start-column="80" selection-end-line="183" selection-end-column="80" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/request/api/player_preference.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="455">
+              <caret line="59" column="45" lean-forward="true" selection-start-line="59" selection-start-column="45" selection-end-line="59" selection-end-column="45" />
+              <folding>
+                <element signature="e#0#59#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -264,6 +275,7 @@
       <find>Error caught, continue</find>
       <find>not in an active unit</find>
       <find>del cdi.tanker_sta[tanker_group_name]</find>
+      <find>ref_player</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -291,7 +303,6 @@
         <option value="$PROJECT_DIR$/core/game_object_control/task.py" />
         <option value="$PROJECT_DIR$/core/request/miz/dcs_query.py" />
         <option value="$PROJECT_DIR$/core/request/miz/dcs_request.py" />
-        <option value="$PROJECT_DIR$/core/request/api/player_preference.py" />
         <option value="$PROJECT_DIR$/core/game_object_control/dcs_group_control.py" />
         <option value="$PROJECT_DIR$/core/essential/other_unit.py" />
         <option value="$PROJECT_DIR$/core/essential/chat_commands/__init__.py" />
@@ -322,8 +333,9 @@
         <option value="$PROJECT_DIR$/core/essential/data_mapping.py" />
         <option value="$PROJECT_DIR$/core/spark.py" />
         <option value="$PROJECT_DIR$/core/essential/weapons/weapon_data_mapping.py" />
-        <option value="$PROJECT_DIR$/core/request/miz/dcs_radio_menu.py" />
         <option value="$PROJECT_DIR$/plugins/airport_static_player_units/static_player_units.py" />
+        <option value="$PROJECT_DIR$/core/request/api/player_preference.py" />
+        <option value="$PROJECT_DIR$/core/request/miz/dcs_radio_menu.py" />
       </list>
     </option>
   </component>
@@ -344,6 +356,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -378,13 +391,7 @@
               <item name="422d-Backend-Rework" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
               <item name="request" type="462c0819:PsiDirectoryNode" />
-              <item name="miz" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="422d-Backend-Rework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="422d-Backend-Rework" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="utility" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="422d-Backend-Rework" type="b2602c69:ProjectViewProjectNode" />
@@ -407,7 +414,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -592,8 +598,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1083" y="70" width="1416" height="1355" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27393225" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.281296" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -655,13 +662,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="cleaned up some cmd output" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/core/request/miz/dcs_object.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="122" column="8" selection-start-line="122" selection-start-column="8" selection-end-line="122" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/request/miz/dcs_pull.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
@@ -913,13 +913,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/request/miz/dcs_radio_menu.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12098">
-          <caret line="546" selection-start-line="546" selection-end-line="546" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/essential/other_unit.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
@@ -927,6 +920,16 @@
           <folding>
             <element signature="e#0#11#0" expanded="true" />
             <marker date="1553126098508" expanded="true" signature="165:313" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="851">
+          <caret line="72" column="7" selection-start-line="72" selection-start-column="7" selection-end-line="72" selection-end-column="7" />
+          <folding>
+            <element signature="e#12#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -998,20 +1001,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
+    <entry file="file://$PROJECT_DIR$/plugins/airport_static_player_units/static_player_units.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="72" column="7" lean-forward="true" selection-start-line="72" selection-start-column="7" selection-end-line="72" selection-end-column="7" />
+        <state relative-caret-position="-2346">
+          <caret line="183" column="80" lean-forward="true" selection-start-line="183" selection-start-column="80" selection-end-line="183" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/request/api/player_preference.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="59" column="45" lean-forward="true" selection-start-line="59" selection-start-column="45" selection-end-line="59" selection-end-column="45" />
           <folding>
-            <element signature="e#12#23#0" expanded="true" />
+            <element signature="e#0#59#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/airport_static_player_units/static_player_units.py">
+    <entry file="file://$PROJECT_DIR$/core/request/miz/dcs_radio_menu.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="194" lean-forward="true" selection-start-line="194" selection-end-line="194" />
+        <state relative-caret-position="769">
+          <caret line="147" column="8" lean-forward="true" selection-start-line="147" selection-start-column="8" selection-end-line="147" selection-end-column="8" />
         </state>
       </provider>
     </entry>
