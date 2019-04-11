@@ -44,6 +44,7 @@ def export():
     """
     while True:
         export_step()
+        # print(time.time())
         # time.sleep(1)
 
 

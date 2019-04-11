@@ -35,6 +35,9 @@ class Weapon:
         self.end_time = 0
         self.flight_time = 0
 
+        self.velocity = []  # this should be a list or vector or something?
+        self.speed = 0  # a number, calculated by distance delta over time delta
+
         self.trajectory = collections.deque(maxlen=5)  # contains trajectory position of the object
         self.attitude = collections.deque(maxlen=5)
         self.geo_coord = collections.deque(maxlen=5)
@@ -47,6 +50,9 @@ class Weapon:
         self.timestamp.append(timestamp)
 
     def update(self, unit_data, timestamp):  # position and attitude
+
+        # also tries to find launcher runtime id from triggered events if launcher is not found in previous iter
+
         self.trajectory.append(unit_data['Position'])
         self.geo_coord.append(unit_data['LatLongAlt'])
 
@@ -78,7 +84,7 @@ class Weapon:
         for name, player_dt in cdi.active_players_by_name.items():
             player_runtime_id_name = 'id_' + str(player_dt.runtime_id)
             try:
-                player_dt = cdi.export_units[player_runtime_id_name]
+                player_dt = cdi.export_omni[player_runtime_id_name]
             except KeyError as e:  # cannot find this id in export data, either data is wrong, or player is inactive
                 print(e)
             else:

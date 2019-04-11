@@ -65,7 +65,7 @@ def get_player_preference_settings():  # FIXME: don't i/o file every second!
             # add a try block at the moment
             except json.JSONDecodeError as e:
                 print(e)
-                print(f_obj[:-10])
+                print("preference json file corrupted again?")
             else:
                 for ucid, player_info in all_connected_players.items():
                     ipaddr = player_info['ipaddr']

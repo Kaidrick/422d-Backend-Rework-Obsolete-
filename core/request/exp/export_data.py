@@ -2,10 +2,12 @@ from core.request.exp.export_request import RequestExport, RequestExportHandle
 import core.data_interface as cdi
 from core.request.miz.dcs_debug import RequestDcsDebugCommand
 
+
 class ExportDataType:
     UNITS = "units"
     BALLISTIC = "ballistic"
     AIRDROMES = "airdromes"
+    OMNI = "omni"  # combined units and ballistic in one batch
 
 
 class RequestExportData(RequestExport):
@@ -29,6 +31,12 @@ class RequestExportAirdromesData(RequestExportData):
     def __init__(self):
         super().__init__()
         self.type = ExportDataType.AIRDROMES
+
+
+class RequestExportOmniData(RequestExportData):
+    def __init__(self):
+        super().__init__()
+        self.type = ExportDataType.OMNI
 
 
 class ExportPlayerData:
