@@ -93,7 +93,8 @@ def weapon_data_process(export_timestamp):
     :return:
     """
 
-    sel_dt = select_weapon_data({**cdi.export_ballistic, **cdi.export_units})  # current data
+    # sel_dt = select_weapon_data({**cdi.export_ballistic, **cdi.export_units})  # current data
+    sel_dt = select_weapon_data(cdi.export_omni)
     wpn_export_data = weapon_data_filter(sel_dt)
     # print(time.time(), wpn_export_data)
 

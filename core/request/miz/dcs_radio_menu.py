@@ -145,7 +145,7 @@ def init_radio_menu_for_group(group_id, player_name):  # TODO: Add more radio it
     except AttributeError as e:
         print(e)
         group_lang = 'en'
-        
+
     # group_lang = 'en'
     # print("set language to: " + group_lang)
     global _

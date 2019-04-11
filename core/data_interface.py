@@ -43,6 +43,8 @@ export_units = {}
 export_ballistic = {}
 export_airdromes = {}
 
+export_omni = {}
+
 # -----------------------------------------------------------------------------------------------------------
 # Data Models
 active_munition = {}

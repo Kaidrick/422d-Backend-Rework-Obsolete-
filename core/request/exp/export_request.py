@@ -36,7 +36,7 @@ class RequestExport:
                     tm = b""
 
                     while True:
-                        mp = s.recv(2048)  # 1024
+                        mp = s.recv(256)  # 1024
                         tm += mp
 
                         if tm.endswith(b"\n"):
@@ -63,4 +63,6 @@ class RequestExport:
 
 
 if __name__ == '__main__':
-    RequestExport(handle=RequestExportHandle.QUERY).send()
+    while True:
+        RequestExport(handle=RequestExportHandle.QUERY).send()
+        print(time.time())
