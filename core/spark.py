@@ -12,11 +12,12 @@ class SparkHandler:
     SHOT = {}
     SHOOTING_START = {}
     SHOOTING_END = {}
-    ENGINE_STARTUP = {}  # doesn't really work for multi-player
-    ENGINE_SHUTDOWN = {}  # doesn't really work for multi-player
+    ENGINE_STARTUP = {}  # doesn't really work for multi-player, need to improvise
+    ENGINE_SHUTDOWN = {}  # doesn't really work for multi-player, need to improvise
     TAKEOFF = {}
     LAND = {}
     PLAYER_DISTANCE = {}  # player's position changes
+    PLAYER_AIRSPACE_CHANGE = {}  # player entered a new airspace
 
     # weapon
     WEAPON_RELEASE = {}
@@ -61,6 +62,11 @@ def player_despawn(spark_dt):
 
 def player_distance(spark_dt):
     for handler_id, handler_method in SparkHandler.PLAYER_DISTANCE.items():
+        handler_method(spark_dt)
+
+
+def player_airspace_change(spark_dt):
+    for handler_id, handler_method in SparkHandler.PLAYER_AIRSPACE_CHANGE.items():
         handler_method(spark_dt)
 
 

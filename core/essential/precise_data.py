@@ -23,7 +23,6 @@ def extract_export_data():
     # res_units = RequestExportUnitsData().send()
     # res_ballistic = RequestExportBallisticData().send()
 
-    # TODO: combine export data on lua side? is it possible?
     if res_omni:
         cdi.export_omni = res_omni
         # print(res_omni)

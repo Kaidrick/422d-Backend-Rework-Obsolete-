@@ -1,0 +1,61 @@
+from .weapon import Weapon
+import core.data_interface as cdi
+import numpy as np
+import core.utility.data_parsing as parse
+
+
+class SurfaceToAirMissile(Weapon):
+    def __init__(self, weapon_runtime_id, weapon_data, timestamp):
+        super().__init__(weapon_runtime_id, weapon_data, timestamp)
+
+    def find_launcher(self):
+        t_check_pos = np.array([self.init_pos['x'], self.init_pos['z']])
+        check_alt = self.init_pos['y']
+
+        search_dict = {**cdi.active_players_by_name, **cdi.other_units_by_name}
+
+        # check find the player or the other_unit who launched this weapon
+        for name, launcher_object in search_dict.items():
+            runtime_id_name = launcher_object.runtime_id_name
+            try:
+                launcher_dt = cdi.export_omni[runtime_id_name]
+            except KeyError as e:  # cannot find this id in export data, either data is wrong, or player is inactive
+                print(e)
+            else:
+                launcher_pos = launcher_dt['Position']
+                t_launcher_pos = np.array([launcher_pos['x'], launcher_pos['z']])
+                launcher_alt = launcher_pos['y']
+                # check 3d distance between this player's pos and this current weapons position
+                dist = np.linalg.norm(
+                    t_check_pos - t_launcher_pos)  # distance between weapon launch position and this A/C
+
+                if dist < 10:
+                    # if it's a SAM, then distance check alone is sufficient
+                    # need to return address of the launcher object in cdi
+                    if name in cdi.active_players_by_name.keys():
+                        return cdi.active_players_by_name[name]
+
+                    if name in cdi.other_units_by_name.keys():
+                        return cdi.other_units_by_name[name]
+
+                else:
+                    # print(f"mismatched distance for type {self.display_name}, dist: {dist}")
+                    pass
+                    # if within feasible range limit, check direction
+
+        return None
+
+
+class AirToAirMissile(Weapon):
+    def __init__(self, weapon_runtime_id, weapon_data, timestamp):
+        super().__init__(weapon_runtime_id, weapon_data, timestamp)
+
+
+class AirToSurfaceMissile(Weapon):
+    def __init__(self, weapon_runtime_id, weapon_data, timestamp):
+        super().__init__(weapon_runtime_id, weapon_data, timestamp)
+
+
+class SurfaceToSurfaceMissile(Weapon):
+    def __init__(self, weapon_runtime_id, weapon_data, timestamp):
+        super().__init__(weapon_runtime_id, weapon_data, timestamp)

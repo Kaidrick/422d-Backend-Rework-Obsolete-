@@ -64,7 +64,7 @@ def miz():
         process_pulls()
         process_miz_precise_timing_events()
 
-        time.sleep(1)
+        time.sleep(0.5)
 
 
 def pull():

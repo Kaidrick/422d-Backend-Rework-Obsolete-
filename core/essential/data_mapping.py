@@ -10,6 +10,7 @@ from core.request.miz.dcs_query import RequestDcsAllGroups, RequestDcsAllStaticO
 from core.request.api.api_debug import RequestAPINetDostring
 from core.essential.other_unit import parse_other_unit
 from core.essential.player import parse_player_unit
+import time
 
 
 f_map_playable_group_info = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'scripts', 'map_playable.lua')
@@ -89,8 +90,12 @@ def group_data_process(res_group):
 
             else:  # if player control flag is False
                 if unit['name'] != "":
-                    kn_other = parse_other_unit(group_data['id'], group_data['name'], group_data['coalition'],
-                                                group_data['category'], unit)
+                    if unit['name'] in active_other_names:
+                        kn_other = cdi.other_units_by_name[unit['name']].update(unit)
+                    else:
+                        kn_other = parse_other_unit(group_data['id'], group_data['name'], group_data['coalition'],
+                                                    group_data['category'], unit)
+
                     check_other_names.append(kn_other.unit_name)
                     o_edit[kn_other.unit_name] = kn_other
 
@@ -134,6 +139,10 @@ def trigger_spark_other_despawn(check_name, o_omni):
         }
     }
     spark.other_despawn(spk_dt)
+
+    # add to destroyed unit dict indexed by runtime_id_name + time
+    cdi.destroyed_other_units[kn_check.runtime_id_name + '_' + str(time.time())] = kn_check
+
     print(f"Unit >>>"
           f"{spk_dt['data']['unit_name']}({spk_dt['data']['unit_type']}"
           f" - {spk_dt['data']['runtime_id']})"

@@ -7,6 +7,8 @@ import core.spark as spark
 from .bomb import Bomb
 from .rocket import Rocket
 from .weapon import Weapon
+from .projectile import Projectile
+from .missile import SurfaceToAirMissile
 
 
 filter_reference_wpn_data = {}
@@ -56,7 +58,7 @@ def weapon_data_filter(wpn_export_data):
             ref_data = filter_reference_wpn_data[unit_id_name]
         except KeyError:  # unit_id_name not in reference, it should have been removed normally
             # remove
-            print("pass")
+            # print("pass")
             pass
         else:  # found ref_data
             if ref_data['Position'] == unit_data['Position']:
@@ -110,19 +112,28 @@ def weapon_data_process(export_timestamp):
     for unit_id_name, unit_data in wpn_export_data.items():
         # check wsType
         unit_type = unit_data['Type']
+        unit_timestamp = unit_data['_timestamp']
         if unit_id_name not in active_weapon_id_names:  # new name, create new weapon object
-            if unit_type['level2'] == 4:  # missile
-                kn_weapon = Rocket(unit_id_name, unit_data, export_timestamp)
+            if unit_type['level2'] == 4:  # Missile with AAM, SAM and ASM sub category?
+                if unit_type['level3'] == 7:  # AAM
+                    kn_weapon = Weapon(unit_id_name, unit_data, unit_timestamp)
+                elif unit_type['level3'] == 8:  # ASM
+                    kn_weapon = Weapon(unit_id_name, unit_data, unit_timestamp)
+                elif unit_type['level3'] == 34:  # SAM
+                    kn_weapon = SurfaceToAirMissile(unit_id_name, unit_data, unit_timestamp)
+                else:  # 11 --> SSM
+                    kn_weapon = Weapon(unit_id_name, unit_data, unit_timestamp)
+
             elif unit_type['level2'] == 5:  # Bomb
-                kn_weapon = Bomb(unit_id_name, unit_data, export_timestamp)
+                kn_weapon = Bomb(unit_id_name, unit_data, unit_timestamp)
             elif unit_type['level2'] == 6:  # Shell
-                kn_weapon = Rocket(unit_id_name, unit_data, export_timestamp)
+                kn_weapon = Projectile(unit_id_name, unit_data, unit_timestamp)
             elif unit_type['level2'] == 7:  # NURS (Rockets)
-                kn_weapon = Rocket(unit_id_name, unit_data, export_timestamp)
+                kn_weapon = Rocket(unit_id_name, unit_data, unit_timestamp)
             else:
-                kn_weapon = Weapon(unit_id_name, unit_data, export_timestamp)
+                kn_weapon = Weapon(unit_id_name, unit_data, unit_timestamp)
         else:  # name already exists, call update method
-            kn_weapon = cdi.active_munition[unit_id_name].update(unit_data, export_timestamp)
+            kn_weapon = cdi.active_munition[unit_id_name].update(unit_data, unit_timestamp)
 
         wpn_edit[unit_id_name] = kn_weapon  # new weapon or updated weapon
         check_weapon_id_names.append(unit_id_name)
@@ -172,7 +183,7 @@ def trigger_spark_weapon_release(check_name, wpn_edit):
 
 
 def trigger_spark_weapon_terminal(check_name, wpn_omni):
-    kn_check = wpn_omni[check_name]
+    kn_check = wpn_omni[check_name]  # weapon model object
     spk_dt = {
         'type': 'weapon_terminal',
         'data': {
