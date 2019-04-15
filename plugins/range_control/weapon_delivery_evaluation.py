@@ -499,7 +499,7 @@ def evaluate_dt(group_batch, locale):  # use group_id to find user user group la
                 #     + evaluate_he_effect(weapon_type, 1, ip_vec3)
 
                 batch_evaluation_str = \
-                    " | " + _("Dir: ") + f"{s_dt.init_heading:03.0f}" + \
+                    " | " + _("Dir: ") + f"{np.rad2deg(s_dt.init_heading):03.0f}" + \
                     " | " + _("Alt: ") + f"{s_dt.init_pos['y']:.0f}" + _("m") + "\n" + \
                     _("Flt Time: ") + f"{s_dt.flight_time:.2f}" + _("s") + \
                     " | V₀: " + f"{s_dt.init_spd:.0f}" + _("m/s") + \
@@ -518,18 +518,28 @@ def evaluate_dt(group_batch, locale):  # use group_id to find user user group la
                 # after checking all hit events for this batch
                 # calculate average impact point?
                 ips = []
+                lls = []
                 for dt in batch:
                     # ip_vec3 = dt.trajectory_precise_pos[-1]
                     ip_vec3 = dt.trajectory[-1]
+                    ip_ll = dt.geo_coord[-1]
 
                     ips.append(ip_vec3)
+                    lls.append(ip_ll)
                     # check if this tracker weapon has any hit
 
                 # calculate average impact point?
                 x = [ip['x'] for ip in ips]
                 y = [ip['z'] for ip in ips]
-                impact_center = (sum(x) / len(ips), sum(y) / len(ips))
-                batch_evaluation_str = _("Average Impact Point: ") + f"{impact_center}\n"
+
+                lat = [il['Lat'] for il in lls]
+                lon = [il['Long'] for il in lls]
+                alt = [il['Alt'] for il in lls]
+                # impact_center = (sum(x) / len(ips), sum(y) / len(ips))
+                avg_ll = (sum(lat) / len(lat), sum(lon) / len(lon), sum(alt) / len(alt))
+                avg_ll_str = generate_ll_deg_min(avg_ll[0], avg_ll[1], avg_ll[2])
+                batch_evaluation_str = _("Average Impact Point: ") + f"{avg_ll_str[0]} {avg_ll_str[1]}" + \
+                    _(" at ") + f"{avg_ll_str[2]}" + _("m") + "\n"
 
         elif weapon_category == 7:  # rockets
             if delivery_num == 1:  # single delivery
@@ -571,7 +581,7 @@ def evaluate_dt(group_batch, locale):  # use group_id to find user user group la
                 #     + evaluate_he_effect(weapon_type, 1, ip_vec3)
 
                 batch_evaluation_str = \
-                    " | " + _("Dir: ") + f"{s_dt.init_heading:03.0f}" + \
+                    " | " + _("Dir: ") + f"{np.rad2deg(s_dt.init_heading):03.0f}" + \
                     " | " + _("Alt: ") + f"{s_dt.init_pos['y']:.0f}" + _("m") + "\n" + \
                     _("Flt Time: ") + f"{s_dt.flight_time:.2f}" + _("s") + \
                     " | V₀: " + f"{s_dt.init_spd:.0f}" + _("m/s") + \
@@ -590,18 +600,28 @@ def evaluate_dt(group_batch, locale):  # use group_id to find user user group la
                 # after checking all hit events for this batch
                 # calculate average impact point?
                 ips = []
+                lls = []
                 for dt in batch:
                     # ip_vec3 = dt.trajectory_precise_pos[-1]
                     ip_vec3 = dt.trajectory[-1]
+                    ip_ll = dt.geo_coord[-1]
 
                     ips.append(ip_vec3)
+                    lls.append(ip_ll)
                     # check if this tracker weapon has any hit
 
                 # calculate average impact point?
                 x = [ip['x'] for ip in ips]
                 y = [ip['z'] for ip in ips]
-                impact_center = (sum(x) / len(ips), sum(y) / len(ips))
-                batch_evaluation_str = _("Average Impact Point: ") + f"{impact_center}\n"
+
+                lat = [il['Lat'] for il in lls]
+                lon = [il['Long'] for il in lls]
+                alt = [il['Alt'] for il in lls]
+                # impact_center = (sum(x) / len(ips), sum(y) / len(ips))
+                avg_ll = (sum(lat) / len(lat), sum(lon) / len(lon), sum(alt) / len(alt))
+                avg_ll_str = generate_ll_deg_min(avg_ll[0], avg_ll[1], avg_ll[2])
+                batch_evaluation_str = _("Average Impact Point: ") + f"{avg_ll_str[0]} {avg_ll_str[1]}" + \
+                    _(" at ") + f"{avg_ll_str[2]}" + _("m") + "\n"
 
         elif weapon_category == 5:  # bombs
             if delivery_num == 1:  # single bomb
@@ -643,19 +663,28 @@ def evaluate_dt(group_batch, locale):  # use group_id to find user user group la
             else:  # two or more bombs
                 # average impact point
                 ips = []
+                lls = []
                 for dt in batch:
                     # ip_vec3 = dt.trajectory_precise_pos[-1]
                     ip_vec3 = dt.trajectory[-1]
+                    ip_ll = dt.geo_coord[-1]
 
                     ips.append(ip_vec3)
+                    lls.append(ip_ll)
                     # check if this tracker weapon has any hit
 
-                # after checking all hit events for this batch
                 # calculate average impact point?
                 x = [ip['x'] for ip in ips]
                 y = [ip['z'] for ip in ips]
-                impact_center = (sum(x) / len(ips), sum(y) / len(ips))
-                batch_evaluation_str = _("Average Impact Point: ") + f"{impact_center}\n"
+
+                lat = [il['Lat'] for il in lls]
+                lon = [il['Long'] for il in lls]
+                alt = [il['Alt'] for il in lls]
+                # impact_center = (sum(x) / len(ips), sum(y) / len(ips))
+                avg_ll = (sum(lat) / len(lat), sum(lon) / len(lon), sum(alt) / len(alt))
+                avg_ll_str = generate_ll_deg_min(avg_ll[0], avg_ll[1], avg_ll[2])
+                batch_evaluation_str = _("Average Impact Point: ") + f"{avg_ll_str[0]} {avg_ll_str[1]}" + \
+                    _(" at ") + f"{avg_ll_str[2]}" + _("m") + "\n"
 
         # one weapon can be responsible for multiple hit
         # find number of unique targets hit by this batch of weapon
@@ -664,7 +693,7 @@ def evaluate_dt(group_batch, locale):  # use group_id to find user user group la
 
         batch_msg = "——————————————————————————\n" + _("Delivery Batch") + " #" + f"{batch_num} - " + \
             _("Type: ") + f"{weapon_display_name}" + " | " + _("Qty: ") + f"{delivery_num}" + \
-                    batch_evaluation_str + "\n"
+            " | " + batch_evaluation_str + "\n"
 
         msg += batch_msg
     print(msg)

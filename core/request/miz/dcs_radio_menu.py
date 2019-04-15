@@ -542,12 +542,14 @@ def init_radio_menu_on_birth_spark(spark_dt):
 
     SanitizeRadioItem(player_group_id).send()  # remove all existing radio items from this group
     init_radio_menu_for_group(player_group_id, player_name)
-    RequestDcsMessageForGroup(player_group_id, "Welcome! We are doing some major overhaul! Below is a list of "
-                                               "functions that are currently missing from the server:\n"
-                                               "1. Missile Trainer --> missile will still launch, so be aware.\n"
-                                               "2. Target Range Control and Weapon Delivery Evaluation\n"
-                                               "\nMaybe there are a few more.. \n"
-                                               "we are still working on that. Have fun!").send()
+
+    tmp_msg = _("This is a temporary MOTD:\n"
+                "We've finished to overhaul, and most of the previous functions are back such as\n"
+                "Weapon Delivery Evaluation and Missile Trainer in the ECR. However, note that "
+                "some of these functions have not been tested thoroughly in multi-player environment. "
+                "Expect to see some weird and crazy bugs/crashes. Have fun!")
+
+    RequestDcsMessageForGroup(player_group_id, tmp_msg).send()
 
 
 spark.SparkHandler.PLAYER_SPAWN["dcs_radio_init_on_birth"] = init_radio_menu_on_birth_spark
