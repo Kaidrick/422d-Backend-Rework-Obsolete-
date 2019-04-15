@@ -4,6 +4,8 @@ A Player object should contain overall information about a player, such as langu
 """
 import time
 import core.data_interface as cdi
+import numpy as np
+import core.spark as spark
 
 
 def parse_player_unit(group_id, group_name, coalition, category, unit_data):
@@ -23,13 +25,14 @@ class Player:
     """
     def __init__(self, group_id, group_name, coalition, unit_data):
 
-        self.player_stat = None
+        self.player_stat = PlayerStats()
         self._airspace = None  # this should be a string, such as R-62
         self.marker_panels = []  # a list of marker panels, some of which need to be updated at an interval
 
         self.invisible_to_ai = None
 
         self.runtime_id = unit_data['runtime_id']
+        self.runtime_id_name = 'id_' + str(self.runtime_id)
 
         self.player_name = unit_data['player_name']
         self.unit_name = unit_data['name']
@@ -39,9 +42,12 @@ class Player:
         self.unit_country = unit_data['country']
 
         self.fuel = unit_data['fuel']
+        self.velocity = unit_data['velocity']
 
         # Data to keep updated
         self.last_unit_pos = unit_data['pos']
+
+        self.move_dir = np.array([0, 0, 0])  # moving direction as vec3 in LO
 
         # init record field
         self.recent_pos = [unit_data['pos']]  # keep 10 recent position for calculation
@@ -88,14 +94,28 @@ class Player:
         # north correction
         # ammo
 
-    def check_movement(self):
-        if self.last_unit_pos != self.unit_pos:  # player's position has changed
-            return True
-        else:  # player's position has not changed
-            return False
+    def hi_res(self):  # get accurate data from export
+        # check if player exist as a valid id in cdi
+        try:
+            hi_res = cdi.export_omni[self.runtime_id_name]
+        except KeyError:
+            print("Unable to find player in export data")
+            return None
+        else:
+            hi_res_data = {
+                'pos': hi_res['Position'],
+                'll': hi_res['LatLongAlt'],
+                'hdg': hi_res['Heading'],
+                'pitch': hi_res['Pitch'],
+                'bank': hi_res['Bank']
+            }
+            return hi_res_data
 
     def update(self, update_data):
+        self.last_unit_pos = self.unit_pos
+
         self.fuel = update_data['fuel']
+        self.velocity = update_data['velocity']
         self.unit_pos = update_data['pos']
         self.unit_ll = update_data['coord']['LL']
         self.mgrs = update_data['coord']['MGRS']
@@ -104,6 +124,33 @@ class Player:
             'bank': update_data['att'],
             'heading': update_data['att'],
         }
+
+        # check if player has moved during the last simulation export
+        if self.last_unit_pos != self.unit_pos:  # player's position has changed
+            array_last_unit_pos = np.array(
+                [
+                    self.last_unit_pos['x'], self.last_unit_pos['y'], self.last_unit_pos['z']
+                ]
+            )
+            array_unit_pos = np.array(
+                [
+                    self.unit_pos['x'], self.unit_pos['y'], self.unit_pos['z']
+                ]
+            )
+            self.move_dir = array_unit_pos - array_last_unit_pos
+
+            spk_dt = {
+                'type': 'player_distance',
+                'data': {
+                    'runtime_id': self.runtime_id_name,
+                    'player_name': self.player_name,
+                    'sp': self.last_unit_pos,
+                    'ep': self.unit_pos,
+                    'move_dir': self.move_dir,
+                    'self': self
+                }
+            }
+            spark.player_distance(spk_dt)
 
         return self
 
@@ -140,3 +187,6 @@ class Player:
 class PlayerStats:
     def __init__(self):
         self.weapons_released = []
+        self.airspace_routes = []
+
+        self.sessions = []

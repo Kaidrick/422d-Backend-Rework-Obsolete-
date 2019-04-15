@@ -34,6 +34,9 @@ playable_unit_info_by_group_name = {}  # indexed by group name
 # AI Controlled Units
 other_units_by_name = {}  # indexed by unit name
 
+destroyed_other_units = {}  # indexed by runtime_id_name + epoch, for instance, id_32483094_159435345
+# because unit name might be reused in the mission? needs work
+
 # player preferences
 player_net_config_by_ucid = {}
 

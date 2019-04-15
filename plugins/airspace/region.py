@@ -8,6 +8,7 @@ import os
 import configparser
 import threading
 import time
+import core.spark as spark
 
 theatre = cdi.theatre
 
@@ -143,7 +144,17 @@ def airspace_tracker():
             player_dt.set_airspace(player_airspace)
 
             if not last_airspace == player_airspace:  # airspace change
-                # airspace change signal here
+                # airspace change spark here
+                spk_dt = {
+                    'type': 'airspace_change',
+                    'data': {
+                        'player_name': player_name,
+                        'runtime_id': player_dt.runtime_id_name,
+                        'last_airspace': last_airspace,
+                        'current_airspace': player_airspace,
+                    }
+                }
+                spark.player_airspace_change(spk_dt)
 
                 print(f"{player_dt.player_name} ({player_dt.unit_type}, ID: {player_dt.runtime_id}) - Airspace Change: "
                       f"{last_airspace} > {player_airspace}")

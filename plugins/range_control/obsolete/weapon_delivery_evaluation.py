@@ -10,8 +10,87 @@ import gettext
 from core.request.miz.dcs_debug import RequestDcsDebugCommand
 from plugins.declare_plugins import plugin_log
 from core.request.miz.dcs_env import set_msg_locale
+from core.spark import SparkHandler
+import threading
 
 _ = gettext.gettext
+
+player_eval_record = {}  # indexed by player name, contains data of whether a weapon has been reported to player
+player_last_launch_timestamp = {}
+player_last_term_timestamp = {}
+
+
+def create_player_record(spk_dt):
+    player_name = spk_dt['data']['name']
+    player_eval_record[player_name] = []  # list that contains weapon object that has been evaluated
+
+    player_last_launch_timestamp[player_name] = None
+    player_last_term_timestamp[player_name] = None
+
+
+def erase_player_record(spk_dt):  # erase record when player is not longer active
+    player_name = spk_dt['data']['name']
+    del player_eval_record[player_name]
+    del player_last_launch_timestamp
+    del player_last_term_timestamp[player_name]
+
+
+def set_launch_timestamp(spk_dt):
+    wpn_obj = spk_dt['data']['self']
+    launcher_obj = wpn_obj.launcher
+    try:
+        player_name = launcher_obj.player_name
+    except AttributeError:
+        pass
+    else:
+        player_last_launch_timestamp[player_name] = wpn_obj.launch_time
+
+
+SparkHandler.PLAYER_SPAWN['range_control_player_record_create'] = create_player_record
+SparkHandler.PLAYER_DESPAWN['range_control_player_record_erase'] = erase_player_record
+SparkHandler.WEAPON_RELEASE['range_control_record_player_launch_timestamp'] = set_launch_timestamp
+
+
+def check_eval_criteria(launcher_obj):
+    # this thread is spawn after a weapon is terminal, c1 is go
+
+    # check cdi.active_munition to find all active weapon of this player
+    for wpn_id_name, wpn_dt in cdi.active_munition.items():
+        # get launcher
+        kn_launcher = wpn_dt.launcher
+        if launcher_obj is kn_launcher:  # this launcher still has at least one active weapon, eval NO GO
+            return  # do nothing
+
+    # after search and no match --> no active weapon
+    ref_last_launch_timestamp = player_last_launch_timestamp[launcher_obj.player_name]
+    time.sleep(10)  # wait 10 seconds and then check last launch time, use current time
+    try:
+        check_last_launch_timestamp = player_last_launch_timestamp[launcher_obj.player_name]
+    except KeyError:
+        print(__file__, "player no longer exists in the mission, ignore")
+    else:
+        if check_last_launch_timestamp == ref_last_launch_timestamp:  # this value does not change, no launch occurs
+            print(f"do eval and push report data to player {launcher_obj.player_name}")
+
+
+# TODO: send eval only if:
+# TODO: 1. a player's weapon is terminal --> triggered by this, default GO
+# TODO: 2. there is no other active munition deployed by this player --> check this immediately
+# TODO: 3. no weapon is launched during the next 10 seconds --> check last launch timestamp
+
+
+def player_weapon_terminal_recorder(spk_dt):  # trigger on weapon terminal spark
+    wpn_obj = spk_dt['data']['self']
+    launcher_obj = wpn_obj.launcher
+    try:
+        player_name = launcher_obj.player_name
+    except AttributeError:  # not launched by a player
+        print(__file__, "not launched by a player, ignore")
+    else:
+        player_last_term_timestamp[player_name] = wpn_obj.timestamp[-1]  # get last timestamp (terminal time)
+
+        # spawn a new thread to check if last term timestamp changed after 10 seconds
+        threading.Thread(target=check_eval_criteria, args=launcher_obj)
 
 
 batch_interval = 5  # seconds
@@ -24,6 +103,10 @@ with open(os.path.join(os.path.abspath(os.path.dirname(__file__)),
                        '../..', 'data') + "/weapon_data/warheads.json", 'r') as f:
     warheads_data = json.load(f)
 
+
+# TODO: do eval when a weapon release by player is terminal and within 10 seconds there is no other launch?
+# TODO: do eval only after the last player weapon is terminal
+# TODO: Every time a player's weapon is terminal, spawn a new thread that checks after 10 seconds for active weapon
 
 # check if release data has new entries
 # if new entries, check if player has launch multiple weapons
@@ -52,20 +135,9 @@ def select_weapon_data_entry_by_group_id(group_id):
     return sel_dt
 
 
-def evaluate_dt(group_batch, group_id):  # use group_id to find user user group language
+def evaluate_dt(group_batch, locale):  # use group_id to find user user group language
     # group id might not be valid because unit is dead now and erazed from group
-    try:
-        group_player_name = cdi.active_players_by_group_id[group_id].player_name
-        lang = cdi.active_players_by_group_id[group_id].language
-    except KeyError:  # key error, unit is dead
-        return "invalid evaluation"
-
-    # group_player_name = db.env_group_dict[group_id].lead['player_name']
-
-    # find language preference
-    # lang = cdi.active_players_by_group_id[group_id].language
-
-    # lang = db.env_player_dict[group_player_name].language  # current language
+    lang = locale
 
     global _
     _ = set_msg_locale(lang, 'weapon_delivery_evaluation')
@@ -393,8 +465,12 @@ def evaluate_dt(group_batch, group_id):  # use group_id to find user user group 
     return msg
 
 
-def select_batch(sel_gp_dt):
-    # sort data by time?
+def select_batch(sel_gp_dt):  # select batch from player's weapon release record (list of Weapon object)
+    # if weapon object is already in range control record list, then ignore
+    # else add to range control record list and continue
+
+    # sort data by time? is this necessary? list in python 3 retains the order items are inserted in?
+    # but the player stats release weapon list is only appended on terminal, so still need to sort on launch time
     selected_group_weapon_dt = sel_gp_dt
     selected_group_weapon_dt.sort(key=lambda x: x.launch_time, reverse=False)
 
