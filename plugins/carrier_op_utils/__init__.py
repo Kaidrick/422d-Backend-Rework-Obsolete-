@@ -1,0 +1,4 @@
+import plugin_functions.declare_plugins
+from plugin_functions.carrier_op_utils.carrier_route_plan import plugin_name, include_carrier_op_utils
+
+plugin_functions.declare_plugins.plugin_mains[plugin_name] = include_carrier_op_utils

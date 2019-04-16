@@ -633,7 +633,7 @@ def tanker_control(tanker_group_name,
 
 def include_dispatch_tankers():
     t1 = threading.Thread(target=tanker_control,
-                          args=("KC135MPRS - Track: Petro", "KC135MPRS", 'PETRO', 518, 30000, 7, "X", "PTO"),
+                          args=("KC135MPRS - Track: Petro", "KC135MPRS", 'PETRO', 418, 30000, 7, "X", "PTO"),
                           kwargs={'freq': 244000000, 'callsign': [1, 1, 1, 'Texaco11']})
     t1.start()
     time.sleep(5)
