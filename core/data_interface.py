@@ -40,6 +40,9 @@ destroyed_other_units = {}  # indexed by runtime_id_name + epoch, for instance, 
 # player preferences
 player_net_config_by_ucid = {}
 
+# net side slot and unitID reference
+player_in_net_slot = {}
+
 # -----------------------------------------------------------------------------------------------------------
 # Export Data for look up
 export_units = {}

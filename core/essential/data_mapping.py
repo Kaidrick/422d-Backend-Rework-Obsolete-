@@ -74,6 +74,34 @@ def group_data_process(res_group):
 
     for group_data in res_group:  # check each group
         for unit in group_data['units']:  # check units in each group
+
+            # FIXME: The DCS API function getPlayerName() returns the name of the RIO
+            # FIXME: and once the second player (RIO) enters the aircraft. It should return the name of the pilot.
+            # FIXME: Furthermore, the getPlayerName() function returns an empty string once the RIO left.
+
+            # So the problem is as follows:
+            # 1. player name is not accurate --> check API occupied slot
+            #                                if slot then get player name from hook
+            #                                if slot2 then get RIO name from hook
+
+            # need to check unit id from the start
+            # check if this unit id is in net side ref dict
+            # if it is in the ref dict, then find the matching name, and override player name
+            # since rio should always (at least in theory) spawn after the pilot did,
+            # ref dict will only keep pilot name
+
+            # FIXME: the problem here is, getPlayerName() return is flawed, and should be ignored for player unit
+            check_unit_id = unit['id']
+            # this has to be used with plugin --> static playable aircraft --> need to move to essential instead
+            # TODO: finish spark handler function for SLOT_CHANGE
+            try:  # check if player_name is in any slot
+                player_name = cdi.player_in_net_slot[check_unit_id]
+            except KeyError:
+                # either this is not a player unit, or slot dict has not been populated for some reason
+                pass
+            else:
+                unit['player_name'] = player_name  # override false player name return by API function
+
             if unit['player_control']:  # if player control flag is True
                 if unit['player_name'] != "":
                     # if player name is already in the name list

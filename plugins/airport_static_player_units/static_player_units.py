@@ -6,6 +6,7 @@ from core.request.api.api_debug import RequestAPINetDostring
 import threading
 import time
 from plugins.declare_plugins import plugin_log
+import core.data_interface as cdi
 
 plugin_name = "Airport Static Player Units"
 
@@ -248,6 +249,8 @@ def placeholder(pull_data):  # get slot changes
                                 f"Unit {slot_change['slotID_FROM']} is now freed. "
                                 f"Respawn Unit {slot_change['slotID_FROM']}.")
 
+        # player of this name left this slot. slot is empty
+        cdi.player_in_net_slot[slot_change['slotID_FROM']] = None
         # static_player_unit_matching_dict
         try:
             static_data = static_player_unit_matching_dict[slot_change['slotID_FROM']]
@@ -267,6 +270,11 @@ def placeholder(pull_data):  # get slot changes
         plugin_log(plugin_name, f"{slot_change['slotID_player']} changed slot. "
                                 f"Destroy Unit {slot_change['slotID_TO']}. "
                                 f"Unit {slot_change['slotID_TO']} is now occupied.")
+
+        # player of this name enter this slot. slot is occupied by this player
+        # if in multi-crew aircraft, say f-14 or l-39, backseat is indicated by unit_id_2 instead
+        # in order to get the correct name, match unit_id as slot_id, and get player name in the dict
+        cdi.player_in_net_slot[slot_change['slotID_TO']] = slot_change['slotID_player']
 
         # static_player_unit_matching_dict[unitId] --> Unit.getByName():destroy() ?
         try:
