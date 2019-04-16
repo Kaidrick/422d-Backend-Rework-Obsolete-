@@ -1,0 +1,14 @@
+1. need more spark, for example, aircraft takeoff, landing, startup, shutdown
+    * takeoff and landing --> this is probably better handled by game event
+    * startup/shutdown --> doesn't seem to work in multi-player
+        so the only clue is the fuel amount
+        - when a player aircraft spawn, set a started flag, if fuel amount starts to decrease in a certain range,
+          assert engine start. and if fuel consumption is zero, assert engine shutdown
+
+2. session tracker, which record data based on event or spark
+    * takeoff time
+    * land time
+    * flight time
+
+3. finish <aircraft_type_system_of_measurement.py>
+
