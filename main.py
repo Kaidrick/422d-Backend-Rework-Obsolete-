@@ -76,7 +76,7 @@ def pull():
         process_api_pulls()
         get_player_preference_settings()
 
-        time.sleep(0.5)
+        time.sleep(0.1)
 
 
 if __name__ == '__main__':

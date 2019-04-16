@@ -19,6 +19,9 @@ class SparkHandler:
     PLAYER_DISTANCE = {}  # player's position changes
     PLAYER_AIRSPACE_CHANGE = {}  # player entered a new airspace
 
+    # net side
+    SLOT_CHANGE = {}  # player changed slot
+
     # weapon
     WEAPON_RELEASE = {}
     WEAPON_TERMINAL = {}
@@ -91,3 +94,11 @@ def other_spawn(spark_dt):
 def other_despawn(spark_dt):
     for handler_id, handler_method in SparkHandler.OTHER_DESPAWN.items():
         handler_method(spark_dt)
+
+
+# --------------------------------------------------------------------------
+# Net
+def slot_change(spark_dt):
+    for handler_id, handler_method in SparkHandler.SLOT_CHANGE.items():
+        handler_method(spark_dt)
+
