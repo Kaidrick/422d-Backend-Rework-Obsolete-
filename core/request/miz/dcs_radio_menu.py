@@ -160,14 +160,20 @@ def init_radio_menu_for_group(group_id, player_name):  # TODO: Add more radio it
     # ucid = env_player_dict[group_player_name].ucid
 
     # group_player_name = cdi.active_players_by_group_id[group_id].player_name
-    group_player_name = ref_player.player_name
-    # ipaddr = cdi.active_players_by_group_id[group_id].ipaddr
-    ipaddr = ref_player.ipaddr
-    # ucid = cdi.active_players_by_group_id[group_id].ucid
-    ucid = ref_player.ucid
+    try:
+        group_player_name = ref_player.player_name
+        # ipaddr = cdi.active_players_by_group_id[group_id].ipaddr
+        ipaddr = ref_player.ipaddr
+        # ucid = cdi.active_players_by_group_id[group_id].ucid
+        ucid = ref_player.ucid
 
-    # lang_on_ip = cdi.active_players_by_group_id[group_id].lang_on_ip
-    lang_on_ip = ref_player.lang_on_ip
+        # lang_on_ip = cdi.active_players_by_group_id[group_id].lang_on_ip
+        lang_on_ip = ref_player.lang_on_ip
+    except AttributeError:
+        print(ref_player.__dict__)
+        return
+    else:
+        pass
 
     if lang_on_ip:
         lang_on_ip_message = _("Based on your DCS World client language setting, "

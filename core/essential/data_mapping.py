@@ -100,7 +100,11 @@ def group_data_process(res_group):
                 # either this is not a player unit, or slot dict has not been populated for some reason
                 pass
             else:
+
                 unit['player_name'] = player_name  # override false player name return by API function
+
+            # FIXME: spark a player spawn when player left an unit???
+            # spark because check_player_names has this name
 
             if unit['player_control']:  # if player control flag is True
                 if unit['player_name'] != "":
