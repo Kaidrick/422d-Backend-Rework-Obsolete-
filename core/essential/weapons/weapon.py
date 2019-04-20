@@ -142,7 +142,7 @@ class Weapon:
                 # TODO: the vector from player aircraft to the weapon should be within certain limit
                 # TODO: in nose quarter is tolerable?
 
-                if dist < 20:  # TODO: maybe this value is too small for rocket and guns?
+                if dist < 100:  # TODO: this value need more tweaking for rockets?
                     # if within feasible range limit, check direction
                     array_wpn_init_pos = np.array([
                         self.init_pos['x'], self.init_pos['y'], self.init_pos['z']

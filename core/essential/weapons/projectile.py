@@ -47,7 +47,7 @@ class Projectile(Weapon):
 
             # FIXME: if no using hi res data, distance is sometimes too far for accurate assertion
 
-            if 100 < dist < 600:
+            if 50 < dist < 600:
                 array_wpn_init_pos = np.array([
                     self.init_pos['x'], self.init_pos['y'], self.init_pos['z']
                 ])
@@ -57,7 +57,7 @@ class Projectile(Weapon):
                 array_wpn_launch_vector = array_wpn_init_pos - array_launcher_pos
                 # check angle to move_dir
                 angle = parse.angle_between(array_wpn_launch_vector, launcher_move_dir)
-                if angle <= 10:
+                if angle <= 20:
                     # print("launch br:", np.rad2deg(angle))
                     if name in cdi.active_players_by_name.keys():
                         return cdi.active_players_by_name[name]

@@ -5,3 +5,4 @@
 *.pyc
 *.xml
 data/ucid_settings.json
+.idea/workspace.xml
