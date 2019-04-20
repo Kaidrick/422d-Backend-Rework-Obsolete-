@@ -293,7 +293,7 @@ def placeholder(pull_data):  # get slot changes
                 """
                 RequestDcsDebugCommand(msg).send()
             else:
-                print("playable static: filtered")
+                print("playable static: filtered unit type")
         except KeyError:  # no match found, must not be ground start, ignore
             print("No match - Parking start unit, ignore")
 
