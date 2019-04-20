@@ -281,15 +281,19 @@ def placeholder(pull_data):  # get slot changes
             unit_info = static_player_unit_matching_dict[slot_change['slotID_TO']]
             # print(unit_info)
             unit_name = unit_info['unitName']
-            msg = f"""
-                                    local success, data = pcall(StaticObject.getByName, '{unit_name}')
-                                        if success then
-                                            if data:isExist() then
-                                                data:destroy()
-                                            end
-                                        end
-                                """
-            RequestDcsDebugCommand(msg).send()
+            unit_type = unit_info['type']
+            if unit_type not in filter_list:
+                msg = f"""
+                    local success, data = pcall(StaticObject.getByName, '{unit_name}')
+                    if success then
+                        if data:isExist() then
+                            data:destroy()
+                        end
+                    end
+                """
+                RequestDcsDebugCommand(msg).send()
+            else:
+                print("playable static: filtered")
         except KeyError:  # no match found, must not be ground start, ignore
             print("No match - Parking start unit, ignore")
 

@@ -55,7 +55,12 @@ def player_spawn(spark_dt):
     :return:
     """
     for handler_id, handler_method in SparkHandler.PLAYER_SPAWN.items():
-        handler_method(spark_dt)
+        try:
+            handler_method(spark_dt)
+        except AttributeError as e:
+            print(__file__, "attribute error", e)
+        except KeyError as e:
+            print(__file__, "key error", e)
 
 
 def player_despawn(spark_dt):
