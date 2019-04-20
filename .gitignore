@@ -4,3 +4,4 @@
 *.xml
 *.pyc
 *.xml
+data/ucid_settings.json
