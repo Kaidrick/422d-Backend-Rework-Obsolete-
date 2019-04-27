@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="600c2c46-9673-4fc9-98d6-73a0b6339ae7" name="Default Changelist" comment="cleaned up some cmd output">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ucid_settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/ucid_settings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugins/airport_static_player_units/static_player_units.py" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/airport_static_player_units/static_player_units.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,7 +16,7 @@
     <SUITE FILE_PATH="coverage/422d_Backend_Rework$precise_data.coverage" NAME="precise_data Coverage Results" MODIFIED="1553146947338" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core/essential" />
     <SUITE FILE_PATH="coverage/422d_Backend_Rework$bomb.coverage" NAME="bomb Coverage Results" MODIFIED="1553260930826" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core/essential/weapons" />
     <SUITE FILE_PATH="coverage/422d_Backend_Rework$export_data.coverage" NAME="export_data Coverage Results" MODIFIED="1555378442993" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core/request/exp" />
-    <SUITE FILE_PATH="coverage/422d_Backend_Rework$main.coverage" NAME="main Coverage Results" MODIFIED="1555748941923" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/422d_Backend_Rework$main.coverage" NAME="main Coverage Results" MODIFIED="1556342992174" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/422d_Backend_Rework$data_mapping.coverage" NAME="data_mapping Coverage Results" MODIFIED="1552924645206" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core/essential" />
     <SUITE FILE_PATH="coverage/422d_Backend_Rework$api_request.coverage" NAME="api_request Coverage Results" MODIFIED="1552913527239" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core/request/api" />
     <SUITE FILE_PATH="coverage/422d_Backend_Rework$export_request.coverage" NAME="export_request Coverage Results" MODIFIED="1555311116445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core/request/exp" />
@@ -60,13 +62,13 @@
     <session id="1719173253">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="22" />
-          <entry key="project.open.time.0" value="6" />
+          <entry key="project.closed" value="23" />
+          <entry key="project.open.time.0" value="7" />
           <entry key="project.open.time.4" value="11" />
           <entry key="project.open.time.5" value="4" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="23" />
+          <entry key="project.opened" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -90,14 +92,14 @@
         <counts>
           <entry key="dummy" value="14" />
           <entry key="lua" value="572" />
-          <entry key="py" value="49958" />
+          <entry key="py" value="49988" />
           <entry key="txt" value="774" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="1360" />
-          <entry key="Python" value="49958" />
+          <entry key="Python" value="49988" />
         </counts>
       </usages-collector>
     </session>
@@ -107,8 +109,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plugins/airport_static_player_units/static_player_units.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="295" column="58" selection-start-line="295" selection-start-column="58" selection-end-line="295" selection-end-column="58" />
+            <state relative-caret-position="-831">
+              <caret line="263" column="45" lean-forward="true" selection-start-line="263" selection-start-column="45" selection-end-line="263" selection-end-column="45" />
               <folding>
                 <element signature="e#27#88#0" expanded="true" />
               </folding>
@@ -119,7 +121,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/essential/data_mapping.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="763">
+            <state relative-caret-position="5083">
               <caret line="229" column="17" selection-start-line="229" selection-start-column="17" selection-end-line="229" selection-end-column="17" />
             </state>
           </provider>
@@ -128,7 +130,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/spark.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
+            <state relative-caret-position="1426">
               <caret line="62" column="43" selection-start-line="62" selection-start-column="43" selection-end-line="62" selection-end-column="43" />
             </state>
           </provider>
@@ -146,7 +148,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/essential/weapons/projectile.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="851">
+            <state relative-caret-position="759">
               <caret line="37" column="38" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="38" />
               <folding>
                 <element signature="e#114#132#0" expanded="true" />
@@ -176,7 +178,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plugins/range_control/weapon_delivery_evaluation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="12857">
+            <state relative-caret-position="12535">
               <caret line="559" selection-start-line="559" selection-end-line="559" />
               <folding>
                 <element signature="e#342#384#0" expanded="true" />
@@ -197,7 +199,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plugins/nttr_missile_trainer/range_protection.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1219">
+            <state relative-caret-position="1127">
               <caret line="53" selection-start-line="53" selection-end-line="53" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
@@ -296,9 +298,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="1227" />
-    <option name="y" value="42" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="170" />
+    <option name="y" value="23" />
     <option name="width" value="1416" />
     <option name="height" value="1355" />
   </component>
@@ -627,10 +629,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1227" y="42" width="1416" height="1355" extended-state="0" />
+    <frame x="170" y="23" width="1416" height="1355" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31958762" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3240059" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -936,9 +938,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1656">
           <caret line="72" column="12" selection-start-line="72" selection-start-column="12" selection-end-line="72" selection-end-column="12" />
-          <folding>
-            <element signature="e#12#23#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -946,6 +945,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3473">
           <caret line="171" column="26" selection-start-line="171" selection-start-column="26" selection-end-line="171" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/airport_static_player_units/static_player_units.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-831">
+          <caret line="263" column="45" lean-forward="true" selection-start-line="263" selection-start-column="45" selection-end-line="263" selection-end-column="45" />
+          <folding>
+            <element signature="e#27#88#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/essential/data_mapping.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5083">
+          <caret line="229" column="17" selection-start-line="229" selection-start-column="17" selection-end-line="229" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/spark.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1426">
+          <caret line="62" column="43" selection-start-line="62" selection-start-column="43" selection-end-line="62" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -958,7 +981,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core/essential/weapons/projectile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="851">
+        <state relative-caret-position="759">
           <caret line="37" column="38" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="38" />
           <folding>
             <element signature="e#114#132#0" expanded="true" />
@@ -982,7 +1005,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/range_control/weapon_delivery_evaluation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12857">
+        <state relative-caret-position="12535">
           <caret line="559" selection-start-line="559" selection-end-line="559" />
           <folding>
             <element signature="e#342#384#0" expanded="true" />
@@ -999,34 +1022,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/nttr_missile_trainer/range_protection.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1219">
+        <state relative-caret-position="1127">
           <caret line="53" selection-start-line="53" selection-end-line="53" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/essential/data_mapping.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="763">
-          <caret line="229" column="17" selection-start-line="229" selection-start-column="17" selection-end-line="229" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/spark.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="62" column="43" selection-start-line="62" selection-start-column="43" selection-end-line="62" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/airport_static_player_units/static_player_units.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="295" column="58" selection-start-line="295" selection-start-column="58" selection-end-line="295" selection-end-column="58" />
-          <folding>
-            <element signature="e#27#88#0" expanded="true" />
           </folding>
         </state>
       </provider>

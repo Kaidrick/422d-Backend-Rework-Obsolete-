@@ -255,10 +255,11 @@ def placeholder(pull_data):  # get slot changes
         try:
             static_data = static_player_unit_matching_dict[slot_change['slotID_FROM']]
             # add group or add static unit? --> depends on type? always static?
-            AddStaticObject(static_data['unitName'], static_data['type'],
-                            static_data['x'], static_data['y'],
-                            livery_id=static_data['livery_id'],
-                            onboard_num=static_data['onboard_num'], heading=static_data['heading']).send()
+            if static_data['type'] not in filter_list:
+                AddStaticObject(static_data['unitName'], static_data['type'],
+                                static_data['x'], static_data['y'],
+                                livery_id=static_data['livery_id'],
+                                onboard_num=static_data['onboard_num'], heading=static_data['heading']).send()
         except KeyError:  # not ground start unit, ignore
             print("No match, ignore despawn")
 
