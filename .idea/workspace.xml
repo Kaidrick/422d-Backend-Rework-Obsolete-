@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="600c2c46-9673-4fc9-98d6-73a0b6339ae7" name="Default Changelist" comment="cleaned up some cmd output">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/ucid_settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/ucid_settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/airport_static_player_units/static_player_units.py" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/airport_static_player_units/static_player_units.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/essential/weapons/weapon.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/essential/weapons/weapon.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/request/miz/dcs_radio_menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/request/miz/dcs_radio_menu.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,6 +21,7 @@
     <SUITE FILE_PATH="coverage/422d_Backend_Rework$api_request.coverage" NAME="api_request Coverage Results" MODIFIED="1552913527239" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core/request/api" />
     <SUITE FILE_PATH="coverage/422d_Backend_Rework$export_request.coverage" NAME="export_request Coverage Results" MODIFIED="1555311116445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core/request/exp" />
     <SUITE FILE_PATH="coverage/422d_Backend_Rework$dcs_query.coverage" NAME="dcs_query Coverage Results" MODIFIED="1553062270501" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core/request/miz" />
+    <SUITE FILE_PATH="coverage/422d_Backend_Rework$request_test.coverage" NAME="request_test Coverage Results" MODIFIED="1556356521181" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-1641901470">
@@ -62,13 +63,15 @@
     <session id="1719173253">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="23" />
-          <entry key="project.open.time.0" value="7" />
-          <entry key="project.open.time.4" value="11" />
-          <entry key="project.open.time.5" value="4" />
-          <entry key="project.open.time.6" value="1" />
+          <entry key="project.closed" value="30" />
+          <entry key="project.open.time.0" value="8" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.4" value="13" />
+          <entry key="project.open.time.5" value="5" />
+          <entry key="project.open.time.6" value="2" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="24" />
+          <entry key="project.opened" value="31" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -77,7 +80,7 @@
           <entry key="cfg" value="4" />
           <entry key="gitignore" value="1" />
           <entry key="lua" value="5" />
-          <entry key="py" value="325" />
+          <entry key="py" value="338" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
@@ -85,35 +88,77 @@
         <counts>
           <entry key="Ini" value="4" />
           <entry key="PLAIN_TEXT" value="9" />
-          <entry key="Python" value="325" />
+          <entry key="Python" value="338" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="14" />
           <entry key="lua" value="572" />
-          <entry key="py" value="49988" />
+          <entry key="py" value="50609" />
           <entry key="txt" value="774" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="1360" />
-          <entry key="Python" value="49988" />
+          <entry key="Python" value="50609" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/plugins/airport_static_player_units/static_player_units.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugins/dispatch_tankers/tanker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-831">
-              <caret line="263" column="45" lean-forward="true" selection-start-line="263" selection-start-column="45" selection-end-line="263" selection-end-column="45" />
-              <folding>
-                <element signature="e#27#88#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="565">
+              <caret line="497" lean-forward="true" selection-start-line="497" selection-end-line="497" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="805">
+              <caret line="76" column="29" lean-forward="true" selection-start-line="76" selection-start-column="29" selection-end-line="76" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/request/api/player_preference.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/essential/weapons/weapon_data_mapping.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1914">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/essential/weapons/weapon.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="130" column="17" lean-forward="true" selection-start-line="130" selection-start-column="17" selection-end-line="130" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/core/request/miz/dcs_radio_menu.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1022">
+              <caret line="253" lean-forward="true" selection-start-line="253" selection-end-line="253" />
             </state>
           </provider>
         </entry>
@@ -121,56 +166,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/essential/data_mapping.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5083">
-              <caret line="229" column="17" selection-start-line="229" selection-start-column="17" selection-end-line="229" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/spark.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1426">
-              <caret line="62" column="43" selection-start-line="62" selection-start-column="43" selection-end-line="62" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/to-do.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/essential/weapons/projectile.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="759">
-              <caret line="37" column="38" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="38" />
-              <folding>
-                <element signature="e#114#132#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/essential/weapons/missile.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
-              <caret line="28" column="38" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plugins/dispatch_tankers/tanker.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="14306">
-              <caret line="635" column="83" selection-start-line="635" selection-start-column="83" selection-end-line="635" selection-end-column="83" />
+            <state relative-caret-position="-1380">
+              <caret line="134" column="30" selection-start-line="134" selection-start-column="8" selection-end-line="134" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -178,8 +175,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plugins/range_control/weapon_delivery_evaluation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="12535">
-              <caret line="559" selection-start-line="559" selection-end-line="559" />
+            <state relative-caret-position="2921">
+              <caret line="141" selection-start-line="141" selection-end-line="141" />
               <folding>
                 <element signature="e#342#384#0" expanded="true" />
               </folding>
@@ -238,7 +235,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/core/request/miz/dcs_request.py" />
         <option value="$PROJECT_DIR$/core/game_object_control/dcs_group_control.py" />
         <option value="$PROJECT_DIR$/core/essential/chat_commands/__init__.py" />
         <option value="$PROJECT_DIR$/core/essential/chat_commands/chat_cmd_processor.py" />
@@ -275,20 +271,21 @@
         <option value="$PROJECT_DIR$/core/essential/precise_data.py" />
         <option value="$PROJECT_DIR$/core/request/exp/export_request.py" />
         <option value="$PROJECT_DIR$/plugins/__init__.py" />
-        <option value="$PROJECT_DIR$/plugins/range_control/weapon_delivery_evaluation.py" />
         <option value="$PROJECT_DIR$/core/data_interface.py" />
         <option value="$PROJECT_DIR$/plugins/nttr_missile_trainer/scripts/switchAI_on_off.lua" />
         <option value="$PROJECT_DIR$/plugins/nttr_missile_trainer/range_protection.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/core/essential/data_mapping.py" />
-        <option value="$PROJECT_DIR$/core/request/miz/dcs_radio_menu.py" />
         <option value="$PROJECT_DIR$/plugins/carrier_op_utils/carrier_route_plan.py" />
         <option value="$PROJECT_DIR$/to-do.txt" />
         <option value="$PROJECT_DIR$/plugins/dispatch_tankers/tanker.py" />
         <option value="$PROJECT_DIR$/core/essential/weapons/projectile.py" />
-        <option value="$PROJECT_DIR$/core/essential/weapons/weapon.py" />
         <option value="$PROJECT_DIR$/core/spark.py" />
         <option value="$PROJECT_DIR$/plugins/airport_static_player_units/static_player_units.py" />
+        <option value="$PROJECT_DIR$/request_test.py" />
+        <option value="$PROJECT_DIR$/plugins/range_control/weapon_delivery_evaluation.py" />
+        <option value="$PROJECT_DIR$/core/essential/weapons/weapon.py" />
+        <option value="$PROJECT_DIR$/core/request/miz/dcs_radio_menu.py" />
       </list>
     </option>
   </component>
@@ -299,8 +296,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="170" />
-    <option name="y" value="23" />
+    <option name="x" value="305" />
+    <option name="y" value="27" />
     <option name="width" value="1416" />
     <option name="height" value="1355" />
   </component>
@@ -309,7 +306,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -407,18 +403,13 @@
               <item name="422d-Backend-Rework" type="b2602c69:ProjectViewProjectNode" />
               <item name="422d-Backend-Rework" type="462c0819:PsiDirectoryNode" />
               <item name="plugins" type="462c0819:PsiDirectoryNode" />
-              <item name="nttr_missile_trainer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="422d-Backend-Rework" type="b2602c69:ProjectViewProjectNode" />
-              <item name="422d-Backend-Rework" type="462c0819:PsiDirectoryNode" />
-              <item name="plugins" type="462c0819:PsiDirectoryNode" />
               <item name="range_control" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -464,28 +455,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/core/essential/weapons/bomb.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="dcs_query" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="422d Backend Rework" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/core/request/miz" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/core/request/miz/dcs_query.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -582,21 +551,43 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="request_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="422d Backend Rework" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/request_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.precise_data" />
-      <item itemvalue="Python.dcs_query" />
       <item itemvalue="Python.main" />
       <item itemvalue="Python.bomb" />
       <item itemvalue="Python.export_request" />
       <item itemvalue="Python.export_data" />
+      <item itemvalue="Python.request_test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.request_test" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.export_data" />
         <item itemvalue="Python.export_request" />
         <item itemvalue="Python.bomb" />
-        <item itemvalue="Python.dcs_query" />
       </list>
     </recent_temporary>
   </component>
@@ -629,15 +620,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="170" y="23" width="1416" height="1355" extended-state="0" />
+    <frame x="305" y="27" width="1416" height="1355" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3240059" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.35787922" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4992" visible="true" weight="0.3264463" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4992" weight="0.3264463" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -694,13 +685,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="cleaned up some cmd output" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/plugins/range_control/obsolete/weapon_tracker.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5681">
-          <caret line="316" column="4" selection-start-line="316" selection-start-column="4" selection-end-line="316" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plugins/range_control/obsolete/shell_tracker.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-276" />
@@ -731,13 +715,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/essential/weapons/asm.py" />
-    <entry file="file://$PROJECT_DIR$/plugins/nttr_missile_trainer/missile_training_announcer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="41" column="29" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plugins/range_control/player_tracker.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="920">
@@ -770,34 +747,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/range_control/obsolete/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/range_control/controller.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/range_control/data_collector.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/nttr_missile_trainer/missile_trainer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/nttr_missile_trainer/range_missile_control.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/nttr_missile_trainer/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -854,13 +803,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/request/api/player_preference.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="60" selection-start-line="60" selection-end-line="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plugins/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
@@ -910,58 +852,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/essential/weapons/weapon_data_mapping.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/data_interface.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1380">
           <caret line="61" selection-start-line="61" selection-end-line="61" />
-          <folding>
-            <element signature="e#106#167#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/essential/weapons/weapon.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="144" column="28" selection-start-line="144" selection-start-column="28" selection-end-line="144" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1656">
-          <caret line="72" column="12" selection-start-line="72" selection-start-column="12" selection-end-line="72" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/request/miz/dcs_radio_menu.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3473">
-          <caret line="171" column="26" selection-start-line="171" selection-start-column="26" selection-end-line="171" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/airport_static_player_units/static_player_units.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-831">
-          <caret line="263" column="45" lean-forward="true" selection-start-line="263" selection-start-column="45" selection-end-line="263" selection-end-column="45" />
-          <folding>
-            <element signature="e#27#88#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/essential/data_mapping.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5083">
-          <caret line="229" column="17" selection-start-line="229" selection-start-column="17" selection-end-line="229" selection-end-column="17" />
+        <state relative-caret-position="7061">
+          <caret line="307" column="48" lean-forward="true" selection-start-line="307" selection-start-column="48" selection-end-line="307" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -969,6 +870,48 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1426">
           <caret line="62" column="43" selection-start-line="62" selection-start-column="43" selection-end-line="62" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/nttr_missile_trainer/missile_trainer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6854">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/nttr_missile_trainer/missile_training_announcer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2443">
+          <caret line="41" column="29" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/nttr_missile_trainer/range_missile_control.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1426">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/request_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/range_control/data_collector.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/range_control/controller.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -996,17 +939,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plugins/dispatch_tankers/tanker.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14306">
-          <caret line="635" column="83" selection-start-line="635" selection-start-column="83" selection-end-line="635" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plugins/range_control/weapon_delivery_evaluation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12535">
-          <caret line="559" selection-start-line="559" selection-end-line="559" />
+        <state relative-caret-position="2921">
+          <caret line="141" selection-start-line="141" selection-end-line="141" />
           <folding>
             <element signature="e#342#384#0" expanded="true" />
           </folding>
@@ -1027,6 +963,55 @@
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/dispatch_tankers/tanker.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="565">
+          <caret line="497" lean-forward="true" selection-start-line="497" selection-end-line="497" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/essential/data_mapping.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1380">
+          <caret line="134" column="30" selection-start-line="134" selection-start-column="8" selection-end-line="134" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="805">
+          <caret line="76" column="29" lean-forward="true" selection-start-line="76" selection-start-column="29" selection-end-line="76" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/request/api/player_preference.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/essential/weapons/weapon_data_mapping.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1914">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/essential/weapons/weapon.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="130" column="17" lean-forward="true" selection-start-line="130" selection-start-column="17" selection-end-line="130" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/request/miz/dcs_radio_menu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1022">
+          <caret line="253" lean-forward="true" selection-start-line="253" selection-end-line="253" />
         </state>
       </provider>
     </entry>

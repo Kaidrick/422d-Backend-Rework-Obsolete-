@@ -127,7 +127,7 @@ class Weapon:
             try:
                 launcher_dt = cdi.export_omni[runtime_id_name]
             except KeyError as e:  # cannot find this id in export data, either data is wrong, or player is inactive
-                print(e)
+                print("export data flawed, or player not active for wpn with id:", e)
             else:
                 launcher_pos = launcher_dt['Position']
                 launcher_move_dir = launcher_object.move_dir  # array

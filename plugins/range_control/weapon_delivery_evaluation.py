@@ -109,11 +109,12 @@ def player_weapon_terminal_recorder(spk_dt):  # trigger on weapon terminal spark
     launcher_obj = wpn_obj.launcher
     try:
         player_name = launcher_obj.player_name
+        check_suppress_count = suppress_count[player_name]
     except AttributeError:  # not launched by a player
-        print(__file__, "not launched by a player, ignore")
+        print(__file__, "not launched by a player, or player no longer in game, ignore")
         pass
     else:
-        if wpn_obj.timestamp[-1] not in suppress_count[player_name]:  # no thread is checking this timestamp
+        if wpn_obj.timestamp[-1] not in check_suppress_count:  # no thread is checking this timestamp
             # spawn new thread
             suppress_count[player_name].append(wpn_obj.timestamp[-1])
             threading.Thread(target=check_eval_criteria, args=[launcher_obj]).start()
