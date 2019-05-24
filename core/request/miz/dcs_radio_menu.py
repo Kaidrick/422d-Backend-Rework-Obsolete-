@@ -134,8 +134,10 @@ class SanitizeRadioItem(DcsAction):
 
 def init_radio_menu_for_group(group_id, player_name):  # TODO: Add more radio items
     go = []
-
-    ref_player = cdi.active_players_by_name[player_name]
+    try:
+        ref_player = cdi.active_players_by_name[player_name]
+    except KeyError:
+        print("cdi.acitve_players_by_name does not contain key:", player_name)
 
     # pref = find_player_preferences_by_group_id(group_id)
     # group_lang = pref['lang']
@@ -171,6 +173,9 @@ def init_radio_menu_for_group(group_id, player_name):  # TODO: Add more radio it
         lang_on_ip = ref_player.lang_on_ip
     except AttributeError:
         print(ref_player.__dict__)
+        RequestDcsMessageForGroup(group_id, "An internal <AttributeError> error has occured "
+                                            "in the server backend. Please try "
+                                            "switching to another slot.").send()
         return
     else:
         pass
