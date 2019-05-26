@@ -110,6 +110,8 @@ def player_weapon_terminal_recorder(spk_dt):  # trigger on weapon terminal spark
     try:
         player_name = launcher_obj.player_name
         check_suppress_count = suppress_count[player_name]
+    except KeyError:
+        print(__file__, f"unable to process spark: {spk_dt}")
     except AttributeError:  # not launched by a player
         print(__file__, "not launched by a player, or player no longer in game, ignore")
         pass
