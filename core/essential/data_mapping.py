@@ -115,9 +115,12 @@ def group_data_process(res_group):
                         kn_player = parse_player_unit(group_data['id'], group_data['name'], group_data['coalition'],
                                                       group_data['category'], unit)
                         if kn_player.player_name == "":
-                            print("wtf? " + str(unit))
+                            print("wtf? ", unit)
 
                     check_player_names.append(kn_player.player_name)
+                    if kn_player.player_name is None or kn_player.player_name == "None":
+                        print("DEBUG", "player name is None for some reason", unit)
+
                     p_edit[kn_player.player_name] = kn_player
 
             else:  # if player control flag is False
