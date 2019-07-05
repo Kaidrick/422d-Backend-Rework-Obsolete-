@@ -98,9 +98,10 @@ def group_data_process(res_group):
                 try:  # check if player_name is in any slot
                     player_name = cdi.player_in_net_slot[check_unit_id]
                 except KeyError:
-                    print("DEBUG", "player unit id not found in cdi.player_in_net_slot")
+                    print("DEBUG", f"player unit id {check_unit_id}: name -> {player_name} not "
+                                   f"found in cdi.player_in_net_slot")
                 else:
-                    print("DEBUG", f"replace player name with API data: {player_name} or unit id {check_unit_id}")
+                    # print("DEBUG", f"replace player name with API data: {player_name} for unit id {check_unit_id}")
                     unit['player_name'] = player_name  # override false player name return by API function
 
                 # FIXME: spark a player spawn when player left an unit???
