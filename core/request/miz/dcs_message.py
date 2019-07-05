@@ -80,3 +80,8 @@ def get_message_duration(message_content):  # message_content is a string, maybe
         return math.ceil(duration)
     else:
         raise TypeError('message_content must be a string')
+
+
+if __name__ == '__main__':
+    RequestDcsBroadcast('超长超长超长超长超长超长超长超长'
+                        '超长超长超长超长超长超长超长语句', duration=20).send()

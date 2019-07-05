@@ -64,7 +64,22 @@ class RequestDcsDebugCommand(RequestDcsDebug):
     #     time.sleep(3)
 
 if __name__ == '__main__':
-    RequestDcsDebugCommand("trigger.action.outText('test', 10)").send()
+    lua_script = """
+    local kn_vec3 = {}
+    kn_vec3.x = 0
+    kn_vec3.y = 1000
+    kn_vec3.z = 0
+    -- trigger.action.outText(kn_vec3, 10)
+    
+    local tmp, pres = atmosphere.getTemperatureAndPressure(kn_vec3)
+    
+    trigger.action.outText(pres.text, 10)
+    return {tmp, pres}
+    
+    """
+    res = RequestDcsDebugCommand(lua_script, echo_result=True).send()
+
+    print(res)
 
 
     # while True:
