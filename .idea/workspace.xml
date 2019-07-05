@@ -98,14 +98,14 @@
         <counts>
           <entry key="dummy" value="14" />
           <entry key="lua" value="572" />
-          <entry key="py" value="51818" />
+          <entry key="py" value="51896" />
           <entry key="txt" value="774" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="1360" />
-          <entry key="Python" value="51818" />
+          <entry key="Python" value="51896" />
         </counts>
       </usages-collector>
     </session>
@@ -115,8 +115,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core/essential/data_mapping.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="667">
-              <caret line="100" column="88" selection-start-line="100" selection-start-column="88" selection-end-line="100" selection-end-column="88" />
+            <state relative-caret-position="598">
+              <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
             </state>
           </provider>
         </entry>
@@ -138,8 +138,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plugins/airport_static_player_units/static_player_units.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="266" column="49" lean-forward="true" selection-start-line="266" selection-start-column="49" selection-end-line="266" selection-end-column="49" />
+            <state relative-caret-position="96">
+              <caret line="243" lean-forward="true" selection-start-line="243" selection-end-line="243" />
             </state>
           </provider>
         </entry>
@@ -271,7 +271,6 @@
         <option value="$PROJECT_DIR$/plugins/dispatch_tankers/tanker.py" />
         <option value="$PROJECT_DIR$/core/essential/weapons/projectile.py" />
         <option value="$PROJECT_DIR$/core/spark.py" />
-        <option value="$PROJECT_DIR$/plugins/airport_static_player_units/static_player_units.py" />
         <option value="$PROJECT_DIR$/request_test.py" />
         <option value="$PROJECT_DIR$/core/essential/weapons/weapon.py" />
         <option value="$PROJECT_DIR$/core/request/miz/dcs_radio_menu.py" />
@@ -280,6 +279,7 @@
         <option value="$PROJECT_DIR$/core/request/miz/dcs_debug.py" />
         <option value="$PROJECT_DIR$/core/request/miz/dcs_mark_panel.py" />
         <option value="$PROJECT_DIR$/core/essential/data_mapping.py" />
+        <option value="$PROJECT_DIR$/plugins/airport_static_player_units/static_player_units.py" />
       </list>
     </option>
   </component>
@@ -983,15 +983,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plugins/airport_static_player_units/static_player_units.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="266" column="49" lean-forward="true" selection-start-line="266" selection-start-column="49" selection-end-line="266" selection-end-column="49" />
+        <state relative-caret-position="96">
+          <caret line="243" lean-forward="true" selection-start-line="243" selection-end-line="243" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/essential/data_mapping.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="100" column="88" selection-start-line="100" selection-start-column="88" selection-end-line="100" selection-end-column="88" />
+        <state relative-caret-position="598">
+          <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
         </state>
       </provider>
     </entry>
