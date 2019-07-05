@@ -90,21 +90,21 @@ def group_data_process(res_group):
             # since rio should always (at least in theory) spawn after the pilot did,
             # ref dict will only keep pilot name
 
-            # FIXME: the problem here is, getPlayerName() return is flawed, and should be ignored for player unit
-            check_unit_id = unit['id']
-            # this has to be used with plugin --> static playable aircraft --> need to move to essential instead
-            # TODO: finish spark handler function for SLOT_CHANGE
-            try:  # check if player_name is in any slot
-                player_name = cdi.player_in_net_slot[check_unit_id]
-            except KeyError:
-                # either this is not a player unit, or slot dict has not been populated for some reason
-                pass
-            else:
+            if unit['player_control']:  # for a player controlled unit
+                # FIXME: the problem here is, getPlayerName() return is flawed, and should be ignored for player unit
+                check_unit_id = unit['id']
+                # this has to be used with plugin --> static playable aircraft --> need to move to essential instead
+                # TODO: finish spark handler function for SLOT_CHANGE
+                try:  # check if player_name is in any slot
+                    player_name = cdi.player_in_net_slot[check_unit_id]
+                except KeyError:
+                    print("DEBUG", "player unit id not found in cdi.player_in_net_slot")
+                else:
+                    print("DEBUG", f"replace player name with API data: {player_name} or unit id {check_unit_id}")
+                    unit['player_name'] = player_name  # override false player name return by API function
 
-                unit['player_name'] = player_name  # override false player name return by API function
-
-            # FIXME: spark a player spawn when player left an unit???
-            # spark because check_player_names has this name
+                # FIXME: spark a player spawn when player left an unit???
+                # spark because check_player_names has this name
 
             if unit['player_control']:  # if player control flag is True
                 if unit['player_name'] != "":
@@ -118,8 +118,19 @@ def group_data_process(res_group):
                             print("wtf? ", unit)
 
                     check_player_names.append(kn_player.player_name)
-                    if kn_player.player_name is None or kn_player.player_name == "None":
+                    if kn_player.player_name is None:
+                        # dcs bug: SSE sometime returns a nil value
+                        # {'player_stat': <core.essential.player.PlayerStats object at 0x000001DB024E7A20>, '_airspace': None, 'marker_panels': [], 'invisible_to_ai': None, 'runtime_id': 16783618, 'runtime_id_name': 'id_16783618', 'player_name': None, 'unit_name': 'F-14B (AA-103) Sn: 161435', 'player_group_name': 'F-14B (AA-103) Sn: 161435', 'unit_type': 'F-14B', 'unit_coalition': 2, 'unit_country': 2, 'fuel': 0.66464936733246, 'velocity': {'x': 1.4404085959541e-05, 'y': 2.0392202713992e-05, 'z': 1.1106137208117e-05}, 'last_unit_pos': {'x': -360707.53125, 'y': 954.66796875, 'z': -75782.78125}, 'move_dir': array([0, 0, 0]), 'recent_pos': [{'x': -360707.53125, 'y': 954.66796875, 'z': -75782.78125}], 'recent_pos_time': [1562250953.430194], 'unit_pos': {'x': -360707.53125, 'y': 954.66796875, 'z': -75782.78125}, 'unit_ll': [36.582037379852, -115.67862687755, 954.66796875], 'mgrs': {'Easting': 18214, 'MGRSDigraph': 'PA', 'Northing': 49320, 'UTMZone': '11S'}, 'unit_att': {'pitch': [{'x': 0.99942338466644, 'y': 0.016609624028206, 'z': 0.029616825282574}, {'x': -0.016561141237617, 'y': 0.99986112117767, 'z': -0.0018815725343302}, {'x': -0.029643964022398, 'y': 0.0013899991754442, 'z': 0.9995596408844}], 'bank': [{'x': 0.99942338466644, 'y': 0.016609624028206, 'z': 0.029616825282574}, {'x': -0.016561141237617, 'y': 0.99986112117767, 'z': -0.0018815725343302}, {'x': -0.029643964022398, 'y': 0.0013899991754442, 'z': 0.9995596408844}], 'heading': [{'x': 0.99942338466644, 'y': 0.016609624028206, 'z': 0.029616825282574}, {'x': -0.016561141237617, 'y': 0.99986112117767, 'z': -0.0018815725343302}, {'x': -0.029643964022398, 'y': 0.0013899991754442, 'z': 0.9995596408844}]}, 'group_id': 1152}
+
+                        # possible solution:
+                        # use unit name to cross reference api side
                         print("DEBUG", "player name is None for some reason", unit)
+
+                        # query --> cdi.player_in_net_slot
+                        # with unit id?
+                        sol_q_unit_name = unit['']
+                        # is it possible to request player name from other source?
+
 
                     p_edit[kn_player.player_name] = kn_player
 

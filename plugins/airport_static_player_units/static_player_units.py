@@ -250,7 +250,9 @@ def placeholder(pull_data):  # get slot changes
                                 f"Respawn Unit {slot_change['slotID_FROM']}.")
 
         # player of this name left this slot. slot is empty
-        cdi.player_in_net_slot[slot_change['slotID_FROM']] = None
+        cdi.player_in_net_slot[slot_change['slotID_FROM']] = None  # set to None
+        del cdi.player_in_net_slot[slot_change['slotID_FROM']]  # player left this slot, delete this entry
+
         # static_player_unit_matching_dict
         try:
             static_data = static_player_unit_matching_dict[slot_change['slotID_FROM']]
