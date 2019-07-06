@@ -98,8 +98,22 @@ def group_data_process(res_group):
                 try:  # check if player_name is in any slot
                     player_name = cdi.player_in_net_slot[check_unit_id]
                 except KeyError:
-                    print("DEBUG", f"player unit id {check_unit_id}: name -> {player_name} not "
+                    print("DEBUG", f"player unit id {check_unit_id}: name -> not "
                                    f"found in cdi.player_in_net_slot")
+
+                    print("DEBUG", "Request process API pull immediately")
+
+                    # request extra api pull
+                    from core.request.api.api_pull import process_api_pulls
+                    process_api_pulls()
+
+                    # try again?
+                    try:
+                        player_name = cdi.player_in_net_slot[check_unit_id]
+                    except KeyError:
+                        print("DEBUG", f"extra api process request done but unit id {check_unit_id} still not found")
+                    else:
+                        unit['player_name'] = player_name
                 else:
                     # print("DEBUG", f"replace player name with API data: {player_name} for unit id {check_unit_id}")
                     unit['player_name'] = player_name  # override false player name return by API function

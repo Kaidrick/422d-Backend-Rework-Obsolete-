@@ -56,6 +56,8 @@ def miz():
     while True:
         # get_all_players_data()
         res_group = get_all_groups_data()
+        cdi.raw_res_group = res_group  # get a copy
+
         if res_group:
             group_data_process(res_group)
         else:

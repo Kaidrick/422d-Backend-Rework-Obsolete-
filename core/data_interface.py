@@ -60,6 +60,10 @@ active_munition = {}
 weapon_shot_event_log = {}  # del entry when a search is done
 dead_other_units = {}  #
 
+# ------------------------------------------------------------------------------------------------------------
+# Raw Query Data
+raw_res_group = {}
+
 # plugins
 d_atis = {}  # airport_atis
 # cdi.d_atis[ab] = {
